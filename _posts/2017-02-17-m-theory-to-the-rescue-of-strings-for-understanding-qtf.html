@@ -1,0 +1,87 @@
+---
+layout: post
+title: M-theory to the rescue of Strings for understanding QTF
+date: 2017-02-17 18:33:25.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+  inline_featured_image: '0'
+
+use_math: true
+
+
+
+  
+use_math: true
+---
+
+(fy)
+<h4>M-theory</h4>
+<p>Let us first recall how M-theory emerges, from the superstring point of view. The tension of a $Dp$ brane is<br />
+\begin{equation}<br />
+\tau_p = g_s^{-1} (2 \pi)^{-p} \alpha ' ^{-(p+1)/2} \, .<br />
+\end{equation}<br />
+Here $g_s$ is the string coupling constant, and $\alpha ' = l_s^2$ is the square of the string length. If we focus on the $D0$ brane, which is a particle, and for which the tension is just its mass, we find the mass $m_{D0} = \frac{1}{g_s \sqrt{\alpha '}}$. There also exist bound states of $n$ $D0$ branes, with mass $M = n m_{D0}$. Now when the string coupling becomes large, $g_s \rightarrow \infty$, those states become light particles, that can be interpreted as a Kaluza-Klein tower, with mass $M=n/R$ with a radius<br />
+\begin{equation}<br />
+R = g_s \sqrt{\alpha '} = g_s l_s \, .<br />
+\end{equation}<br />
+This means that while at weak coupling $g_s \ll 1$ the strings length is much bigger that $R$ and the string theory is effectively ten-dimensional, but when the coupling becomes large, we can no longer ignore the additional compactified eleventh dimension. At low-energy, this theory is identified with eleven-dimensional supergravity, and at any energy scale, we have M-theory.</p>
+<h4>Branes in M-theory and string theory</h4>
+<p>The brane content of M-theory can be inferred from the low-energy supergravity. This theory has a three-form, which should be sourced by some three-dimensional object (counting time), that is the $M2$ brane. By eleven-dimensional Hodge duality[1. Recall that a $Dp$ brane in $d$ dimensions couples to a $p+1$ gauge field, which has a $p+2$-form field strength, whose dual is a $d-p-2$ field strength that derives from a $d-p-3$ gauge field that couples to a $D(d-p-4)$ brane. Applying to $d=11$ and $p=2$, we find that the dual of the $M2$ is the $M5$. ], we should also have an $M5$ brane. Somehow less well-known is the fact that there is a third kind of supersymmetric object, called the M-wave, or sometimes the $M0$ brane. Depending on whether these two types of branes wrap or not the compact cycle, they give various ten-dimensional objects :</p>
+<ul>
+<li>The M-wave can not wrap the circle (it is space-like). It gives the Kaluza-Klein states that are identified with bound states of $D0$ branes.</li>
+<li>If the $M2$ wraps the circle, it gives the fundamental type $IIA$ string, sometimes called $F1$.</li>
+<li>If the $M2$ does not wrap the circle, it gives the $D2$.</li>
+<li>If the $M5$ wraps the circle, it gives the $D4$.</li>
+<li>If the $M5$ does not wrap the circle, it gives the $NS5$.</li>
+<li>The $D6$ brane, magnetic dual in ten dimensions of the $D0$, corresponds to the <a href="https://ncatlab.org/nlab/show/Kaluza-Klein+monopole">Kaluza-Klein monopole</a>, or Taub-NUT space.</li>
+</ul>
+<p>All this is very nice, except that we didn't explain the $D8$ brane ! This is a more complicated story, maybe the subject of an following up note.</p>
+<h4>The fate of the M5 brane</h4>
+<p>In his seminal paper about solutions of <a href="https://arxiv.org/abs/hep-th/9703166">four-dimensional theories via M-theory</a>, Witten uses a construction with $D4$ and $NS5$ branes as follows.<br />
+\begin{equation}<br />
+\begin{array}{c|cccccccccc}<br />
+&amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 \\ \hline<br />
+NS5 &amp; - &amp; - &amp; - &amp; - &amp; - &amp; - &amp; \mathrm{Re} \, s &amp; \cdot &amp; \cdot &amp; \cdot \\<br />
+D4 &amp; - &amp; - &amp; - &amp; - &amp; \mathrm{Re} \, v &amp; \mathrm{Im} \, v &amp; - &amp; \cdot &amp; \cdot &amp; \cdot<br />
+\end{array}<br />
+\end{equation}<br />
+There are $n+1$ $NS5$ branes, and $k_\alpha$ $D4$ branes between the five-branes $\alpha -1$ and $\alpha$, for $\alpha=1,\dots,n$.</p>
+<p><img class="size-full wp-image-430 aligncenter" src="{{site.image_path}}/Witten.svg" alt="" /></p>
+<p>The four-dimensional interpretation is the following :</p>
+<ul>
+<li>There is a gauge group $\prod_{\alpha=1}^n SU(k_\alpha)$.</li>
+<li>The coupling constant is given by the positions of the $NS5$ in the direction $6$, and the theta angle is given by the eleventh dimension $10$: with $s=(x^6 + i x^{10})/R$ we have $-i \tau_{\alpha} = s_{\alpha} - s_{\alpha -1} $.</li>
+<li>There are hypermultiplets transforming in the representations $(\mathbf{k}_{\alpha} ,\bar{\mathbf{k}}_{\alpha+1})$</li>
+<li>The masses of the hypers are given by the positions $v = x^4 + i x^5$ of the $D4$ in the directions $4,5$.</li>
+</ul>
+<p>This is very interesting, but the story is even more beautiful once one realizes that both the $NS5$ and the $D4$ come from the same object in M-theory, namely the $M5$! Not only is this beautiful, but it will also solve a problem of the type $IIA$ description, by smoothing the singular junctions where the $D4$ end on the $NS5$. We will therefore consider an $M5$ that lives in the four space-time dimensions, and in addition in a two-dimensional Riemann surface $\Sigma$ inside the $\mathbb{R}^3 \times S^1$ parametrized by $(v,s)$. If locally $\Sigma$ is given by the equation $v = \mathrm{cst}$, then the ten-dimensional interpretation is a $D4$, and of the equation is $s = \mathrm{cst}$, we have an $NS5$, as illustrated in the table below.</p>
+<p>\begin{equation}<br />
+\begin{array}{c|ccccccccccc}<br />
+&amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 \\ \hline<br />
+M5 &amp; - &amp; - &amp; - &amp; - &amp; \Sigma &amp; \Sigma &amp; \Sigma &amp; \cdot &amp; \cdot &amp; \cdot &amp; \Sigma<br />
+\end{array}<br />
+\end{equation}</p>
+<h4>Adding six-branes</h4>
+<p>Let us now add one last element to our construction, a few $D6$ branes.<br />
+\begin{equation}<br />
+\begin{array}{c|cccccccccc}<br />
+&amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 \\ \hline<br />
+NS5 &amp; - &amp; - &amp; - &amp; - &amp; - &amp; - &amp; \mathrm{Re} \, s &amp; \cdot &amp; \cdot &amp; \cdot \\<br />
+D4 &amp; - &amp; - &amp; - &amp; - &amp; \mathrm{Re} \, v &amp; \mathrm{Im} \, v &amp; - &amp; \cdot &amp; \cdot &amp; \cdot \\<br />
+D6 &amp; - &amp; - &amp; - &amp; - &amp; \mathrm{Re} \, v &amp; \mathrm{Im} \, v &amp; \mathrm{Re} \, s &amp; - &amp; - &amp; -<br />
+\end{array}<br />
+\end{equation}<br />
+More precisely, we put $d_{\alpha}$ $D6$ branes between the $NS5$ labeled $\alpha -1$ and $\alpha$. The gauge theory interpretation of the previous paragraph does not change, but we have now a different matter content, with additional hypermultiplets coming from the strings between the $D4$ and $D6$. Again, going to M-theory makes everything smooth, the singularity of the $D6$ core being replaced by the smooth and complete (multi-)Taub-NUT metric.</p>
+<p>In the next article, I will explain how those constructions can be used to understand deep concepts of the field theories, both in four and higher dimensions.</p>
+<h4>References</h4>
+<ul>
+<li>The classical book by C. Johnson,<em> D-branes</em>.</li>
+<li>For the M-wave, see <a href="https://arxiv.org/pdf/1305.6808.pdf">this</a> paper by Chu and Isono.</li>
+<li>The <a href="https://ncatlab.org/nlab/show/brane+scan">brane scan</a> at nCatLab.</li>
+<li>E. Witten, <em>Solutions Of Four-Dimensional Field Theories Via M Theory</em>.</li>
+</ul>

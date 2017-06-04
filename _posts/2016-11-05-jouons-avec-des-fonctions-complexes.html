@@ -1,0 +1,46 @@
+---
+layout: post
+title: Jouons avec des fonctions complexes
+date: 2016-11-05 16:03:05.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Hep-th
+- Maths
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/User:Jan_Homann">Jan Homann</a> est un contributeur de Wikipedia que je connais principalement pour les visualisations de certaines fonctions complexes, par exemple les <a href="https://en.wikipedia.org/wiki/Eisenstein_series">séries d'Eisenstein</a>. Il a pour cela écrit une petite fonction pour Mathematica que je vais utiliser pour rendre compte de quelques effets amusants des fonctions complexes. L'idée est simplement de représenter les nombres complexes par une couleur, la teinte décrivant l'argument et la saturation décrivant le module. En d'autres termes, plus c'est clair, plus le nombre est grand en module, et l'argument se traduit par les couleurs :</p>
+<ul>
+<li>Rouge : réel positif</li>
+<li>Jaune-vert : multiple positif de $i$</li>
+<li>Bleu clair : réel négatif</li>
+<li>Violet : multiple négatif de $i$.</li>
+</ul>
+<p>Une image vaut mieux qu'un long discours, voici représenté le plan complexe :</p>
+<p><img class="size-full wp-image-116 aligncenter" src="{{site.image_path}}/definition-1.svg" alt="definition" /></p>
+<p>Considérons maintenant le graphe d'une fonction $f: \mathbb{C} \rightarrow \mathbb{C}$. Si $f(z_0)=0$, le point $z_0$ sera noir, comme ci-dessus. En général, autour de ce point, toutes les couleurs de notre arc-en-ciel sont présentes une et une seule fois. Mais si le zéro est d'ordre $n$, comme pour la fonction $f(z)=z^n$, les couleurs sont présentes $n$ fois. Voici par exemple $f(z)=z^2$ :</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/z2.svg"><img class="size-full wp-image-117 aligncenter" src="{{site.image_path}}/z2.svg" alt="z2" /></a>Le rouge, représentant les réels positifs, est présent deux fois, sur les réels positifs et sur les réels négatifs. C'est normal, si $z$ est réel, $z^2$ est toujours positif. Vous pouvez aussi vérifier que les imaginaires reçoivent la couleur des réels négatifs, signe que $z^2$ est négatif si $z=i y$ avec $y$ réel.  Évidemment, si je prends une fonction avec plusieurs zéros, le phénomène se reproduit. Par exemple, $f(z)=z(z+i)(z-1)^2$, on obtient</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/fn.svg"><img class="size-full wp-image-118 aligncenter" src="{{site.image_path}}/fn.svg" alt="fn" /></a>On voit qu'on a deux zéros d'ordre $1$ et un zéro d'ordre $2$.</p>
+<p><strong>Des coupures</strong></p>
+<p>Maintenant, que se passe-t-il si on prend $n=\frac{1}{2}$ dans le raisonnement précédent ? Logiquement, on ne verra que la moitié des couleurs. En effet, voici $f(z)= \sqrt{z} = z^{1/2}$ :</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/sqrt.svg"><img class="size-full wp-image-119 aligncenter" src="{{site.image_path}}/sqrt.svg" alt="sqrt" /></a>On voit apparaître une disgracieuse coupure, de taille infinie. Où sont donc passés, par exemple, les réels négatifs en bleu clair ? Ils sont sur une autre feuille ! En effet, la fonction $f(z)= \sqrt{z}$ n'est pas univaluée sur $\mathbb{C}$, il est nécessaire de lui adjoindre sa sœur $g(z)= - \sqrt{z}$, dont la représentation est <a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/msqrt.svg"><img class="size-full wp-image-120 aligncenter" src="{{site.image_path}}/msqrt.svg" alt="msqrt" /></a>Vous pouvez vérifier que maintenant, en faisant deux tours autour de $0$, on revient au point de départ, en ayant parcouru toutes les couleurs, à condition qu'au niveau de la coupure, on saute d'une "feuille" à l'autre. Si on met deux zéros d'ordre $n$ et $m$ côte à côte et qu'on se place assez loin, tout se passe comme si on avait un zéro d'ordre $n+m$. Vous pouvez le vérifier sur le graphe de $f(z)=z(z+i)(z-1)^2$ ci-dessus : vu de loin, tout se passe comme si on avait un zéro en $z^4$. Du coup, on peut se débarrasser des coupures infinies en plaçant côte à côte deux zéros</p>
+<p>d'ordre $1/2$. Par exemple, regardons $f(z)=\sqrt{(z-1)(z+1)}$ :</p>
+<p><img class="size-full wp-image-122 aligncenter" src="{{site.image_path}}/branchcut.svg" alt="branchcut" /></p>
+<p><img class="size-full wp-image-123 aligncenter" src="{{site.image_path}}/branchcut2.svg" alt="branchcut2" /></p>
+<p>On le voit, les coupures partant des deux zéros se rencontrent, et en dehors de l'intervalle situé entre les deux zéros, tout est parfaitement régulier. Si je m'éloigne suffisamment, la coupure disparaîtra et le premier de ces deux graphes sera exactement semblable au premier graphe de cet article, qui représentait la fonction $f(z)=z$.</p>
+<p>Nous avons bien compris le cas $z^{1/2}$, et le cas $z^{1/3}$ n'est pas bien différent, sauf qu'à présent, il faut trois feuilles pour décrire toute la fonction. De chaque point part toujours une coupure, mais à présent il faut que trois coupures se rencontrent pour s'annihiler. Voici par exemple $f(z)=(z^3-1)^{1/3}$ :</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/3branches.svg"><img class="size-full wp-image-125 aligncenter" src="{{site.image_path}}/3branches.svg" alt="3branches" /></a></p>
+<p><strong>Et les pôles ?</strong></p>
+<p>Nous nous sommes beaucoup intéressés aux zéros, ces points noirs sur les représentations graphiques. Mais il existe un autre type de points intéressants, ce sont les pôles, où la fonction diverge. Ce points seront blancs, et les couleurs s'ordonnent dans l'autre sens : voici $f(z)=\frac{1}{z}=z^{-1}$ :</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/inverse.svg"><img class="size-full wp-image-126 aligncenter" src="{{site.image_path}}/inverse.svg" alt="inverse" /></a>Comme on le voit, un pôle n'est pas bien différent d'un zéro, c'est simplement un zéro d'ordre négatif, ici $-1$. Et donc, conséquence intéressante, un pôle et un zéro placés côte à côte s'annulent, comme deux charges de signes opposés. Et c'est plus qu'une simple analogie, comme vous pouvez le constater en savourant le graphe de $f(z)=\frac{2z-1}{2z+1}= (z-\frac{1}{2})^1 (z+\frac{1}{2})^{-1}$ : <a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/dipole.svg"><img class="size-full wp-image-127 aligncenter" src="{{site.image_path}}/dipole.svg" alt="dipole" /></a>Jusqu'à présent, nous avons regardé des fonctions assez simples. La prochaine fois, nous verrons que l'outil de visualisation introduit ici pour ces cas simples permet de découvrir de fascinantes propriétés de certaines fonctions.</p>
+<p>&nbsp;</p>

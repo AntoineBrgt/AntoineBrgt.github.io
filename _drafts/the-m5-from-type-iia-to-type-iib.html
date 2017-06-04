@@ -1,0 +1,45 @@
+---
+layout: post
+title: The M5 from type IIA to type IIB
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+  inline_featured_image: '0'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p><a href="http://antoinebourget.org/blog/index.php/2017/02/17/m-theory-to-the-rescue-of-strings-for-understanding-qtf/">Last time</a>, we saw that a setup of $D4$ and $NS5$ branes in type $IIA$ string theory (that is useful to study four-dimensional field theories) can be lifted to M-theory, in which case the two types of branes are avatars of the same $M5$ brane. In general, this $M5$ brane has a very complicated geometry, in order to produce the brane set-up illustrated in the previous post. However, there are situations where the geometry simplifies, for instance if the $D4$ branes coincide:</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/02/BraneIIASetupCoincident.svg"><img class="size-full wp-image-435 aligncenter" src="{{ site.baseurl }}/assets/BraneIIASetupCoincident.svg" alt="" /></a></p>
+<p>In this case, the $N$ $D4$ branes can be represented by $N$ (here, we have $N=3$) $M5$ branes wrapping a cylinder $\mathbb{R}\times S^1$ parametrized by $(x^6, x^{10})$ (and, of course, the four-dimensional spacetime). The $NS5$ branes are represented by other $M5$ which intersect the cylinder at particular values $t_{1,2,3}$ of $(x^6, x^{10})$, or of $$t = e^{x^6 + i x^{10}} \, . $$ In this last parametrization, there are two additional particular points, namely $t=0 , \infty$ which are the endpoints of the cylinder, and where the $N$ $M5$ branes intersect themselves. From the $6d$ point of view of the $N$ $M5$s, there are in this setup two kinds of singularities on the $S^2$ compact sphere:</p>
+<ul>
+<li>Simple punctures $t_{1,2,3}$</li>
+<li>Full punctures at $t= 0 , \infty$.</li>
+</ul>
+<p>The above theory can then be represented as</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/02/spherePuncturesSimpleFull2.svg"><img class="size-full wp-image-439 aligncenter" src="{{ site.baseurl }}/assets/spherePuncturesSimpleFull2.svg" alt="" /></a></p>
+<p>Alternatively, we can describe the four-dimensional theory associated to this curve by the quiver</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/02/quiver3333.svg"><img class="size-full wp-image-440 aligncenter" src="{{ site.baseurl }}/assets/quiver3333.svg" alt="" /></a>in which the coordinates of the three points $t_{1,2,3}$ have ratios that correspond to the coupling constant $e^{2 \pi i \tau} = q$ for the two gauge groups. This picture makes sense when both $q$s are very small, which means that we are in the following configuration:</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/02/quiver3333degenerate.svg"><img class="size-full wp-image-441 aligncenter" src="{{ site.baseurl }}/assets/quiver3333degenerate.svg" alt="" /></a></p>
+<p>But one important fact is that playing with punctures on Riemann surfaces, we can obtain theories that don't have an immediate interpretation as a type $IIA$ brane setup. One example is the Gaiotto's $T_N$ theory, which is defined by a sphere with three full punctures:</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/02/spherePunctures3Full.svg"><img class="size-full wp-image-442 aligncenter" src="{{ site.baseurl }}/assets/spherePunctures3Full.svg" alt="" /></a></p>
+<p>The three punctures can be placed at $t=0,1,\infty$, so the above theory has no marginal coupling constant, and there is no clear type $IIA$ brane configuration that can represent it. The idea of Benini, Benvenutti and Tachikawa in their 2009 <a href="https://arxiv.org/pdf/0906.0359.pdf">paper</a> was to use a type $IIB$ configuration and three types of five-branes ($D5$, $NS5$ and $(1,1)$), one for each puncture. A five-brane has a six-dimensional world-volume, but we will use one of these dimensions as part of a two-dimensional internal space where the different branes will behave differently. More precisely, the setup is as follows:</p>
+<p>\begin{equation}<br />
+\begin{array}{c|cccccccccc}<br />
+&amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 \\ \hline<br />
+D5 &amp; - &amp; - &amp; - &amp; - &amp; - &amp; - &amp; \cdot &amp; \cdot &amp; \cdot &amp; \cdot \\<br />
+NS5 &amp; - &amp; - &amp; - &amp; - &amp; - &amp; \cdot &amp; - &amp; \cdot &amp; \cdot &amp; \cdot \\<br />
+(1,1) &amp; - &amp; - &amp; - &amp; - &amp; - &amp; \theta &amp; \theta &amp; \cdot &amp; \cdot &amp; \cdot<br />
+\end{array}<br />
+\end{equation}</p>
+<p>The statement of Benini-Benvenutti-Tachikawa is that the brane junction illustrated below gives rise, after compactification on the circle $S^1$ parametrized by $x^4$, to the $T_3$ theory of Gaiotto, illustrated above by the sphere with three full punctures.</p>
+<p><img class="wp-image-448 aligncenter" src="{{ site.baseurl }}/assets/BraneJunction333.svg" alt="" width="343" height="280" /></p>

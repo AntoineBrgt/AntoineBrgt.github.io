@@ -1,0 +1,50 @@
+---
+layout: post
+title: Supersymmetric indices
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>Today [1. By this I mean the day when I started to write this post. I still don't know when it will finally be published! ] I was pleased to see a new paper by Carlo Angelantonj, Dan Israel, and Matthieu Sarkis about <a href="https://arxiv.org/abs/1611.09442">threshold corrections in heterotic flux compactifications</a>, as well as a paper by Seyed Morteza Hosseini, Anton Nedelin, and Alberto Zaffaroni about the <a href="https://arxiv.org/abs/1611.09374">Cardy limit of the topologically twisted index</a> and black strings in $AdS_5$. One common point of these two papers is that I personally know Matthieu and Morteza, and there is always a special flavor in articles whose authors are friends. Another common point is the crucial use in both cases of new "supersymmetric indices". I would like to take this opportunity to clarify a little bit what those indices are.</p>
+<p><strong>The Witten index</strong></p>
+<p>To my knowledge, the original supersymmetric index is the Witten index, introduced in 1982: $$I_W = \mathrm{Tr} \, (-1)^F \, . $$ In this expression, the trace means that we sum over all physical states of the theory, and $F$ is the fermion number operator. If this is to be an index, it should not change under continuous deformations of the parameters of the theory under consideration. And indeed, by the famous argument by Witten, this is the case in supersymmetric theories because at non-zero energy, fermions and bosons give the same contribution with opposite sign. Therefore only zero-energy states contribute (and so $I_W$ may be non-zero) but the index doesn't change when a zero-energy state becomes non-zero-energy and vice-versa.</p>
+<p>Let us give an example: the $4d$, $\mathcal{N}=1$ pure Yang-Mills theory with a simple gauge group $G$, we have $$I_W = \textrm{Dual Coxeter number of } G \, . $$ The dual Coxeter number of $SU(N)$, for instance, is just $N$.</p>
+<p>One of the reasons why the Witten index is important is that it tells us whether there can be a spontaneous breaking of supersymmetry:</p>
+<p>\begin{tikzpicture}<br />
+[+preamble]<br />
+\usepackage{tikz}<br />
+\usetikzlibrary{arrows}<br />
+\tikzstyle{arrow} = [thin,-&gt;,&gt;=angle 60]<br />
+[/preamble]<br />
+\node[draw,text width=4cm,align=center](1) at (0cm,0cm) {Supersymmetry is not spontaneously broken};<br />
+\node[draw,text width=4cm,align=center](2) at (5cm,0cm) {The vacuum energy (ie the energy of the lowest-energy state) is equal to zero};<br />
+\node[draw,text width=4cm,align=center](3) at (10cm,0cm) {$I_W \neq 0$};<br />
+\draw[implies-implies,double equal sign distance] (1) -- (2);<br />
+\draw[-implies,double equal sign distance] (3) -- (2);<br />
+\end{tikzpicture}</p>
+<p>Be careful about the implications in the above diagram, I didn't say that $I_W = 0$ implies spontaneous breaking of supersymmetry!</p>
+<p><strong>The Cecotti-Fendley-Intriligator-Vafa index</strong></p>
+<p>Ten years later, in 1992, a <a href="http://xxx.lanl.gov/pdf/hep-th/9204102v1">new "index"</a> was devised for $\mathcal{N}=(2,2)$ theories in two dimensions with two vacua $| a \rangle$ and $| b \rangle$: $$I_{CFIV} = \mathrm{Tr}_{| a \rangle \rightarrow | b \rangle} \, F (-1)^F \, .$$ The trace is taken on states that interpolate between the two vacua. This is (almost) an index because it is independent of (almost) all deformations of the theory under consideration. This is a kind of refinement of the Witten index, because</p>
+<ul>
+<li>The contribution of long multiplets is $0$</li>
+<li>The contribution of short (BPS) multiplets is $-1$.</li>
+</ul>
+<p>Hence if $I_{CFIV} \neq 0$, there must be short multiplets, and BPS kinks between the two vacua. The CFIV index is also called the new supersymmetric index, and this is the starting point of the Matthieu's work in the paper mentioned above.</p>
+<p><strong>The elliptic genus</strong></p>
+<p>A very good recent review on this subject is <a href="https://arxiv.org/abs/1608.02955">the chapter</a> written by Francesco Benini and Bruno Le Floch for the volume about localization in QFT.</p>
+<p><strong>The topologically twisted index</strong></p>
+<p>The Benini-Zaffaroni topologically twisted index $I_{BZ}$ deals with theories in two, three and four dimensions with (at least) four supercharges. More precisely, it is the partition function of the theory on $\Sigma_g \times T^d$ with $d=0,1,2$ and $\Sigma_g$ is a Riemann surface of genus $g$ on which we perform a topological $A$-twist. [1. The twist is necessary to preserve supersymmetry. ] This is a much more recent construction, originally presented in 2015 with $g=0$ and generalized to arbitrary Riemann surfaces in 2016, see <a href="https://arxiv.org/pdf/1605.06120v1.pdf">here</a>.</p>
+<p>In the case $g=1$, the BZ index reduces roughly to the Witten index. [1. Although there are many subtleties, one of them being that the computation is valid only when there is a continuous and non-anomalous $R$-symmetry. For instance, the result quoted above about the pure SYM theory can not be reproduced. ]</p>
+<p>&nbsp;</p>

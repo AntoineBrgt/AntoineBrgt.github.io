@@ -1,0 +1,149 @@
+---
+layout: post
+title: Toric geometry for physicists
+date: 2017-03-30 19:14:37.000000000 +02:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  inline_featured_image: '0'
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>The word "toric" is often used in string theory. Sometimes it just means that the object under consideration is doubly-periodic (if it is two-dimensional), or more generally periodic in all its directions. But this is not what I want to talk about. Here I want to talk about what is called <strong>toric geometry</strong>. For the mathematical introduction, I followed the nice introductory lecture notes by David Cox [1. Cox is also the author of the book "Primes of the form $x^2 + n y^2$, about which I will certainly talk one day or another on this blog. ] available <a href="http://dacox.people.amherst.edu/lectures/tutorial.pdf">here</a>. The <a href="http://dacox.people.amherst.edu/">personal website</a> of David Cox contain a lot of other resources on the subject. </p>
+<h2>Brief mathematical introduction</h2>
+<h4>Introduction to toric varieties</h4>
+<p>First, let us define what is a <strong>toric variety</strong>. This is a generalization of the projective space<br />
+\begin{equation}<br />
+\label{CP}<br />
+\mathbb{CP}^{n} = \frac{\mathbb{C}^{n+1} - \{(0,\dots ,0)\}}{\mathbb{C}^{\ast}} \, ,<br />
+\end{equation}<br />
+where the equivalence class by which we quotient is given by the action of the $\mathbb{C}^{\ast}$ in the denominator,<br />
+\begin{equation}<br />
+(z_1 ,\dots , z_{n+1}) \sim (\lambda z_1 ,\dots , \lambda z_{n+1})<br />
+\end{equation}<br />
+for $\lambda \in \mathbb{C}^{\ast}$. In equation (\ref{CP}), we have removed from $\mathbb{C}^{n+1}$ the only point which is fixed by the $\mathbb{C}^{\ast}$ action. To define toric varieties, we will generalize this construction and consider varieties of the form<br />
+\begin{equation}<br />
+\frac{\mathbb{C}^{n+k} - Z}{(\mathbb{C}^{\ast})^k} \, ,<br />
+\end{equation}<br />
+where $k$ is an integer that can be greater than one, and $Z$ is an appropriate subset of $\mathbb{C}^{n+k}$. We will see later how this $Z$ is chosen, but let us start with an example: [1. This example is taken from the book by Blumenhagen, Lüst and Theisen, "Basic concepts of string theory", p. 482. ]<br />
+\begin{equation}<br />
+\label{P112}<br />
+\mathbb{P}[1,1,2] = \frac{\mathbb{C}^{3} - \{(0,0,0)\}}{(z_1,z_2,z_3) \sim (\lambda z_1,\lambda z_2,\lambda^2 z_3)} \, ,<br />
+\end{equation}<br />
+where as always $\lambda \in \mathbb{C}^{\ast}$. As opposed to (\ref{CP}), the space (\ref{P112}) is singular. Indeed, look at the point $[0,0,1] \in \mathbb{P}[1,1,2]$. Points in a small neighborhood around this point can be parametrized as $[u,v,1]$, where $u$ and $v$ are small complex numbers. Then because of the action in (\ref{P112}), we have, with $\lambda = -1$,<br />
+\begin{equation}<br />
+[u,v,1] = [-u,-v,1] \, .<br />
+\end{equation}<br />
+This means that there is a $\mathbb{Z}_2$ orbifold singularity around the point $[0,0,1]$.</p>
+<h4>How to define a toric variety (the <em>fan</em> definition)</h4>
+<p>We have seen two examples of toric varieties, but we didn't give a precise definition. Let us proceed by steps. First, we define a (rational polyhedral) <strong>cone</strong> $\sigma \subset \mathbb{R}^n$ to be<br />
+\begin{equation}<br />
+\sigma = \{\lambda_1 \mathbf{u}_1 + \dots + \lambda_l \mathbf{u}_l | \lambda_1 \dots \lambda_l \geq 0\}<br />
+\end{equation}<br />
+where $(\mathbf{u}_1 , \dots , \mathbf{u}_l) \in (\mathbb{Z}^n)^l$. Now that we know what is a cone, we define a <strong>fan</strong> $\Sigma$ to be a finite collection of cones satisfying some technical conditions. [1. Those conditions are that the faces of the cones in $\Sigma$ are also cones in $\Sigma$, and the intersection of any two cones in $\Sigma$ is a face of these two cones. ] In particular, the fan $\Sigma$ contains $r$ one-dimensional cones $\rho_i$ (for $i=1 , \dots , r$), and we call $\mathbf{n}_i \in \mathbb{Z}^n$ the generator of $\rho_i \cap \mathbb{Z}^n$.</p>
+<p>Now we are ready to generalize the definition (\ref{CP}). [1. In fact, there is also a more abstract definition, that goes as follows. We define the dual cone<br />
+\begin{equation}<br />
+\sigma^{\vee} = \{\mathbf{m} \in \mathbb{R}^n | \forall \mathbf{u} \in \sigma , \, \langle \mathbf{m} , \mathbf{u} \rangle \geq 0\} \, .<br />
+\end{equation}<br />
+One can show that $\sigma^{\vee} \cap \mathbb{Z}^n$ is finitely generated, by which we mean that there exist $(\mathbf{m}_1 , \dots \mathbf{m}_l)\in (\sigma^{\vee} \cap \mathbb{Z}^n)^l $ such that all points of $\sigma^{\vee} \cap \mathbb{Z}^n$ are linear combination of the $(\mathbf{m}_1 , \dots \mathbf{m}_l)$ with coefficients in $\mathbb{N}$. These vector then define a map $\varphi : (\mathbb{C}^{\ast})^n \rightarrow \mathbb{C}^l$,<br />
+\begin{equation}<br />
+\varphi (t_1 , \dots , t_n) = (t_1^{\mathbf{m}_{1,1}} \cdots t_n^{\mathbf{m}_{1,n}} , \dots , t_1^{\mathbf{m}_{l,1}} \cdots t_n^{\mathbf{m}_{l,n}}) \, .<br />
+\end{equation}<br />
+We then define $U_{\sigma}$ as the smallest variety containing the image of $\varphi$. Then we glue together in a precise way all the $U_{\sigma}$ for $\sigma \in \Sigma$, and obtain $X_{\Sigma}$. It seems to me that this definition is more general, but the one presented in the main text is sufficient for our purposes. ] Introduce a variable $z_i$ for each one-dimensional cone in $\Sigma$. Then we define the toric variety<br />
+\begin{equation}<br />
+\label{defX}<br />
+X_{\Sigma} = \frac{\mathbb{C}^{r} - Z}{G} \, ,<br />
+\end{equation}<br />
+where</p>
+<ul>
+<li>$Z$ is the subset of $\mathbb{C}^{r}$ such that for all $\sigma \in \Sigma$,<br />
+\begin{equation}<br />
+\prod\limits_{\mathbf{n}_i \notin \sigma} z_i = 0 \, .<br />
+\end{equation}
+</li>
+<li>$G$ is the subgroup of $(\mathbb{C}^{\ast})^r$, whose elements are all the $(\mu_1 , \dots , \mu_r) \in (\mathbb{C}^{\ast})^r$ such that<br />
+\begin{equation}<br />
+\prod\limits_{i=1}^r \mu_i^{\mathbf{n}_{i,1}} = \dots = \prod\limits_{i=1}^r \mu_i^{\mathbf{n}_{i,n}} = 1 \, .<br />
+\end{equation}
+</li>
+</ul>
+<p>With those definitions, we see that the dimension of $X_{\Sigma}$ is $r-(r-n)=n$, the dimension of the space where the cones live. </p>
+<h4>How to define a toric variety (the <em>polytope</em> definition)</h4>
+<p>Now we turn to another way of seeing a toric variety. This is based on a lattice polytope $\Delta \subset \mathbb{R}^n$, which by definition is the <em>convex hull</em> of a finite subset of $\mathbb{Z}^n$. This can be seen as an intersection of half-spaces, delimited by hyperplanes $F$ that we call the <strong>facets</strong> of $\Delta$, and oriented by a primitive vector $\mathbf{n}_F$, so that $\Delta$ is the intersection of all the spaces $\{\mathbf{m} \in \mathbb{R}^n | \langle \mathbf{m} , \mathbf{n}_F \rangle \geq -a_F \}$ for some integers $a_F$. Then for any <strong>face</strong> $\mathcal{F}$ of $\Delta$, we call $\sigma_{\mathcal{F}}$ the cone generated by the $\mathbf{n}_F$ for all facets $F$ containing $\mathcal{F}$. The family of all these cones defines a fan $\Sigma_{\Delta}$ (called the <strong>normal fan</strong> of $\Delta$), which itself defines a toric variety $X_{\Delta} = X_{\Sigma_{\Delta}}$. </p>
+<p>Now the points of $\Delta \cap \mathbb{Z}^n$ correspond to monomials in the homogeneous coordinates introduced above. More precisely, to each facet $F$ we associate the coordinate $z_i$ corresponding to the cone generated by $\mathbf{n}_i = \mathbf{n}_{F_i}$. Then each point $\mathbf{m} \in \Delta \cap \mathbb{Z}^n$ gives a monomial<br />
+\begin{equation}<br />
+\mathbf{z^m} := \prod\limits_{i=1}^r z_i^{\langle \mathbf{m} , \mathbf{n}_i\rangle + a_i} \, .<br />
+\end{equation}<br />
+All those monomials have the same degree, and they give all the monomials of this degree ! </p>
+<h4>Smooth or singular ?</h4>
+<p>There is an easy criterion that allows, given the fan description of a toric variety, to know whether it is smooth or singular. [1. For this property and the next one, see for instance theorem 3.2 <a href="https://www2.math.ethz.ch/education/bachelor/lectures/fs2015/math/alg_geom/brasselet">here</a>. ] Namely, a toric variety is smooth if and only if every cone in the fan can be generated by a <em>subset of a $\mathbb{Z}$-basis</em> of $\mathbb{Z}^n$. </p>
+<h4>Compact or non-compact ?</h4>
+<p>Another nice property can be deduced from the fan description : a toric variety is compact if and only if its fan covers all of $\mathbb{R}^n$. </p>
+<h2>Toric varieties and Calabi-Yau manifolds</h2>
+<p>Now we explain how we can construct Calabi-Yau (CY) spaces from toric manifolds. We follow the book by Ibañez and Uranga, "String theory and particle physics". </p>
+<h4>Compact CY inside a toric variety</h4>
+<p>We first recall that a large class of CY spaces can be constructed as hypersurfaces in complex projective spaces (\ref{CP}). For instance, we can consider the space $\mathbb{CP}^4$, with homogeneous coordinates $(z_1 , \dots , z_5)$, and look at the hypersurface satisfying $f(z_i)=0$ where $f$ is a homogeneous polynomial of degree $5$. The degree has to be $5$, because the holomorphic 3-form will locally be<br />
+\begin{equation}<br />
+\Omega = \frac{z_1 \mathrm{d} z_2 \mathrm{d} z_3 \mathrm{d} z_4 }{\partial f / \partial z_5}\, ,<br />
+\end{equation}<br />
+and the numerator and denominator need have the same degree because of the structure of the projective space. This CY is the famous quintic (it is a three complex-dimensional CY). </p>
+<p>This construction can be generalized as follows. Let us focus on three-dimensional CY spaces. In the toric variety<br />
+\begin{equation}<br />
+\frac{\mathbb{C}^{n+k} - Z}{(\mathbb{C}^{\ast})^k} \, ,<br />
+\end{equation}<br />
+consider the subspace described by $n-3$ equations $f_m(z_i)=0$ for $m=1 , \dots , n-3$, of degree $p_{m,j}$ for the action of the $j$-th $\mathbb{C}^{\ast}$ (for $j=1 , \dots , k$). These actions act with weights $q_{i,j}$ on the coordinates $z_i$ (for $i=1 , \dots , n+k$). Then the condition for having a CY is<br />
+\begin{equation}<br />
+\forall j \, , \qquad \sum\limits_{i} q_{i,j} =  \sum\limits_{m} p_{m,j} \, .<br />
+\end{equation}<br />
+The spaces obtained this way are known as <strong>toric CYs</strong>, and their properties can be obtained from the matrices $q_{i,j}$ and $p_{m,j}$. </p>
+<h4>Non-compact CY</h4>
+<p>The CYs defined in the previous paragraph were all compact. Often, it is included in the definition of a CY that it has to be compact (this is the case, for instance, on the Wikipedia article). However, one might be interested as well in non-compact CY (in this case, there are some slight adaptations to be made in the definition). Then, while compact CY can never be toric varieties themselves, those non-compact CY can. Let us consider again a three-dimensional CY. In that case, one can take the full space<br />
+\begin{equation}<br />
+\frac{\mathbb{C}^{3+k} - Z}{(\mathbb{C}^{\ast})^k} \, ,<br />
+\end{equation}<br />
+where the actions are denoted as before by a matrix $q_{i,j}$, and the CY condition reads<br />
+\begin{equation}<br />
+\forall j \, , \qquad \sum\limits_{i} q_{i,j} = 0 \, .<br />
+\end{equation}<br />
+An example that falls in this category of non-compact CY space is the conifold, where $k=1$ and the matrix $q_{i,j}$ is simply $(1,1,-1,-1)$. </p>
+<h2>Examples of toric varieties</h2>
+<h4>An example in dimensions</h4>
+<p>Let us illustrate with a simple example in two dimensions. We start with the polytope on the left of the image below. There are three facets (labeled 1,2,3), with normal inward primitive vectors drawn on the right. There are seven faces (the three sides, the three angles and the empty set), and accordingly the fan drawn in the middle contains seven cones (three two-dimensional domains, three half-lines and the central point). </p>
+<p>\begin{tikzpicture}<br />
+[+preamble]<br />
+    \usepackage{tikz}<br />
+[/preamble]<br />
+\filldraw [black] (0,0) circle (2pt);<br />
+\filldraw [black] (0,1) circle (2pt);<br />
+\filldraw [black] (0,2) circle (2pt);<br />
+\filldraw [black] (1,0) circle (2pt);<br />
+\node at (.5,-.5) {1};<br />
+\node at (-.5,1) {2};<br />
+\node at (1,1) {3};<br />
+\draw (0,0) -- (0,2);<br />
+\draw (0,0) -- (1,0);<br />
+\draw (1,0) -- (0,2);<br />
+\draw[->] (5,0) -- (6,0);<br />
+\draw[->] (5,0) -- (5,1);<br />
+\draw[->] (5,0) -- (3,-1);<br />
+\node at (6.5,0) {2};<br />
+\node at (5,1.5) {1};<br />
+\node at (2.5,-1) {3};<br />
+\node at (10,0) {$z_3^2$};<br />
+\node at (10,1) {$z_1 z_3$};<br />
+\node at (10,2) {$z_1^2$};<br />
+\node at (11,0) {$z_2$};<br />
+\end{tikzpicture}</p>
+<p>From the fan, we can compute $Z$, which is the space defined by $z_1=z_2=z_3=0$, and the group $G$, which is the set of $(\mu_1 , \mu_2 , \mu_3)$ with $\mu_1^0 \mu_2^1 \mu_3^{-2} = \mu_1^1 \mu_2^0 \mu_3^{-1} =1$, which is $(\mu_1 , \mu_2 , \mu_3) = (\lambda ,\lambda^2 ,\lambda )$. We deduce that the space is in fact what we have already seen above, see equation (\ref{P112}). The monomials of degree 2 are written on the right, for each node of the polytope diagram. </p>
+<p>Now we can easily deduce other properties of the variety : it is compact because the fan covers all of $\mathbb{R}^2$, it is singular because the vectors $(\mathbf{n}_1 , \mathbf{n}_3)$ don't form a basis of $\mathbb{Z}^2$, and it is not a CY because the three weights add up to $1+1+2 \neq 0$. </p>
+<h4>Three dimensions</h4>
+<p>The case of three-dimensional CY manifolds is particularly important for applications to string theory. Let us make some general comments about it. There is a theorem that allows to know directly from the fan if a toric variety is a CY three-fold or not : <em>the toric variety of a fan is a CY three-fold if and only if the primitive vectors generating the one-dimensional cones all lie in the same affine hyperplane</em>. An easy consequence is that these CY can not be compact, since such vectors can not generate a cone that covers all of $\mathbb{R}^3$. Another convenient feature is that fans are easy to represent : we can draw the primitive vectors as points on the affine hyperplane. This gives a graph in a two-dimensional plane. The dual of this graph is called the <strong>toric diagram</strong> of the CY three-fold. </p>

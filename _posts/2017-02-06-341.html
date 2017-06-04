@@ -1,0 +1,87 @@
+---
+layout: post
+title: Introduction to Matrix Models and Topological QFT
+date: 2017-02-06 16:40:03.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>These are reading notes based on the book by Marcos Mariño, <em>Chern-Simons Theory, Matrix Models and Topological Strings</em>, Clarendon press, Oxford, 2005. It includes extensive quotations.</p>
+<h3>Matrix Models</h3>
+<p>Matrix models are quantum gauge theories in zero dimensions. Consider an action $\frac{1}{g_s}W(M) = \frac{1}{2g_s} \mathrm{Tr} M^2 + \frac{1}{g_s} \sum\limits_{p \geq 3} \frac{g_p}{p} \mathrm{Tr} M^p$ for a Hermitian $N \times N$ matrix. The partition function $Z$ can be evaluated by perturbation theory around the Gaussian point as a power series in the $g_p$, using fatgraphs. The perturbative expansion of the free energy $F = \log Z$ will involve only connected vacuum bubbles and we can write<br />
+\begin{equation}<br />
+\label{eqFreeEnergyMatrix}<br />
+F (t) = \sum\limits_{g=0}^{\infty} \sum \limits_{h=1}^{\infty} F_{g,h} g_s^{2g-2} t^h = \sum\limits_{g=0}^{\infty} F_g(t) g_s^{2g-2} \, ,<br />
+\end{equation}<br />
+where $g$ is the genus[1. A fatgraph is characterized by its number of edges $E$, of vertices $V$, and closed loops $h$. The genus is defined by $2g-2 = E-V-h$.] of the fatgraphs, $h$ is the number of holes and $t=Ng_s$ is the 't Hooft parameter. The right-hand side is the large $N$ expansion at fixed $t$.</p>
+<p>How to compute $F_g(t)$ ? There is a clever trick to tackle this problem. The matrix model has a gauge symmetry $M \rightarrow U M U^{\dagger}$, which can be used to diagonalize $M$. Using the Fadeev-Popov technique we can rewrite $Z$ as an integral over the eigenvalues:<br />
+\begin{equation}<br />
+\begin{split}<br />
+Z &amp; = \frac{1}{\mathrm{Vol} U(N)} \int \mathrm{d} M e^{- \frac{1}{g_s} W (M)}  \\<br />
+&amp; = \frac{1}{N!} \int \prod\limits_{i=1}^N  \frac{\mathrm{d} \lambda_i}{2 \pi} e^{N^2 S_{\mathrm{eff}}(\lambda)} \, ,<br />
+\end{split}<br />
+\end{equation}<br />
+where the effective action is<br />
+\begin{equation}<br />
+S_{\mathrm{eff}}(\lambda) = - \frac{1}{tN} \sum\limits_{i=1}^N W(\lambda_i) + \frac{2}{N^2} \sum\limits_{i&lt;j} \log |\lambda_i - \lambda_j | \, .<br />
+\end{equation}<br />
+In the large $N$ limit, the eigenvalues can be described by the density function $\rho (\lambda)$ that can be computed[1. One has to solve $\frac{1}{2t} W'(\lambda) = \mathrm{P} \int \frac{\rho(\lambda ') \mathrm{d} \lambda'}{\lambda - \lambda'}$, which can be done by introducing the resolvent -- there is a rich domain of research.] by variation of $S_{\mathrm{eff}}(\lambda)$. The effective action can be expressed in terms of $\rho$, and one can show that $F_0(t) = t^2  S_{\mathrm{eff}}(\rho)$. Higher-genus coefficients can also be obtained.</p>
+<p>Note that a different strategy, involving orthogonal polynomials, can be used to compute the $F_g(t)$.</p>
+<h3>Topological Sigma Models</h3>
+<h4>Cohomological TQFT</h4>
+<p>A cohomological TQFT[1. The cohomological topological QFTs are also called topological theories of the <em>Witten type</em>. ] is a QFT defined on a manifold $M$ that has an underlying scalar symmetry $\delta$ (called <em>topological</em> symmetry) acting on the fields $\phi_i$ in such a way that the correlation functions don't depend on the background metric.</p>
+<p>If the energy-momentum tensor $T_{\mu\nu}$ can be written as<br />
+\begin{equation}<br />
+\label{TensorEq}<br />
+T_{\mu\nu} = \delta G_{\mu\nu}<br />
+\end{equation}<br />
+for some tensor $G_{\mu\nu}$, then by a standard calculation a correlator of $\delta$-invariant operators $\mathcal{O}$ doesn't depend on the metric.[1. We assume that $\delta$ is not anomalous, and we neglect boundary problems.] Here we will assume that $\delta^2 = 0$ and we restrict the observables to the cohomology of $\delta$. Another standard argument shows that in such cohomological theories, the semi-classical approximation for the computation of a correlation function is exact.</p>
+<p>The <em>descent equations</em> are the equations $\mathrm{d} \phi^{(n)} = \delta \phi^{(n+1)}$ that, if solved for a scalar topological observable $\phi^{(0)}$, provide a family of topological non-local observables $\int_{\gamma_{i_n}} \phi^{(n)}$ for $i_n=1 , \cdots , b_n$ and $n=1 , \cdots , \mathrm{dim} \, M$.</p>
+<h4>Topological Twists</h4>
+<p>An $\mathcal{N}=2$ sigma model, defined on a Riemann surface $\Sigma_g$, has four supercharges $Q_{\pm \pm}$, in addition to the spacetime generators (the translations $P_\mu$ and the rotation $J$) and internal $U(1)$ currents $F_{L,R}$. We define the vectorial current $F_V = F_L + F_R$ and the axial current $F_A = F_L - F_R$. We consider $d$ chiral and $d$ anti-chiral superfields $\Phi^I=(x^I, \psi^I , F^I)$ and $\Phi^{\bar{I}}$ and the action<br />
+\begin{equation}<br />
+S = \int_{\Sigma_g} \mathrm{d}^2 z \int \mathrm{d}^4 \theta K (\Phi^I , \Phi^{\bar{I}}) \, .<br />
+\end{equation}<br />
+This is a sigma model whose target is a Kähler manifold of complex dimension $d$ and metric $G_{I\bar{J}}= \partial_I \partial_{\bar{J}} K(x^I , x^{\bar{J}})$.</p>
+<p>This sigma model can be twisted in two different ways, with a redefinition of the spin current:</p>
+<ul>
+<li>A-twist : $\tilde{J} = J - F_V$.</li>
+<li>B-twist : $\tilde{J} = J + F_A$.</li>
+</ul>
+<p>Note that this amounts to gauging one of the two $U(1)$ global currents by coupling it to the spin connection. Since the axial current has an anomaly given by the first Chern class of $X$, the B-model makes sense only on a Calabi-Yau space, where $c_1(X)=0$. In each case, the four (fermionic) supercharges become two scalars (whose sum we call $\mathcal{Q}$) and one vector $G_\mu$ that satisfy<br />
+\begin{equation}<br />
+\mathcal{Q}^2 = 0 \quad \textrm{and} \quad \{ \mathcal{Q} , G_\mu \} = P_\mu \, .<br />
+\end{equation}<br />
+One can prove that the two twisted theories are cohomological TQFTs, by taking $\delta = \mathcal{Q}$ and finding an appropriate tensor that satisfies (\ref{TensorEq}).</p>
+<h4>Correlation Functions</h4>
+<p>Let us focus on the A-model on a Calabi-Yau $X$. One finds that the $\mathcal{Q}$-cohomology is given by operators[1. We don't explain here how the operators are constructed.] $\mathcal{O}_{\phi}$ where $\phi \in H^p(X)$, so the $\mathcal{Q}$-cohomology is in one-to-one correspondence with the de Rham cohomology of the target $X$. Then one can prove that $\langle \mathcal{O}_{\phi_1} \cdots \mathcal{O}_{\phi_l} \rangle = 0$ unless<br />
+\begin{equation}<br />
+\sum\limits_{k=1}^l \mathrm{deg} \, \phi_k = 2d(1-g) \, .<br />
+\end{equation}<br />
+This implies that for $g&gt;1$ all correlation functions vanish. This problem will be addressed next, by coupling the theory with two-dimensional gravity.</p>
+<h3>Topological Strings</h3>
+<p>Although the topological field theories described previously contain a lot of information in genus zero, they are trivial at higher genera due to selection rules, because a fixed metric was considered in the Riemann surface. In order to obtain a non-trivial theory at higher genus, we have to introduce the degrees of freedom of the two-dimensional metric. This means that we have to <strong>couple the TQFT to $2d$ gravity</strong>. </p>
+<h4>Closed strings</h4>
+<p>The twisted TQFTs of the previous section are very similar to the bosonic string, with $\mathcal{Q}$ playing the role of the BRST charge. This suggests the definition [1. See for instance equation (5.4.19) in Polchinski's book. ]<br />
+\begin{equation}<br />
+F_g = \int_{\bar{M}_g} \langle \prod\limits_{k=1}^{6g-6} \int_{\Sigma_g} \mathrm{d}^2 z \left( G_{zz}(\mu_k)_{\bar{z}} {}^z + G_{\bar{z} \bar{z}} (\bar{\mu}_k)_z {}^{\bar{z}} \right) \rangle \, ,<br />
+\end{equation}<br />
+where $\mu_k$ are the Beltrami differentials and $\bar{M}_g$ is the moduli space of Riemann surfaces of genus $g$. We can decompose $F_g = \sum_{\beta \in H^2(X,\mathbb{Z})} N_{g,\beta} Q^\beta$, where $N_{g,\beta}$ are the Gromov-Witten invariants[1. These invariants are in general rational, and they can be written in terms of the integer Gopakumar-Vafa invariants.], with $Q^\beta = \exp \left( - \int_{\beta} \omega \right)$ and $\omega$ the complexified Kähler form on $X$.</p>
+<p>There is a relation between topological string amplitudes and physical superstring amplitudes. For instance, type IIA/B compactified on $X$ is $\mathcal{N}=2$ supergravity in four dimensions. The low-energy effective action for the vector multiplets (up to two derivatives) is coded by the prepotential, which is $F_0$ of the A/B models of topological strings. The higher-genus $F_g$ corresponds to other couplings in the supergravity theory.</p>
+<h4>Open strings</h4>
+<p>The previous discussion can be extended to open strings if we replace the Riemann surface $\Sigma_g$ by $\Sigma_{g,h}$, with $h$ holes. It is then necessary to specify boundary conditions in $X$: for the A model it turns out that the relevant boundary conditions are Dirichlet and given by Lagrangian[1. A Lagrangian submanifold is a cycle on which the Kähler form vanishes.] submanifolds of $X$.</p>
+<h3>String theories and Gauge theories</h3>
+<p>In equation (\ref{eqFreeEnergyMatrix}), the middle term involves coefficients $F_{g,h}$ that could be seen as open string amplitudes on $\Sigma_{g,h}$. Is there such a string theory? In some cases, the answer is yes, and involves open topological strings whose target is a Calabi-Yau with topological D-branes. The identification is obtained using string field theory.</p>
+<p>Now the right-hand side of (\ref{eqFreeEnergyMatrix}) looks more like a closed string amplitude, which would be related to the open string theory by an open-closed duality. This kind of dualities are associated to <em>geometric transitions</em> that relate different geometric backgrounds.</p>
+<h4>Notes</h4>

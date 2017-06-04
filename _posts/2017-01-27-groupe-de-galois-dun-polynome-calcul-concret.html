@@ -1,0 +1,46 @@
+---
+layout: post
+title: 'Groupe de Galois d''un polynôme : calcul concret'
+date: 2017-01-27 12:05:53.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>Je voudrais rassembler ici quelques techniques élémentaires permettant dans certains cas de calculer le groupe de Galois d'un polynôme. Les références que j'ai utilisées sont le <a href="https://gargantua.polytechnique.fr/siatel-web/linkto/mICYYYS8ZJW">cours</a> que j'ai suivi à l'École Polytechnique, ainsi que ce <a href="http://math.univ-lyon1.fr/~tchoudjem/ENSEIGNEMENT/GALOIS/td10.pdf">TD</a> pour l'exemple traité en détail.</p>
+<p>Soit $k$ un corps parfait [1. Je ne veux pas entrer dans les détails de ce que cela signifie. Pour nous, il suffit de savoir que si un corps est fini, ou de caractéristique nulle, il est parfait. ] et soit $\Omega$ la clôture algébrique [2. Tout corps $k$ admet une clôture algébrique unique à $k$-isomorphisme près, c'est le théorème de Steinitz. Par définition, tout polynôme à coefficients dans $k$ est scindé dans la clôture algébrique, c'est-à-dire qu'il se factorise en produit de facteurs de degré 1 dans cette clôture. ] de $k$. Considérons un polynôme $P \in k[X]$ unitaire de degré $n$ et de racines distinctes [3. Que se passe-t-il si $P$ a des racines multiples ? Dans ce cas, on considère simplement le polynôme $Q = \prod (X-x_i)$ où le produit est sur toutes les racines distinctes de $P$, et le groupe de Galois de $Q$ sera le même que celui de $P$. Il n'y a donc pas à se soucier des racines multiples. ]$x_1 , \dots , x_n$. Le groupe de Galois de $P$ sur $k$ est le groupe de Galois de son corps de racines $K = k[x_1 , \dots , x_n]$, vu comme extension de $k$. Il est clair que l'on peut voir le groupe de Galois comme un sous-groupe de $\mathfrak{S}_n$, puisqu'un élément de $G$ laisse tous les coefficients du polynôme invariants, et qu'il n'est pas difficile de montrer que le morphisme de groupe est injectif.</p>
+<p>Listons quelques propriétés du groupe de Galois :</p>
+<ol>
+<li>$P$ est irréductible $\Leftrightarrow$ l'action de $G$ sur les racines est transitive (il n'y a qu'une seule orbite).</li>
+<li>Si $k = \mathbb{F}_p$ est le corps à $p$ éléments ($p$ premier) et $P$ est irréductible de degré $n$, alors $G \approx \mathbb{Z}_n$ et est généré par un cycle de longueur $n$.</li>
+<li>Le discriminant de $P$ est un carré de $k^{\ast}$ $\Leftrightarrow$ $G \subset \mathfrak{A}_n$ (pourvu que $k$ ne soit pas de caractéristique 2).</li>
+<li>Si la réduction $\bar{P}$ modulo $p$ premier de $P \in \mathbb{Z}[X]$ unitaire est séparable, alors $P$ est séparable et $G = \mathrm{Gal}(P, \mathbb{Q})$ admet un sous-groupe isomorphe à $ \mathrm{Gal}(\bar{P},\mathbb{F}_p)$.</li>
+<li>Si $K$ et $L$ sont deux extensions de $k$, et[4. Si cette hypothèse n'est pas vérifiée, le groupe de Galois du produit n'est pas le produit usuel des deux groupes de Galois mais leur produit <em>amalgamé</em>. ] $K \cap L = k$,  alors $\mathrm{Gal}(KL/k) = \mathrm{Gal}(K/k) \times \mathrm{Gal}(L/k)$.</li>
+</ol>
+<p>Dans certains cas, ces propriétés suffisent à calculer le groupe de Galois d'un polynôme à coefficients entiers. Donnons maintenant un exemple de calcul.</p>
+<p><strong>Exemple<br />
+</strong></p>
+<p>Prenons $P = X^5 + 10 X^3 - 10 X^2 + 35 X - 18$. On calcule sans peine que le pgcd de $P$ et de $P'$ vaut $1$, ce qui prouve que le polynôme est séparable. Nous pouvons donc appliquer les propriétés ci-dessus. On peut commencer par calculer le discriminant, qui vaut $2^6 5^8 11^2$. C'est un carré, donc $G$ est un sous groupe de $\mathfrak{A}_5$. Ce groupe d'ordre $60$ a beaucoup de sous-groupes, donc il nous faut plus d'informations.</p>
+<p>Pour utiliser la propriété 1, il faudrait déterminer si $P$ est réductible ou non. Un moyen efficace prouver l'irréductibilité d'un polynôme est le <a href="https://fr.wikipedia.org/wiki/Crit%C3%A8re_d%27Eisenstein">critère d'Eisenstein</a>, éventuellement combiné avec un changement de variable $X \rightarrow X + a$, pour $a$ entier. Ici, on calcule avec un logiciel de calcul formel le pgcd des coefficients (excepté le coefficient dominant qui vaut $1$) de $P(X+a)$ pour plusieurs entiers $a$, et on trouve qu'il vaut $5$ pour $a=3$. Regardons cela plus en détail : $$P(X+3) = X^5+15 X^4+100 X^3+350 X^2+650 X+510 \, . $$ Comme $5^2$ ne divise pas $510$, on en déduit que $P$ est irréductible. Son groupe de Galois est donc transitif.</p>
+<p>Il faut maintenant en savoir plus sur les éléments du groupe de Galois.</p>
+<ul>
+<li>Modulo $2$, on n'apprend pas grand chose, car le polynôme s'écrit $X(X+1)^4$, et le groupe de Galois est trivial.</li>
+<li>Regardons la réduction modulo $3$. On voit que $0$ et $1$ sont racines, donc on peut factoriser par $X(X-1)$. Le facteur restant est $X^3+X^2-X+1$, qui n'a clairement pas de racines dans $\mathbb{F}_3$. Comme ce polynôme est de degré $3$, il est en conséquence irréductible, et son groupe de Galois est $\mathbb{Z}_3$ d'après la propriété 2. D'après la propriété 5, le groupe de Galois de la réduction de $P$ modulo $3$ est donc $\mathbb{Z}_3$, et par la propriété 4, $G$ contient $\mathbb{Z}_3$ comme sous-groupe.</li>
+<li>Modulo $5$, $\bar{P}$ vaut simplement $(X+2)^5$, on n'apprend rien.</li>
+<li>Modulo $7$, on trouve que $\bar{P}$ n'a pas de racine ! C'est intéressant : soit $\bar{P}$ se factorise en $P_2 P_3$ (les indices indiquent le degré des polynômes), soit il est irréductible. Si $\bar{P}$ se factorise, alors le groupe de Galois de $P$ contiendrait comme sous-groupe un facteur $\mathbb{Z}_2$, autrement dit une transposition, [5. Cet argument est-il correct ?] ce qui est exclus puisque $G \subset \mathfrak{A}_5$. Donc $\bar{P}$ est irréductible, et les propriétés 2 et 4 garantissent que $G$ contient un cinq-cycle.</li>
+</ul>
+<p>Nous allons maintenant pouvoir déterminer $G$. Son cardinal est divisible par $3$ et $5$, donc par $15$, et il divise $60$ qui est le cardinal de $\mathfrak{A}_5$. Il y a donc trois possibilités, $15$, $30$ ou $60$. On peut alors regarder sur les tables des sous-groupes de $\mathfrak{A}_5$, par exemple <a href="http://schmidt.nuigalway.ie/subgroups/a5.pdf">ici</a>, et on constate qu'il n'y a pas de sous-groupe d'ordre $15$ ou $30$. On en déduit $G = \mathfrak{A}_5$.</p>
+<p><strong>Pour aller plus loin</strong></p>
+<p>On pourra me reprocher d'avoir utilisé des outils peu aisément généralisables, et d'avoir eu de la chance de trouver des informations utiles en observant les réductions de $P$ modulo $3$ et $7$. En ce qui concerne l'élimination du groupe d'ordre $15$, on pouvait aussi utiliser un <a href="https://groupprops.subwiki.org/wiki/Classification_of_groups_of_order_a_product_of_two_distinct_primes">résultat général</a> sur les groupes d'ordre le produit de deux nombres premiers. Pour l'élimination du groupe d'ordre $30$, on peut se servir d'un <a href="https://groupprops.subwiki.org/wiki/Order_of_simple_non-Abelian_group_divides_factorial_of_index_of_proper_subgroup">résultat</a> qui affirme grosso modo qu'un groupe simple non-abélien n'a pas de sous groupe d'indice petit (précisément, l'ordre du gros groupe simple doit diviser la factorielle de l'indice).</p>
+<p>En dépit de toutes ces techniques, déterminer un groupe de Galois reste un problème en général difficile. Il est d'autant plus remarquable qu'un algorithme existe bel et bien (pour des corps raisonnables comme $\mathbb{Q}$ ou $\mathbb{F}_p$), comme expliqué <a href="http://mathoverflow.net/questions/22923/computing-the-galois-group-of-a-polynomial">ici</a> et <a href="http://qcpages.qc.cuny.edu/~rmiller/Notices.pdf">là</a> ! Malheureusement, cet algorithme n'est pas très utile en pratique, et il faut recourir au genre d'astuces présentées ici. Je ne peux pas ne pas citer en conclusion le très bon résumé présenté dans <a href="http://math.stackexchange.com/questions/45893/how-to-find-the-galois-group-of-a-polynomial">cette</a> conversation.</p>
+<p>&nbsp;</p>

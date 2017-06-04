@@ -1,0 +1,58 @@
+---
+layout: post
+title: Brane dimers and quiver theories
+date: 2017-03-23 11:28:41.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+  inline_featured_image: '0'
+
+use_math: true
+
+
+
+  
+---
+
+<p>This post reviews a few aspects of the article <a href="https://arxiv.org/abs/hep-th/0504110">Brane Dimers and Quiver Gauge Theories</a>, by Franco, Hanany, Kennaway, Vegh and Wecht. The illustrations are taken from this article. Here I will focus on an example, the general construction is pedagogically explained in the article linked above.</p>
+<h2>Toric brane tilings and quiver theories</h2>
+<p>Let us consider a configuration in type IIB string theory as follows :</p>
+<p>\begin{equation}<br />
+\begin{array}{c|cccccccccc}<br />
+&amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 \\ \hline<br />
+NS5 &amp; - &amp; - &amp; - &amp; - &amp; \Sigma &amp; \Sigma &amp; \Sigma &amp; \Sigma &amp; \cdot &amp; \cdot \\<br />
+D5 &amp; - &amp; - &amp; - &amp; - &amp; -  &amp; \cdot &amp; - &amp; \cdot &amp; \cdot &amp; \cdot<br />
+\end{array}<br />
+\end{equation}</p>
+<p>Here $\Sigma$ is a two-dimensional surface embedded in $\mathbb{R}^2 \times T^2$ as indicated in the table. The torus $T^2$ is made of the two compact directions $4$ and $6$. If we look at the intersection $\Sigma \cap T^2$, we obtain a graph on $T^2$. Let us look at an example :</p>
+<p>&nbsp;</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/03/fluxes_cell_dP3_1.svg"><img class="size-full wp-image-481 aligncenter" src="{{site.image_path}}/fluxes_cell_dP3_1.svg" alt="" /></a>Here the black lines are the NS5 branes, and the faces contain D5 branes. The red dotted lines show the fundamental cells of the torus. An important property of the graph is that it is always bipartite, as represented by the black and white dots.</p>
+<p>Let us assume there are $N$ D5 branes in each face of the tiling. Then on the world-volume, we have a four-dimensional $\mathcal{N}=1$ gauge theory characterized by its gauge group, its matter content and its superpotential. This can all be read from the tiling :</p>
+<ul>
+<li>The faces are associated with the gauge nodes of the quiver.</li>
+<li>The links of the tiling are associated with chiral multiplets, which are arrows in the quiver.</li>
+<li>The vertices are associated with superpotential terms, whose sign is given by the color of the node. They correspond to certain loops in the quiver.</li>
+</ul>
+<p>For the above tiling, the quiver diagram is obtained as illustrated below :</p>
+<p><img class="size-full wp-image-477 aligncenter" src="{{site.image_path}}/dimer_quiver_dP3_1.svg" alt="" /></p>
+<p>From the tiling in a fundamental cell we see that the superpotential will have one order 6 term with positive sign, three order four terms with negative sign and two order three terms with positive sign. In other words, the brane tiling give a very physical realization of the quiver gauge theory !</p>
+<p>Note that the quiver diagram can be seen as the graph dual to the brane tiling. This means that it is a graph drawn on a torus, where the vertices are the gauge group factors, the links are the chiral multiplets and the faces are the superpotential terms. Only those quiver theories that admit such a representation can be obtained from a toric brane tiling. In our example, the toric quiver diagram is made of hexagons surrounded by six squares. Each square is surrounded by two hexagons and two triangles. Each triangle is surrounded by three squares.</p>
+<h2>The link with toric geometry</h2>
+<p>When we are given a toric bipartite graph, we can associate to each link a weight, as illustrated with the b) part of the first figure above. This weight is a pure sign if the link is inside a fundamental cell, and a sign and a fugacity if the link crosses the border of the fundamental cell, with an exponent which depends on the orientation of the link. In our example, the 12 links give 12 weights that can be gathered in a matrix<br />
+\begin{equation}<br />
+K=\left( \begin{array}{c|ccc}  &amp; \ \ 2 \ \ &amp; \ \ 4 \ \ &amp; \ \ 6 \ \ \\ \hline<br />
+1 &amp; 1+w &amp; 1-zw &amp; 1+z \\<br />
+3 &amp; 1   &amp; -1 &amp; -w^{-1} \\<br />
+5 &amp; -z^{-1} &amp; -1 &amp; 1 \end{array} \right)<br />
+\end{equation}<br />
+where the lines correspond to the white nodes and the columns to the black nodes. The determinant of this matrix is a (generalized) polynomial<br />
+\begin{equation}<br />
+P(z,w)=w^{-1}z^{-1}-z^{-1}-w^{-1}-6-w-z+wz<br />
+\end{equation}<br />
+whose coefficients can be represented in a diagram as follows:</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2017/03/toric_dP3_1.svg"><img class="size-full wp-image-485 aligncenter" src="{{site.image_path}}/toric_dP3_1.svg" alt="" /></a></p>
+<p>This is an example of a <em>toric diagram</em>. It encodes toric geometry data that can be seen as the Calabi-Yau space probed by D3 branes that give our configuration after two T-dualities. For more details about all this construction, one can refer to <a href="https://arxiv.org/abs/0706.1660">this review</a> by Kennaway.</p>

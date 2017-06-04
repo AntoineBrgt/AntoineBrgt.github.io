@@ -1,0 +1,40 @@
+---
+layout: post
+title: 'MOD 3 : Gravity is the square of Gauge theory'
+date: 2016-11-07 13:20:02.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Hep-th
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+
+---
+
+<p>I have already said a few words about scattering amplitudes in a <a href="http://antoinebourget.org/blog/index.php/2016/10/19/mod-2-amplitudes-and-the-scattering-equations/">previous</a> post, where I promised I would talk about the Cachazo-He-Yuan (CHY) formula. This formula was found in 2013, but just a few years before, a long standing "folklore theorem" had been understood in a new and deeper way. This will be the subject of this post, and hopefully next time we can deal with the CHY formula. So this folklore theorem I'm talking about is the title of this post, namely</p>
+<p style="text-align: center;"><strong>Gravity = (Gauge theory)².</strong></p>
+<p style="text-align: left;">This curious relation is quite familiar for string theorists since the glorious days of perturbative string theory in the mid '80s. In 1986, Kawai, Lewellen and Tye derived at tree level a set of formulas expressing closed string amplitudes in terms of sums of products of open string amplitudes. In the low-energy limit, or equivalently the $\alpha ' \rightarrow 0$ limit, this gives a relation between gravity amplitudes and gauge theory amplitudes. More precisely, at tree level in field theory, graviton scattering must be expressible as a sum of products of well defined pieces of non-abelian gauge theory scattering amplitudes. For instance the four-graviton tree-level amplitude $M_4^{\textrm{tree}}$ and the four-gluon tree-level amplitude $A_4^{\textrm{tree}}$ are related by the KLT formula $$M_4^{\textrm{tree}}(1234) = (p_1 + p_2)^2 A_4^{\textrm{tree}} (1234)A_4^{\textrm{tree}}(1243). $$ There are also formulas for amplitudes with more gravitons or gluons, but they quickly become very intricate, and it is difficult to rephrase it nicely as "Gravity = (Gauge theory)²", as is the case for the four-point functions. And the exponents in the above formula are shouting at us that this is only a tree-level formula, which is then only of limited interest.</p>
+<p style="text-align: left;">As we have just said, the KLT formula becomes more involved when the number of particles becomes bigger, and this is due to the sum over all orderings of colors in the Yang-Mills amplitude. Let us examine how such an amplitude can be decomposed. One key point is to rewrite all possible interactions (this means the $3$-point and the $4$-point interactions) in terms of just $3$-point interactions, introducing if necessary new virtual particles and adjusting the color factors in such a way that the final amplitude does not change.[1. Look at the references for more details about this crucial step. ] Then we can write $$A_n^{\textrm{tree}} = g^{n-2} \sum\limits_i \frac{n_i c_i}{\prod p_{\alpha_i}^2}$$ where the sum is over all the diagrams with cubic vertices that produce the amplitude, $g$ is the coupling constant, the $1/p_{\alpha_i}^2$ stand for the internal propagators, the $c_i$ are color factors (built out of the structure constants $f^{abc}$ of the gauge theory) and the $n_i$ are kinematic factors.  Now if we consider functions $\Delta_i$ satisfying $$\sum\limits_i \frac{\Delta_i c_i}{\prod p_{\alpha_i}^2} = 0 , $$ then changing $n_i \rightarrow n_i + \Delta_i$ doesn't change the final amplitude. Such a transformation is called a <em>generalized gauge transformation</em>.</p>
+<p style="text-align: left;"><strong>The Color-Kinematic duality and Gravity</strong></p>
+<p style="text-align: left;">In 2008, <a href="https://arxiv.org/abs/0805.3993">Bern, Carrasco and Johansson</a> proposed the so-called <strong>color-kinematics duality</strong>. It says that there exists a generalized gauge transformation such that the $n_i$ have the same algebraic relations as the $c_i$, or more precisely $n_i+n_j = 0$ iff $c_i + c_j = 0$, and $n_i+n_j+n_k = 0$ iff $c_i + c_j +c_k= 0$. After this transformation is performed, gravity tree amplitudes are given by $$M_n^{\textrm{tree}} \sim  \sum\limits_i \frac{n_i \tilde{n}_i}{\prod p_{\alpha_i}^2}. $$ Here the $\tilde{n}_i$ are the factors corresponding to another gauge theory. This is really an astounding statement: if one can find a gauge theory where the amplitudes are organized so that they satisfy the color-kinematic duality, then the gravity amplitudes are just obtained by replacing the color factors by kinematic factors of another gauge theory, which doesn't even have to satisfy the color-kinematic duality. The gravity theory whose amplitudes are thus computed is the theory whose spectrum corresponds to the product of the spectra of the two gauge theories. This is a very natural idea in perturbative string theory on the sphere (for the closed string) and on the disk (for the open string). For instance for $\mathcal{N}=8$ supergravity, the two gauge theories are $\mathcal{N}=4$ SYM.</p>
+<p style="text-align: left;">So in this case, we see that our "theorem" is realized in a simpler way, and is valid for all $n$ and not just for $n=4$. However, the "tree" exponents are still annoying... But in 2010, the same authors conjectured that the relation remains true, with the necessary adaptations, between loop amplitudes! Roughly, gauge theory and gravity amplitudes are related via $$A_n^{\textrm{loop}} \sim  \sum\limits_j  \int \prod\limits_{l=1}^L \frac{d p_l}{(2\pi)^D} \frac{1}{S_j} \frac{n_i c_j}{\prod p_{\alpha_i}^2}$$ and $$M_n^{\textrm{loop}} \sim  \sum\limits_j  \int \prod\limits_{l=1}^L \frac{d p_l}{(2\pi)^D} \frac{1}{S_j} \frac{n_i \tilde{n}_j}{\prod p_{\alpha_i}^2} .$$ Here $L$ is the number of loops, and the $S_j$ are the internal symmetry factors of the diagrams. The other notations should be self-evident.</p>
+<p style="text-align: left;">This conjecture, inspired from ideas based on unitarity, has been tested in several non-trivial examples. As is clear on the expressions above, it gives a satisfactory precise statement for our would-be theorem. Moreover, it makes it simpler to compute several supergravity amplitudes. More details can be found in the book by Henriette Elvang, Yu-tin Huang, available on the arXiv.</p>
+<p style="text-align: left;"><strong>Holography in flat space</strong></p>
+<p style="text-align: left;">As a final comment, let us point out that there is another well-known relation between gravity and gauge theory, through holography, in the $AdS/CFT$ correspondence. In this case, it seems that <em>one</em> gauge theory is equivalent to a gravitational theory. However, the fact that the gravitational space-time is $AdS$ implies that there is no possible gravitational $S$-matrix, and equivalently in a CFT there are no asymptotic states, and therefore no amplitudes. In fact, the subject of this note can be seen as holography in flat space. Indeed, we learn deep information, both at tree-level and at the multi-loop level, just from boundary data, ie the kinematics data of the particle that come from infinity and go back to infinity. One can roughly remember the slogan :</p>
+<p style="text-align: center;"><em>S-matrix = Holography in flat space.</em></p>
+<p><strong>References</strong></p>
+<ul>
+<li><em>Perturbative quantum gravity and its relation to gauge theory</em>, Zvi Bern. gr-qc/0206071</li>
+<li><em>Scattering Amplitudes</em>, Henriette Elvang, Yu-tin Huang. arXiv:1308.1697</li>
+<li><em>New Relations for Gauge-Theory Amplitudes</em>, Bern, Carrasco and Johansson. arXiv:0805.3993</li>
+<li><em>Perturbative Quantum Gravity as a Double Copy of Gauge Theory</em>, Bern, Carrasco and Johansson. arXiv:1004.0476</li>
+<li>Talk by Miguel Angel Vázquez-Mozo at Oviedo University, November 7th 2016.</li>
+</ul>
+<p>I thank Miguel Angel Vázquez-Mozo, Diego Rodriguez-Gomez and Carlos Hoyos for useful conversations on this topic.</p>

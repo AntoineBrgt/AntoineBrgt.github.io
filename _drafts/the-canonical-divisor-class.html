@@ -1,0 +1,57 @@
+---
+layout: post
+title: The Canonical Divisor Class
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _oembed_dbf3ccb088fcb0d0f3d32579a49d047a: "{{unknown}}"
+  _edit_last: '1'
+  inline_featured_image: '0'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>When, as a physicist, I want to read papers dealing with F-theory, I often encounter concepts from algebraic geometry with which I am not at ease. One typical example is the object<br />
+\begin{equation}<br />
+\mathcal{O}(- n K_B) \, ,<br />
+\end{equation}<br />
+where $n$ is a positive integer and $B$ is a complex surface. This appears for instance in <a href="https://arxiv.org/pdf/1312.5746.pdf">this</a> article (see equation 2.1) when describing an elliptically fibered Calabi-Yau over the base $B$. To be more precise, the authors consider a singular fibration $\pi : X \rightarrow B$ with an equation<br />
+\begin{equation}<br />
+y^2 = x^3 + fx + g \, ,<br />
+\end{equation}<br />
+where $f$ and $g$ are sections of the line bundles $\mathcal{O}(- 4 K_B) $ and $\mathcal{O}(- 6 K_B) $. In this post, I would like to pause and explain what this means, using only as a prerequisite what a (theoretical !) physicist hopefully knows. Obviously, the goal is to understand the important ideas, and I will not try to make a very rigorous nor a very general presentation. I will dedicate another post to the physical content of this construction.</p>
+<h3>Divisors in algebraic geometry</h3>
+<p>A divisor is a generalization of the concept of a codimension 1 subvariety in an algebraic variety, that applies to a larger class of objects (schemes, etc). Let us focus on algebraic varieties. A <strong>(Weil) divisor</strong> is a formal finite sum of irreducible closed subvarieties of codimension 1, weighted by integer coefficients,<br />
+\begin{equation}<br />
+\sum\limits_i n_i Z_i \, .<br />
+\end{equation}<br />
+For instance, if the variety has dimension 1 (think about a Riemann surface), then a (Weil) divisor is a weighted sum of points (the points are the codimension 1 subvarieties !).</p>
+<p>Let us stay on a Riemann surface for a while. A meromorphic function $f$ defined on this surface has a finite number of isolated zeros and poles, and it is natural to define the divisor of $f$ as<br />
+\begin{equation}<br />
+(f) := \sum\limits_z \mathrm{ord}_z (f) z \, .<br />
+\end{equation}<br />
+In this formula, the letter $z$ denotes the points of the Riemann surface. Any divisor that can be written $(f)$ for some meromorphic function $f$ is called a <strong>principal divisor</strong>, and two divisors that differ by a principal divisor are called <strong>linearly equivalent</strong>. As the name suggests, this is an equivalence relation, and the principal divisors belong to the trivial equivalence class, that contains $0$. A non-trivial class is the <strong>canonical divisor class</strong>, which is <em>the class of the divisors of nonzero meromorphic one-forms</em> (any such one-form can be obtained from any other by multiplication by a meromorphic function, so there is indeed a unique class). If the surface is called $X$, any divisor in the canonical divisor class is called a canonical divisor, and is denoted<br />
+\begin{equation}<br />
+K_X \, .<br />
+\end{equation}</p>
+<p>This can be generalized to higher dimensional varieties. Let $X$ be a $d$-dimensional algebraic variety, and $f$ be a non-zero rational function on $X$. We can define<br />
+\begin{equation}<br />
+(f) := \sum\limits_Z \mathrm{ord}_Z (f) Z \, .<br />
+\end{equation}<br />
+Now the sum runs over the irreducible closed sets $Z$ of codimension 1. One can then consider the divisor of a rational $d$-form $\omega$. Its class, up to linear equivalence, is called the canonical divisor $K_X$.</p>
+<h3>Divisors and Line Bundles</h3>
+<p>Let us consider a divisor $D$ on a variety $X$. One can construct an object $\mathcal{O}_X (D)$ from this divisor (it is a <a href="https://en.wikipedia.org/wiki/Coherent_sheaf">coherent sheaf</a>, but we won't need this), which is made of rational functions $f$ on $X$ such that<br />
+\begin{equation}<br />
+(f) + D \geq 0 \, .<br />
+\end{equation}<br />
+More properly, we say that $f$ is a <em>section</em> of $\mathcal{O}_X (D)$. Concretely, if $D$ is the divisor of a function $g$, $\mathcal{O}_X (D)$ is made of the functions $f$ such that $fg$ has no zeros.</p>
+<h3>Use in physics</h3>
+<p>https://arxiv.org/pdf/1104.2051.pdf</p>

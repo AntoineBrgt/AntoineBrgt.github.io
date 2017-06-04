@@ -1,0 +1,82 @@
+---
+layout: post
+title: Rigor and the Modular Anomaly
+date: 2017-02-15 18:42:55.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+  inline_featured_image: '0'
+use_math: true
+---
+
+<p>In this short note, I derive the modular transformation for the weight two Eisenstein series, and I emphasize the steps where problems that are sometimes neglected in the physical community, like absolute convergence or exchange of summation symbols and limits, are crucial. The Eisenstein $G_2$ function is defined by<br />
+\begin{equation}<br />
+G_2 (\tau) = \sum\limits_{c \in \mathbb{Z}} \sum\limits_{d \in \mathbb{Z}'_c} \frac{1}{(c \tau + d)^2} \, .<br />
+\end{equation}<br />
+Here $\zeta$ is the Riemann zeta function, and we have $\zeta (2) = \pi^2 / 6$. In our notation $\mathbb{Z}'_c$ is just $\mathbb{Z}$ when $c \neq 0$ and is $\mathbb{Z} - \{0\}$ when $c=0$. In other words, we have<br />
+\begin{equation}<br />
+\label{defG2}<br />
+G_2 (\tau) =  \sum\limits_{d \neq 0} \frac{1}{d^2} + \sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)^2} =  2 \zeta (2) + \sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)^2} \, .<br />
+\end{equation}<br />
+Now what happens if we perform an $S$-duality, replacing $\tau \rightarrow -1/ \tau$ ? Well,<br />
+\begin{equation}<br />
+\frac{1}{\tau^2} G_2 \left(-\frac{1}{\tau} \right) =  \sum\limits_{c \in \mathbb{Z}} \sum\limits_{d \in \mathbb{Z}'_c} \frac{1}{\tau ^2 (d- c / \tau )^2} \, ,<br />
+\end{equation}<br />
+and if we change the names of the summation indices,<br />
+\begin{equation}<br />
+\label{G2dual}<br />
+\frac{1}{\tau^2} G_2 \left(-\frac{1}{\tau} \right) = \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \in \mathbb{Z}'_d} \frac{1}{ (c \tau + d )^2} = 2 \zeta (2) +  \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)^2} \, .<br />
+\end{equation}<br />
+Look at how similar equations (\ref{defG2}) and (\ref{G2dual}) are ! If we were not careful, we would conclude that they are equal... But the sum, although convergent, is not absolutely convergent, and more care is needed. We will see that the two expressions (\ref{defG2}) and (\ref{G2dual}) are not equal. </p>
+<p>\begin{eqnarray}<br />
+G_2 (\tau) &=& \sum\limits_{c \in \mathbb{Z}} \sum\limits_{d \in \mathbb{Z}'_c} \frac{1}{(c \tau + d)^2} \\<br />
+ &=&  2 \zeta (2) + \sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)^2} \\<br />
+&=&  2 \zeta (2) + \sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)^2} - \sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)(c \tau + d+1)} \\<br />
+&=&  2 \zeta (2) + \sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)^2(c \tau + d+1)} \\<br />
+&=&  2 \zeta (2) +  \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)^2(c \tau + d+1)} \\<br />
+&=&  2 \zeta (2) +  \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)^2} - \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)(c \tau + d+1)}\\<br />
+&=&  2 \zeta (2) +  \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)^2} + \frac{2 \pi i}{\tau} \\<br />
+&=& \sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \in \mathbb{Z}'_d} \frac{1}{ (c \tau + d )^2}  + \frac{2 \pi i}{\tau} \\<br />
+&=& \frac{1}{\tau^2} G_2 \left(-\frac{1}{\tau} \right)+ \frac{2 \pi i}{\tau} \, .<br />
+\end{eqnarray}<br />
+To go from the fourth to the fifth line, we have used the fact that the sum is absolutely convergent, and therefore we can exchange the two summation symbols. There are two crucial steps in this computation, where we need the astonishing results<br />
+\begin{eqnarray}<br />
+\sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)(c \tau + d+1)} &=& 0 \\<br />
+\sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)(c \tau + d+1)} &=&  - \frac{2 \pi i}{\tau} \, .<br />
+\end{eqnarray}<br />
+Those two equalities are a wonderful example of why rigor is important in mathematics, and to quote Diamond and Shurman in their splendid book <em>A First Course in Modular Forms</em>, this is a calculation "that should leave the reader deeply appreciative of absolute convergence in the future". Let us prove the two equalities above:<br />
+\begin{eqnarray}<br />
+\sum\limits_{c \neq 0} \sum\limits_{d \in \mathbb{Z}} \frac{1}{(c \tau + d)(c \tau + d+1)} &=& \sum\limits_{c \neq 0} \lim\limits_{N \rightarrow \infty} \left( \sum\limits_{d=-N}^{N-1} \frac{1}{c \tau + d} - \frac{1}{c \tau + d+1} \right) \\<br />
+&=& \sum\limits_{c \neq 0} \lim\limits_{N \rightarrow \infty}  \left( \frac{1}{c \tau -N} - \frac{1}{c \tau +N} \right) \\<br />
+&=& \sum\limits_{c \neq 0} 0\\<br />
+&=&0 \, .<br />
+\end{eqnarray}<br />
+\begin{eqnarray}<br />
+\sum\limits_{d \in \mathbb{Z}} \sum\limits_{c \neq 0} \frac{1}{(c \tau + d)(c \tau + d+1)} &=& \lim\limits_{N \rightarrow \infty} \sum\limits_{d=-N}^{N-1} \sum\limits_{c \neq 0} \left( \frac{1}{c \tau + d} - \frac{1}{c \tau + d+1} \right)\\<br />
+ &=& \lim\limits_{N \rightarrow \infty}  \sum\limits_{c \neq 0} \sum\limits_{d=-N}^{N-1} \left( \frac{1}{c \tau + d} - \frac{1}{c \tau + d+1} \right)\\<br />
+ &=& \lim\limits_{N \rightarrow \infty}  \sum\limits_{c \neq 0} \left( \frac{1}{c \tau -N} - \frac{1}{c \tau +N} \right) \\<br />
+ &=& \lim\limits_{N \rightarrow \infty} \frac{-2}{\tau}  \sum\limits_{c > 0} \left( \frac{1}{\frac{N}{\tau} + c} + \frac{1}{\frac{N}{\tau} - c} \right) \\<br />
+ &=& \lim\limits_{N \rightarrow \infty} \frac{-2}{\tau}  \left( \pi \, \mathrm{cot} \, \frac{\pi N}{\tau} - \frac{\tau}{N}\right)\\<br />
+ &=& \frac{-2}{\tau}  \left( \pi i - 0 \right)\\<br />
+ &=& - \frac{2 \pi i}{\tau}  \, .<br />
+\end{eqnarray}<br />
+In the process we have used the well-known identity<br />
+\begin{equation}<br />
+\frac{1}{\tau} + \sum\limits_{c > 0} \left( \frac{1}{\tau + c} + \frac{1}{\tau - c} \right) = \pi \, \mathrm{cot} \, \pi \tau \, .<br />
+\end{equation}</p>
+<p>As a final comment, note that in the literature a different normalization is often used, $E_2 = \frac{1}{2 \zeta (2)} G_2$. The transformation rule of this function under the modular $S$-duality then reads<br />
+\begin{equation}<br />
+\frac{1}{\tau^2} E_2 \left(-\frac{1}{\tau} \right) = E_2 (\tau) + \frac{6}{\pi i \tau} \, .<br />
+\end{equation}</p>
+<p>Note that the modularity can be restored if we agree to sacrifice holomorphy Define<br />
+\begin{equation}<br />
+ E_2^{\ast} (\tau) = E_2 (\tau) + \frac{6}{\pi i (\tau - \bar{\tau})} \, .<br />
+\end{equation}<br />
+Then the transformation rule reads<br />
+\begin{equation}<br />
+\frac{1}{\tau^2} E_2^{\ast} \left(-\frac{1}{\tau} \right) = E_2^{\ast} (\tau)\, .<br />
+\end{equation}</p>

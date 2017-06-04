@@ -1,0 +1,36 @@
+---
+layout: post
+title: Cylindres complexes
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<h3>Cylindres complexes</h3>
+<p>Considérons la courbe d'équation $xy=1$, avec $x$ et $y$ réels. Il est bien connu que cette courbe est une hyperbole. Maintenant, que se passe-t-il si $x$ et $y$ sont des nombres complexes ? On pourrait dire, quelle que soit la géométrie obtenue, qu'il s'agit d'une hyperbole complexe. Mais d'un point de vue topologique, nous avons affaire à un <strong>cylindre</strong> ! En effet, on peut agir sur la courbe (ce mot est maintenant à prendre au sens complexe, une courbe ayant donc deux dimensions réelles) de deux façons :<br />
+$$S^1 : (x,y) \mapsto (e^{i \alpha} x , e^{-i \alpha} y) $$<br />
+et<br />
+$$\mathbb{R}_{+} : (x,y) \mapsto (r x , r^{-1} y) \, . $$<br />
+Partant d'un point quelconque de la courbe, ces deux actions la génèrent entièrement. Notez en particulier que l'hyperbole réelle n'était pas connexe (elle possédait deux branches), mais que le cylindre complexe l'est bel et bien.</p>
+<p>Une autre façon de formuler la même observation est de constater que l'équation $xy = a$ dans n'importe quel corps $k$, avec $a \neq 0$, est invariante par l'action de $k^{\ast}$ donnée par $(x,y) \mapsto (u x , u^{-1} y)$ pour $u \in k^{\ast}$, et que cette action génère naturellement toutes les solutions de l'équation. D'un point de vue topologique, les solutions de $xy=1$ sont donc simplement $k^{\ast}$. Lorsque le corps de départ est celui des réels, on trouve bien deux branches isomorphes à $\mathbb{R}$, et quand le corps de départ est celui des complexes, on trouve $\mathbb{C}^{\ast}$, que l'on peut voir comme un cylindre réel. Le cas $a=0$ est singulier. Si l'on promeut $a$ au rang de variable complexe, l'équation $xy = a$ décrit donc une fibration de base $\mathbb{C}$, paramétrisé par $a$, par une fibre qui est un cylindre, et cette fibration possède un point singulier en $a=0$. </p>
+<h4>Ne pas se fier aux apparences</h4>
+<p>Concluons cette section par une remarque assez triviale, mais qui peut éviter certaines confusions. Si on utilise le changement de variables $\eta_1 = \frac{1}{2}(x+y)$ et $\eta_2 = \frac{1}{2i}(x-y)$, on a $xy = \eta_1^2 + \eta_2^2$. Autrement dit, l'équation<br />
+$$\eta_1^2 + \eta_2^2 = 1$$<br />
+dans $\mathbb{C}^2$ est celle d'un cylindre ! Ceci peut choquer notre intuition basée sur les nombres réels, et pour cause, le changement de variables introduit ci-dessus fait intervenir de façon cruciale un $i$, qui est responsable du passage d'une équation de type hyperbolique à une équation de type elliptique (l'équation d'un cercle). </p>
+<h3>Le conifold déformé</h3>
+<p>Regardons maintenant les solutions de $$C \qquad : \qquad xy-uv = a \, , $$où $x,y,u,v$ sont complexes, et $a>0$. Nous avons maintenant une variété de dimension complexe $3$. Comment la visualiser ? On peut se servir des résultats précédents. Pour cela, il faut une équation du type $xy = \mathrm{constante}$. Choisissons donc une variable additionnelle $Z = z+iw$, avec $z$ et $w$ réels, et écrivons que $xy-uv = a$ est équivalent à<br />
+$$\begin{cases} xy = a+Z \\ uv = Z \, . \end{cases}$$<br />
+Maintenant, à un point $Z$ donné, pourvu que $Z \neq 0$ et $a+Z \neq 0$, nous avons simplement le produit de deux cylindres $\mathbb{C}^{\ast} \times \mathbb{C}^{\ast}$, paramétrés par $(r_1 , \alpha_1 , r_2 , \alpha_2)$.<br />
+Considérons maintenant l'espace $\mathbb{R}^3$ paramétré par $(r_1 , r_2 , z)$. Au-dessus d'un point générique de cet espace, la variété $C$ est simplement $S^1 \times S^1 \times \mathbb{R}$ paramétré par $(\alpha_1 , \alpha_2 , w)$. On en déduit que <strong>$C$ est une fibration $T^2 \times \mathbb{R}$ au-dessus de la base $\mathbb{R}^3$</strong>. Mais il faut tenir compte des points singuliers en $z=0,-a$. Quels sont ces points singuliers dans la base $\mathbb{R}^3$ ? Dans le plan $z=0$, aux points $w=0$ de la fibre l'équation $uv=0$ est obtenue, donc on a une fibration singulière pour toute valeur de $r_2$. Il en va de même pour le plan $z=-a$. On en déduit que les lieux singuliers de la base $\mathbb{R}^3$ sont les deux droites<br />
+$$z=0$$</p>

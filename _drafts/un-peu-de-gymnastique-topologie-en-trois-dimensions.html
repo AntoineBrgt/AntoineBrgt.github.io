@@ -1,0 +1,34 @@
+---
+layout: post
+title: 'Un peu de gymnastique : topologie en trois dimensions'
+date: 
+type: post
+published: false
+status: draft
+categories:
+- Hep-th
+- Maths
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>La topologie, c'est amusant, et bien souvent, pour l'illustrer, on raconte tout un tas de choses passionnantes à propos de sphères, de tores et autres bretzels qu'on ne peut pas déformer les uns en les autres sans faire de trous. Mais j'ai le sentiment que l'on se limite en général à la topologie en dimension $2$ : en effet, si les objets que je viens d'évoquer vivent bien dans notre espace tri-dimensionnel habituel, on les assimile pour les besoins de la chose à leur surface, qui est, elle, bi-dimensionnelle. Ce choix est tout à fait raisonnable, car il est assez facile de visualiser cette topologie. Mais si nous explorions un peu les autres dimensions ?</p>
+<p>Mon but n'est pas de faire de la topologie générale, ni même de la topologie métrique en dimension finie quelconque. Je souhaite rester sur des choses faciles à visualiser. Alors, évidemment, il y a la dimension $1$, qui est très amusante, mais pas si facile : on se retrouve très vite à essayer de comprendre comment démêler des ficelles pleines de nœuds. J'en parlerai une autre fois. Reste enfin la dimension $3$.</p>
+<p><strong>Des objets de dimension trois</strong></p>
+<p>La dimension trois ne semble pas bien impressionnante. On y trouve des objets bien familiers, comme la boule $B^3$ ou le "tore plein" $\mathcal{T}^3$, qui ne sont que les versions remplies de la sphère $S^2$ et du tore $T^2$ vus comme des surfaces. Les exposants indiquent <em>toujours</em> la dimension de l'objet qu'ils désignent, la lettre $B$ est pour boule, $T$ pour tore et $S$ pour sphère. Je pense qu'il est facile de visualiser qu'un tore bi-dimensionnel est le produit de deux cercles, ce que l'on note $T^2=S^1 \times S^1$.</p>
+<p>Mais tournons-nous vers la sphère à trois dimensions, $S^3$. Cette sphère, comme toutes les sphères, n'a pas de frontière, et il ne faut surtout pas la confondre avec la boule $B^3$, qui a une frontière, égale à $S^2$ ! Pour comprendre $S^3$, on peut regarder comment sont construits $S^1$ et $S^2$:</p>
+<ul>
+<li>$S^1$, le cercle, est construit à partir de la droite infinie $\mathbb{R}$ en ajoutant un point à l'infini, ce qui la compactifie. On peut écrire $$S^1 = \mathbb{R} \cup \{\infty\}. $$</li>
+<li>De même, on peut voir $S^2$ comme un plan compactifié à l'aide d'un point à l'infini, $$S^2 = \mathbb{R}^2 \cup \{\infty\}. $$</li>
+<li>Pour $S^3$, on fait pareil : $$S^3 = \mathbb{R}^3 \cup \{\infty\}. $$ Cela traduit bien l'idée qu'on se fait d'une sphère : quelle que soit la direction que le prend en partant d'un point donné, je peut atteindre le point $\infty$, puis revenir au point de départ.</li>
+</ul>
+<p>Qu'en est-il du tore $T^3$ ? Il ne faut pas le confondre avec $\mathcal{T}^3$, dont nous avons parlé plus haut, qui est le volume situé à l'intérieur d'un tore $T^2$ (si $T^2$ est un pneu, $\mathcal{T}^3$ est l'air qui est dedans), et qui n'est pas à proprement parler un tore. En effet, un tore, comme une sphère, n'a pas de frontière. La construction de $T^3$ est analogue à celle de $T^2$ : $$T^3 = S^1 \times S^1 \times S^1. $$ Autrement dit, on prend un cube et on identifie les faces opposées. Si l'univers est un tore, alors si je voyage suffisamment longtemps vers la droite, je vais finir par revenir à mon point de départ en venant de la gauche.</p>
+<p><strong>Comment différencier une sphère d'un tore</strong></p>
+<p>Avec les définitions données ci-dessus, on pourrait croire que $T^3$ et $S^3$ se ressemblent : dans les deux cas, si nous vivons dedans, on peut partir dans une direction et revenir au point de départ en venant de la direction opposée. Il faut donc développer des outils plus raffinés pour sentir la différence. Par exemple, supposons que je déroule, lors de mon voyage, un fil à la manière d'Ariane. Une fois revenu au point de départ, je tombe donc sur le début du fil, et je peux le nouer avec l'autre extrémité, formant ainsi un <em>lacet</em>. Dans $S^3$, je peux alors tirer sur le lacet et le ramener entièrement au point de départ. Dans $T^3$, c'est impossible. Tout ceci est entièrement équivalent à ce qui se passe en dimension deux, où la situation est plus simple à visualiser. En termes mathématiques, on dira que dans $S^3$, tous les lacets peuvent être concentrés en un point sans les casser, ce qui signifie que le groupe fondamental est trivial, ce que l'on note $\pi_1 (S^3) = 0$. Cela est également vrai pour $S^2$, mais pas pour $S^1$ ! Dans ce dernier cas, les lacets sont caractérisés par le nombre de tours qu'ils font autour du cercle, et on note $\pi_1 (S^1) = \mathbb{Z}$. Le groupe fondamental permet de lister les lacets inéquivalents.</p>

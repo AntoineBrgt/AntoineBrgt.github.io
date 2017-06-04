@@ -1,0 +1,36 @@
+---
+layout: post
+title: Fundamental group of orbifolds
+date: 2017-01-24 10:46:33.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>Defining what is the fundamental group of an orbifold is a subtle task. Here I briefly explain why the naive definition is not correct, and then give an idea of the correct definition. For simplicity we work on the example $\mathbb{C}/\mathbb{Z}_2$ -- generalizing to an arbitrary orbifold is easy.</p>
+<p>The naive way to think about an orbifold is just as a quotient space. Namely, $\mathbb{C}/\mathbb{Z}_2$ would then be the space of equivalence classes of points of $\mathbb{C}$ under the $\mathbb{Z}_2$ action, $\mathbb{C}/\mathbb{Z}_2 = \left\{\left\{z,-z \right\} | z \in \mathbb{C} \right\}$. Let us compute the fundamental group of this space. It is obvious that the problematic curves are in the homotopic class of<br />
+\begin{eqnarray}<br />
+[0,1] &amp;\rightarrow&amp; \mathbb{C}/\mathbb{Z}_2 \\<br />
+t&amp; \mapsto&amp; \{ e^{\pi i t} , -  e^{\pi i t} \} \, .<br />
+\end{eqnarray}<br />
+This is indeed a closed loop, since $\{1,-1\} = \{-1,1\}$. The question is whether it is homotopic to the trivial loop that sits at the point $\{1,-1\}$ or not. Let us show that this loop \emph{is} homotopic to the trivial loop. Define<br />
+\begin{equation}<br />
+f_a (t) = \{\pm (\cos (\pi t) + i a \sin (\pi t))\} \, \qquad g_a (t) = \{\pm ((1-a) |\cos(\pi t)| + a)\} \, .<br />
+\end{equation}<br />
+The loop $f_1$ is the initial loop, while $f_0$ which is obviously in the same class, passes through the origin. We have $g_0 = f_0$, and $g_1$ is the trivial loop. So $f_1 \rightarrow f_0 = g_0 \rightarrow g_1$ shows that we can continuously deform the original loop to the trivial loop. We conclude that $\pi_1 (\mathbb{C}/\mathbb{Z}_2) = 1$.</p>
+<p><strong>The point is precisely that an orbifold is more than a mere quotient space</strong>, a fact that mathematicians emphasize by denoting $\mathbb{C}//\mathbb{Z}_2$ the orbifold. In this respect, the physics literature is very sloppy (see for instance the definition as a quotient space of the term 'orbifold' at the end of Polchinski's book). This is why it is difficult to define the fundamental group as a group of (equivalence classes of) loops: defining what a loop is is very cumbersome. This is done in Ratcliffe's book "<a href="http://www.springer.com/la/book/9780387331973">Foundations of Hyperbolic Manifolds</a>". In his <a href="https://people.math.osu.edu/davis.12/papers/lectures%20on%20orbifolds.pdf">lecture notes</a> about orbifolds, Michael Davis gives four definitions of $\pi_1$ for an orbifold, after suggesting that when the concept of orbifold was first introduced by Satake under the name of <em>V-manifolds</em>, those definitions were missing:</p>
+<blockquote>
+<div data-canvas-width="66.47212763333333">Thurston's big improvement over Satake's earlier version [...] was to show that the theory of covering spaces and fundamental groups worked for orbifolds. (When I was a graduate student a few years before, this was "well-known" not to work.)</div>
+</blockquote>
+<p>I don't want to go into the details of the definition of an orbifold loop here, and usually people working with the fundamental group of orbifolds don't either ! More useful is the following construction. Many orbifolds[1. For the other orbifolds, the bad ones, there is also a concept of universal cover, but in this case this cover is itself a non-trivial orbifold. ] (those that Thurston calls "good") admit a cover which is a simply connected manifold, which we call the universal cover. The homeomorphisms of this cover that commute with the projection on the orbifold are called the <em>deck transformations</em>. They naturally form a group, and this group is precisely what we call the fundamental group of the orbifold. In the above example, the cover is $\mathbb{C}$, and the only homeomorphism that commutes with the projection is $z \mapsto -z$. We find $$\pi_1^{\textrm{orb}} \left( \mathbb{C}//\mathbb{Z}_2 \right) = \mathbb{Z}_2 \, . $$</p>
+<p>&nbsp;</p>

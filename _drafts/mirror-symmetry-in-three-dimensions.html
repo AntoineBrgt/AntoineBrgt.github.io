@@ -1,0 +1,48 @@
+---
+layout: post
+title: Mirror symmetry in three dimensions
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>Let us consider supersymmetric theories in three dimensions. I recall that in $3d$, the minimal spinor is a Majorana spinor with two real components, so if we talk about $\mathcal{N}_{3d}=2$ supersymmetry, it means that we have four real supercharges. This corresponds to $\mathcal{N}_{4d}=1$, and because of that these $3d$ theories will have holomorphy properties and non-renormalization theorems. Roughly, one can say that $\mathcal{N}_{3d}=2$ is the minimal amount of supersymmetry in three dimensions which is required for it to exert its power: with only $\mathcal{N}_{3d}=1$, we don't have holomorphy properties.</p>
+<p><strong>Generalities about $\mathcal{N}_{3d}=2$ theories</strong></p>
+<p>For a very recent review of this topic, see for instance part of this <a href="https://arxiv.org/pdf/1611.04883.pdf">paper</a> by Amariti, Orlando and Reffert, on which I take much of the material presented here.[1. I want to thank the authors for the effort of summarizing 20 years of dense literature in a concise, yet precise, way. ] One important difference with $\mathcal{N}_{4d}=1$ is that the vector multiplet contains a scalar field, which can acquire an expectation value and break the gauge group to its maximal abelian torus, leading to a <strong>Coulomb branch</strong> of the moduli space. In fact, an abelian gauge field itself can be Hodge dualized to a periodic scalar, called the dual photon, and even in a non-abelian theory, one can do this at a generic point on the Coulomb branch. This Hodge duality also transforms the usual field strength, which is a 2-form, into a 1-form, i.e. a current, which is conserved because of the Maxwell equations. This means that $3d$ theories have a <strong>global topological symmetry</strong> that we call $U(1)_J$, with conserved current $J$.</p>
+<p>Concerning the moduli space, we have seen that there is a Coulomb branch, and in general there is also a <strong>Higgs branch</strong> parametrized by the scalars of the quark multiplets. Because of the scalar potential, the two branches are distinct (one can not have both a non-vanishing VEV for the scalar in the vector multiplet and for the scalar in the quark multiplet). It is important to note that both branches can receive loop corrections.</p>
+<p>Finally, let us consider the form of the low-energy effective action. XXX</p>
+<p><strong>Dualities in three dimensions</strong></p>
+<p>We now quickly review various dualities that hold between different $\mathcal{N}_{3d}=2$ theories.</p>
+<ol>
+<li><u>Three-dimensional versions of Seiberg duality</u>.<br />
+We can distinguish two versions, depending on whether a Chern-Simons term is present or not.</p>
+<ul>
+<li><u>Aharony duality</u>.<br />
+This duality relates an electric theory, say $U(N_c)$ gauge theory with $N_f$ quarks and $N_f$ antifundamental quarks, to a dual magnetic theory, which has gauge group $U(N_f - N_c)$, a different matter content and a superpotential term.</li>
+<li><u>Giveon-Kutasov duality</u>.<br />
+Here we consider a $U(N_c)_k$ theory with again $N_f$ quarks and antiquarks. The index $k$ means that we have a level $k$ Chern-Simons term in the action. Then there is a dual $U(N_f + N_c + |k|)_{-k}$ theory with a different matter content and a superpotential.</li>
+</ul>
+<p>These two dualities are in fact connected via a mass flow, which I don't explain here (see section 3.2.3 of the <a href="https://arxiv.org/pdf/1611.04883.pdf">review</a>).</li>
+<li>$\mathcal{N}_{3d}=2$ version of Mirror symmetry.[1. I recall that mirror symmetry was first discovered for $\mathcal{N}_{3d}=4$ theories by Intriligator and Seiberg in 1996 (see <a href="https://arxiv.org/abs/hep-th/9607207">here</a>). It relates two different theories in the IR (in the UV, the theories are free). The highlights are that the Coulomb and Higgs branches are exchanged. Since the Coulomb branch gets quantum corrections while the Higgs branch does not, the duality means that <strong>quantum effects in one theory arise classically in the dual</strong> and vice-versa. A similar point can be made about global symmetries, which are manifest in one description and arise quantum mechanically in the dual. The mathematical core of mirror symmetry is the following: the $R$-symmetry is $SU(2)_R$, as can be seen from $\mathcal{N}_{6d}=1$ theories, and another $SU(2)_L$ appears during the dimensional reduction as the rotations in the three compact directions. These combine into a $SO(4)$ global symmetry, and mirror symmetry is the exchange $SU(2)_R \leftrightarrow SU(2)_L$. ] The prototypical example is:<br />
+\begin{tikzpicture}<br />
+[+preamble]<br />
+\usepackage{tikz}<br />
+[/preamble]<br />
+\node[draw,text width=6cm,align=center](1) at (0cm,0cm) {$\mathcal{N}_{3d}=2$ QED with one flavor};<br />
+\node[draw,text width=6cm,align=center](2) at (8cm,0cm) {$XYZ$ model with three chiral fields $X,Y,Z$ and a superpotential $W=XYZ$};<br />
+\draw[] (1) -- (2);<br />
+\end{tikzpicture}<br />
+However, because of the reduced amount of supersymmetry, it is in general difficult to establish mirror symmetry (an early discussion can be found <a href="https://arxiv.org/pdf/hep-th/9703110v1.pdf">here</a>). One could ask if there is a clear string theoretic picture, using branes. [1. For the $\mathcal{N}_{3d}=4$ mirror symmetry, the brane picture has been given by <a href="https://arxiv.org/pdf/hep-th/9611230v3.pdf">Hanany and Witten</a> only a few month after the field theoretic version.  ]</li>
+</ol>
+<p>&nbsp;</p>

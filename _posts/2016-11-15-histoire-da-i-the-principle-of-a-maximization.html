@@ -1,0 +1,26 @@
+---
+layout: post
+title: 'Histoire d''A (I) : The principle of a maximization'
+date: 2016-11-15 20:48:33.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Hep-th
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p><strong>Anomalies in four-dimensional CFTs</strong></p>
+<p>The title of this post might be confusing: I'm not talking about a maximization in general, but about the maximization of the anomaly coefficient $a$ ! Let us first recall what we are talking about. We consider a conformal field theory (CFT) in four dimensions, with its energy-momentum tensor $T_{ \mu\nu}$, whose trace vanishes in the vacuum, $\langle T_{\mu}^{\mu}\rangle = 0$. At least this is true in flat space, but if we go to curved space, an anomaly appears, under the form $$\langle T_{\mu}^{\mu}\rangle = \frac{c}{(4\pi)^2} \textrm{Weyl}^2 - \frac{a}{(4\pi)^2} \textrm{Euler} \, . $$ In this equation, we have two important tensors of Riemannian geometry in four dimensions, the Weyl tensor which describes how the shape of an object is transformed when one moves, and the Euler tensor whose integral gives the Euler characteristic. You can look <a href="https://arxiv.org/pdf/0804.1957.pdf">here</a> for precise definitions with normalizations. In a free theory, there are <a href="https://arxiv.org/pdf/hep-th/9908014.pdf">generic formulas</a>: $$c = \frac{1}{120}(N_s + 6N_f + 12 N_v) \qquad a = \frac{1}{360}(N_s + 11 N_f + 62 N_v)$$ where $N_s$ is the number of real scalars, $N_f$ the number of Dirac spinors and $N_v$ the number of vectors. For instance, a free $\mathcal{N}=2$ full hypermultiplet is made of two complex scalars (or four real scalars) and one Dirac spinor (or two Weyl spinors), which gives $c=1/12$ and $a=1/24$. But the formulas above are valid for any free CFT, be it supersymmetric or not.</p>
+<p><strong>Supersymmetry comes in</strong></p>
+<p>What happens if we consider $\mathcal{N}=1$ theories? Then there is always a $U(1)_R$ symmetry, which is part of the bosonic symmetry $SO(4,2) \times U(1)_R$ of the superconformal algebra $SU(2,2 | 1)$. The $R$-symmetry current belongs to the same superconformal multiplet as the stress-energy tensor, and for that reason it is also connected to the anomaly coefficients $a$ and $c$. For instance, one has $$a = \frac{3}{32}(3 \mathrm{Tr} \, R^3 - \mathrm{Tr} \, R) \, . $$  This is valid even for strongly coupled theories, and it provides a very efficient way to compute $a,c$ for these theories.</p>
+<p>But where there is also a flavor symmetry in the theory, we can always redefine the $R$-charges by a combination of the global charges, $$R \rightarrow R + s_i F^i$$ where $F^i$ are the non-$R$-charges in the flavor symmetry algebra. Although one can somewhat restrict this freedom of redefinition by physical requirement, this is not enough in general to find the right $R$-symmetry that has the nice relations with anomalies. An outstanding result obtained by <a href="https://arxiv.org/pdf/hep-th/0304128v3.pdf">Intriligator and Wecht</a> in 2003 is that this $R$-symmetry is the one that maximizes the quantity $$a(s) = \frac{3}{32}(3 \mathrm{Tr} \, R(s)^3 - \mathrm{Tr} \, R(s)) \, . $$ This is the $a$-maximization principle.</p>
+<p>As a conclusion, let us prepare the next episode of our Histoire d'A with the following comment. If we consider a flow between a UV SCFT and an IR SCFT, in general the flavor symmetry group gets reduced in the process, because in order to start the flow, we have introduced a deformation that may have broken part of the flavor symmetry. Therefore, the space where the $s_i$ live becomes smaller, and there is less space for maximization. This seems to imply that $$a_{IR}&lt;a_{UV}$$. In fact, it is not entirely correct because there might be an accidental additional symmetry in the IR that spoils the reasoning. So we need more to prove the $a$ theorem (this is the name of the above inequality), and I leave this for the second episode.</p>

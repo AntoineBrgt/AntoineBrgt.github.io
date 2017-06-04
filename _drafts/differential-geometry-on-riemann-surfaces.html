@@ -1,0 +1,29 @@
+---
+layout: post
+title: Differential geometry on Riemann surfaces
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>This is a summary of some crucial facts about the differential geometry of Riemann surfaces, based primarily on the book by Jürgen Jost, Compact Riemann Surfaces.</p>
+<p>We first recall two fundamental facts concerning two important classes of Riemann surfaces. In what follows, we use $M$ to denote a generic Riemann surface.</p>
+<ul>
+<li>If $M$ is compact, then every holomorphic and every harmonic function is constant.</li>
+<li>If $M$ is simply connected any holomorphic nowhere vanishing function $f$ is the exponential of a holomorphic function (that we call the logarithm of $f$).</li>
+</ul>
+<p>These two properties make very useful connections between topology and complex analysis, and it interesting to see how the conclusion fails to hold when the hypothesis is not satisfied, in each case.</p>
+<p>Now we focus on a particularly interesting Riemann surface, the strict upper half-plane $\mathfrak{H}$ (defined by $\mathrm{Im} \, z &gt;0$). The biholomorphic functions $\mathfrak{H} \rightarrow \mathfrak{H}$ are exactly the Möbius transformations $$z \mapsto \frac{az+b}{cz+d}$$ where $a,b,c,d$ are real with $ad-bc&gt;0$. Multiplying those four numbers by a constant, we can assume that $ad-bc=1$, and therefore the biholomorphic maps of the upper half-plane are given by the group $PSL(2,\mathbb{R})$.</p>
+<p>Let us now examine the metric aspects. A conformal Riemann metric on $M$ is given in local coordinates by $\lambda^2(z) \mathrm{d} z \mathrm{d} \bar{z}$ where $\lambda (z)&gt;0$ is a regular (for instance $C^{\infty}$) function. The important point here is that $\lambda (z)$ is positive everywhere, with no further restriction. This means that there is a lot of choice to define a metric on a Riemann surface, and this applies as well in the case of $\mathfrak{H}$. However, we will always work with one particular metric on $\mathfrak{H}$ defined by $$ \mathrm{d} s^2 = \frac{\mathrm{d} z \mathrm{d} \bar{z}}{(\mathrm{Im} \, z)^2} = \frac{\mathrm{d} x^2 + \mathrm{d} y^2}{y^2} \, .$$ With this metric, $PSL(2,\mathbb{R})$ is the isometry group of $\mathfrak{H}$, and up to a multiplicative constant, it is the only metric that has this property. So the nice property of the hyperbolic metric (this is the standard name of the metric introduced above) is that the biholomorphic functions and the isometries coincide. This is the crucial ingredient for the construction of the next paragraph.</p>
+<p>&nbsp;</p>

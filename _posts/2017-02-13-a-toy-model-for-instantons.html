@@ -1,0 +1,26 @@
+---
+layout: post
+title: A toy-model for instantons
+date: 2017-02-13 20:13:38.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>Instantons are a central concept of modern theoretical physics, and they are by essence non-perturbative, which might make them somewhat frightening. Here I want to mention briefly one setup where they appear in such a simple guise that one can really study them explicitly at will. This is the $\mathbb{CP}^1$ model. Because I want to stress the simplicity of the description of the instantons, I will do that in the first section, and then in the second section I will explain the name $\mathbb{CP}^1$ given to the model. This is based on Shifman's book <em>Advanced topics in Quantum Field Theory</em>, section 29.</p>
+<h4>The model and its instantons</h4>
+<p>Consider a two-dimensional model with one complex scalar $\phi (x)$ with Lagrangian $$\mathcal{L} = \frac{2 \partial_{\mu} \bar{\phi} \partial_{\mu} \phi}{g^2 (1+ \bar{\phi} \phi)^2} \, ,$$ where $g$ is the coupling constant. In fact, we take $\phi$ to live on the Riemann sphere $\mathbb{CP}^1 = \mathbb{C} \cup \{\infty\}$, which is all right because of the form of the action. We also use the Euclidean metric $(+1,+1)$ and sum over repeated indices. One can check that $$\mathcal{L} =  g^{-2}  (1+ \bar{\phi} \phi)^{-2} \left[(  \partial_{\mu} \bar{\phi} - i \epsilon_{\mu\nu}  \partial_{\nu} \bar{\phi}) (  \partial_{\mu}\phi + i \epsilon_{\mu\rho}  \partial_{\rho} \phi ) - 2i   \epsilon_{\mu\nu}  \partial_{\mu} \bar{\phi} \partial_{\mu} \phi \right] \, . $$ The last term in this equation is proportional to the derivative of $\epsilon_{\mu\nu} \bar{\phi} \partial_{\nu} \phi / (1+ \bar{\phi} \phi)$, so it reduces to a topological term. We deduce that the minimal action is achieved when $ \partial_{\mu}\phi + i \epsilon_{\mu\rho}  \partial_{\rho} \phi  = 0$.</p>
+<p>Define now the complex combination $z = x_1 + i x_2$. The above equation takes the very simple form $$\bar{\partial} \phi = 0 \, . $$ Since $\phi$ takes values on the Riemann sphere, it means that $\phi (z)$ minimizes the action if and only if it is a meromorphic function ! In fact, one can show that the variable $z$ should also be thought to live on the sphere, because as $|z| \rightarrow \infty$, $\phi (z)$ has to be constant for the action to remain finite. Therefore $\phi$ is a map $S^2 \rightarrow S^2$, and because $\pi_2 (S^2) = \mathbb{Z}$, each map belongs to a topological sector labeled by an integer.</p>
+<p>Let us consider for instance $\phi (z) = \frac{a}{z-b}$. Plugging into the Lagrangian, only the topological term contributes, and the action evaluates to $$S = \frac{4 \pi}{g^2} \, . $$ The answer is independent of the constants $a$ and $b$, which are instanton moduli (the first one is related to the size of the instanton and the second one to its position). There are 4 real moduli for this instanton. Clearly, one can add as many terms as one wants to form a $k$-instanton solution with $4k$ moduli, and it is no more difficult to describe colliding instantons using poles of higher order.</p>
+<h4>The origin of the Lagrangian</h4>
+<p>Now that I have described the instantons, let us explain where does the Lagrangian written above come from. Using stereographic projection, we can send the plane parametrized by $\phi$ to the sphere $S^2$ -- incidentally, this explains why I insisted that $\phi$ live on the Riemann sphere. The equations for this projection are $$\begin{cases} X^1 = \frac{2 \mathrm{Re} \, \phi}{1+ \bar{\phi} \phi} \\  X^2 = \frac{2 \mathrm{Im} \, \phi}{1+ \bar{\phi} \phi} \\ X^3 = \frac{1 - \bar{\phi} \phi}{1+ \bar{\phi} \phi}\end{cases}$$ Using these new variables, that satisfy $||\vec{X}|| = 1$, we can rewrite the Lagrangian as $$\mathcal{L} = \frac{1}{2 g^2} ||\partial_{\mu} \vec{X}||^2 \, . $$ In other words, this is the theory of a free field on a sphere, otherwise known as the $O(3)$ model, for obvious invariance reasons. This is a very well-known model, that can be tracked back to Heisenberg's model of antiferromagnets formulated in the 1930s.</p>

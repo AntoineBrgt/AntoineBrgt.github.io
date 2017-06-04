@@ -1,0 +1,50 @@
+---
+layout: post
+title: Webs of five-branes
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  inline_featured_image: '0'
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>Let us consider a configuration in type IIB string with various kinds of five-branes. The first kind is the $D5$ brane, whose tension is (see <a href="http://antoinebourget.org/blog/index.php/2017/02/17/m-theory-to-the-rescue-of-strings-for-understanding-qtf/">this previous post</a> for the general formula) :<br />
+\begin{equation}<br />
+\tau_{D5} = \frac{1}{g_s (2 \pi )^5 \alpha ' ^3} \, .<br />
+\end{equation}<br />
+We would like to see how this transforms under $S$-duality, which changes $g_s \mapsto 1/g_s$. For this, we have to know the transformation rule for $\aplha '$. One way of finding it is to look at the strings: the tension of a fundamental string is $\tau_{F1} = \frac{1}{2 \pi \alpha '}$, and under $S$-duality it becomes a $D1$ brane with tension $\tau_{D1} = \frac{1}{2 \pi \alpha ' g_s}$, so we have the rule<br />
+\begin{equation}<br />
+S :<br />
+\begin{cases}<br />
+g_s \mapsto \frac{1}{g_s} \\<br />
+\alpha ' \mapsto \alpha 'g_s \, .<br />
+\end{cases}<br />
+\end{equation}<br />
+Using this rule, we find the tension of the $NS5$ brane, which is the dual of the $D5$:<br />
+\begin{equation}<br />
+\tau_{NS5} = \frac{1}{g_s^2 (2 \pi )^5 \alpha ' ^3} \, .<br />
+\end{equation}</p>
+<h4>String networks</h4>
+<p>It is not entirely obvious that we can combine a $D1$ and a $F1$ into a BPS object. Indeed, the BPS bound (computed from the supersymmetry algebra) for a one-dimensional object with $p$ units of fundamental string charge and $q$ units of $D1$ charge is $\tau \geq \tau^{(p,q)}_1 = \sqrt{(p \tau_{F1})^2 + (q \tau_{D1})^2}$. Putting just one $D1$ and one $F1$ on top of each other produces an object of tension $\tau_{F1} + \tau_{D1}$, which doesn't saturate the BPS bound. But this is not the stable situation: the fundamental string will break, with ends appearing on the $D1$, and finally dissolves, leaving only flux in the $D1$. Then one can compute that the tension of the resulting object saturates the BPS bound! And one can do the same for any $(p,q)$. Note that we can write<br />
+\begin{equation}<br />
+\tau^{(p,q)}_1 = \frac{1}{2 \pi \alpha '} \sqrt{p^2 + (q /g_s)^2} = \tau_{F1} |p+\tau q| \, ,<br />
+\end{equation}<br />
+with $\tau = i / g_s$. Finally, we can consider string junctions. In order to preserve supersymmetry, they need to satisfy two conditions:</p>
+<ol>
+<li>The sum of the charges must vanish at each junction</li>
+<li>The string with charge $(p,q)$ must be pointing in the direction of $p +  \tau q$ in the plane of the junction.</li>
+</ol>
+<p>We can then take the $S$-dual of this construction, and end up with a brane web. The branes are extended in dimensions $0,1,2,3,4$ and they form a network in the plane $5,6$, submitted to the same conditions as the corresponding strings.</p>
+<h4>Brane webs</h4>
+<p>If we consider a web of five-branes, then its world-volume is a five-dimensional $\mathcal{N}=1$ supersymmetric QFT. The original paper by Aharony, Hanany and Kol, <em>Webs of (p,q) 5-branes, Five Dimensional Field Theories and<br />
+Grid Diagrams</em>, then gives a dictionary between the $5d$ point of view and the web of branes point of view. </p>

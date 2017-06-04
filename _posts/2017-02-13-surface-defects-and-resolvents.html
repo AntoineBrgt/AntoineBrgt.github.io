@@ -1,0 +1,48 @@
+---
+layout: post
+title: Surface Defects and Resolvents
+date: 2017-02-13 19:27:13.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>This is a short note based on the paper "<a href="https://arxiv.org/pdf/1307.2578.pdf">Surface Defects and Resolvents</a>" by Gaiotto, Gukov and Seiberg. I will illustrate how one can compute (twisted) chiral ring relations for a supersymmetric $2d$ theory coupled to a $4d$ theory. Here the focus is on the two-dimensional aspect, and a future post will shed another light on this problem, from the four-dimensional point of view.</p>
+<h4>$\mathcal{N}=(2,2)$ supersymmetry in two dimensions</h4>
+<p>Let us begin with a very quick review of some basic notions of two-dimensional theories with $\mathcal{N}=(2,2)$ supersymmetry. A good place to learn about $\mathcal{N}=(2,2)$ supersymmetry is the big book on mirror symmetry, available freely <a href="http://www.claymath.org/library/monographs/cmim01c.pdf">here</a>. Let us first present the basic fields, and how we can construct supersymmetric actions.</p>
+<p>It is useful to introduce the superspace formalism : the superfields depend on the time coordinate $x^0$, the space coordinate $x^1$ and the four Grassmann coordinates $\theta^{\pm}$ and $\bar{\theta}^{pm}$. The space-time coordinates are combined into $x^{\pm} = x^0 \pm x^1$. Then we can define eight operators $$D_{\pm} = \frac{\partial}{\partial \theta^{\pm}} - i \bar{\theta}^{\pm} \partial_{\pm} \, , \qquad Q_{\pm} = \frac{\partial}{\partial \theta^{\pm}} + i \bar{\theta}^{\pm} \partial_{\pm}$$ and similar definitions for $\bar{D}_{\pm}$ and $\bar{Q}_{\pm}$. We then say that a superfield $\Phi$ is</p>
+<ul>
+<li>Chiral if $\bar{D}_{\pm} \Phi = 0$ ;</li>
+<li>Anti-chiral if $D_{\pm} \Phi = 0$ ;</li>
+<li>Twisted chiral if $\bar{D}_+ \Phi = D_- \Phi = 0$ ;</li>
+<li>Twisted anti-chiral if $\bar{D}_- \Phi = D_+ \Phi = 0$.</li>
+</ul>
+<p>Using these superfields, we can construct supersymmetric invariant actions by combining the following terms :</p>
+<ul>
+<li>The D-terms $\int \mathrm{d}^2 x \,  \mathrm{d}^4 \theta \, K (\Phi_i)$ for any superfields $\Phi_i$, where $ \mathrm{d}^4 \theta = \mathrm{d} \theta^+ \mathrm{d} \theta^- \mathrm{d} \bar{\theta}^+ \mathrm{d} \bar{\theta}^-$.</li>
+<li>The F-terms $\int \mathrm{d}^2 x \,  \mathrm{d}^2 \theta \, W (\Phi_i) $ for any chiral superfields $\Phi_i$. Here $ \mathrm{d}^2 \theta = \mathrm{d} \theta^+ \mathrm{d} \theta^- $.</li>
+<li>The twisted F-terms $\int \mathrm{d}^2 x \,  \mathrm{d}^2 \tilde{\theta} \, \tilde{W} (U_i) $ for any twisted chiral superfields $U_i$. Here $ \mathrm{d}^2 \tilde{\theta} = \mathrm{d} \bar{\theta}^- \mathrm{d} \theta^+ $.</li>
+</ul>
+<h4>$\mathcal{N}=(2,2)$ gauge theories</h4>
+<p>If we want to construct gauge theories, we need another ingredient, namely the vector superfield $V$, which is a real superfield that transforms as usual under gauge transformations (see section 15.2.1 in the Mirror symmetry book for the details). We consider here a $U(1)$ gauge field. The important point is that <strong>the super-field-strength that we construct from $V$ is a twisted chiral superfield</strong> $$\Sigma = \bar{D}_+ D_- V \, . $$ The Lagrangian for the gauge part is then $$\mathcal{L}_{\mathrm{gauge}} = - \frac{1}{2e^2} \int \mathrm{d}^2 x \,  \mathrm{d}^4 \theta \, \bar{\Sigma} \Sigma \, . $$ The kinetic terms for the charged chiral superfields $\Phi$ has the form $$\mathcal{L}_{\mathrm{kin}} = \int \mathrm{d}^2 x \,  \mathrm{d}^4 \theta \, \bar{\Phi} e^V \Phi \, . $$</p>
+<p>Now a point which is specific to two dimensions is that we can add a <strong>linear twisted</strong> superpotential $$\tilde{W}_{\mathrm{FI} , \theta} = -t \Sigma $$ where $t=r-i \theta$ with $r$ the Fayet-Iliopoulos parameter and $\theta$ the $theta$-angle. Finally, if it is possible to form a polynomial $W(\Phi)$ which is gauge invariant, we can of course add such a (non-twisted) superpotential term in the action.</p>
+<p>Let us consider the supersymmetric gauged linear sigma-model (GLSM) Lagrangian $$\mathcal{L}_{\textrm{GLSM}} = \mathcal{L}_{\mathrm{gauge}} + \mathcal{L}_{\mathrm{kin}} + \frac{1}{2}  \left( -t \int \mathrm{d}^2 x \,  \mathrm{d}^2 \tilde{\theta} \,  \Sigma + c.c. \right) \, . $$ We can compute the low-energy twisted effective superpotential as follows :</p>
+<ol>
+<li>Integrate out the massive chiral matter fields. For a field of total mass $x$, one obtains a contribution $2 \pi i \tilde{W}  = - x \log (x/e)$. The total mass can in general be written as $m+\sigma$ where $m$ is the bare mass and $\sigma$ is the scalar part of the vector multiplet.</li>
+<li>Extremize the total effective $\tilde{W} [\sigma , m]$ with respect to $\sigma$. The equation $\partial_{\sigma} \tilde{W} [\sigma , m] = 0$ are the twisted chiral ring relations. When solved, the solutions plugged back into $\tilde{W} [\sigma , m]$ give the twisted effective superpotential.</li>
+</ol>
+<p>As a final comment, note that a GLSM can be used to realize a non-linear sigma-model on certain target Kähler manifolds. For instance,</p>
+<h4>Four-dimensional theory with surface defects</h4>
+<p>We now show how the procedure of the previous paragraph can be applied to the computation of the twisted effective superpotential for a four-dimensional theory with surface defects. For simplicity we consider the example of pure $\mathcal{N}=2$ $SU(2)$ gauge theory in four dimensions, with a defect that breaks $SU(2) \rightarrow U(1)$. In the UV, this can be defined as a $CP(1)$ sigma-model coupled to the pure $SU(2)$ theory. This means that the $2d$ theory contains an $SU(2)$ doublet of fields  of unit charge under some $U(1)$ gauge field, and after integrating them out, we obtain an effective twisted superpotential $$2 \pi i \tilde{W} [\sigma , \Phi] = t \sigma - \mathrm{Tr} \,  \left[ (\sigma + \Phi ) \log \frac{\sigma + \Phi }{e}\right] \, . $$ It is important to note that the $4d$ fields $\Phi$ play the role of $2d$ twisted masses, and we recall that the term $t \sigma$ was introduced in the previous paragraph as the original twisted superpotential.</p>
+<p>Now the effects of the $4d$ gauge dynamics are introduced by noting that the second derivative gives $$- 2 \pi i \partial_{\sigma}^2 \tilde{W} [\sigma , \Phi] = \mathrm{Tr} \,  \left[ \frac{1}{\sigma + \Phi }\right]$$ and that this quantity, which is usually denoted $T(\sigma)$, can be computed, for instance, using the Dijkgraaf-Vafa method. Naively, if we use the classical relation $\mathrm{Tr} \,  \Phi^{2k} = 2u^k$, we would say that $T(x) = 2 \sigma / (\sigma^2 - u)$. But there are instanton corrections, and the result is $$T(x) = \frac{2 \sigma}{\sqrt{(x^2 - u)^2 - 4 \Lambda^4}} \, , $$ where $\Lambda$ is as usual the scale factor. With this explicit expression at hand, we can integrate once to obtain $\partial_{\sigma} \tilde{W} [\sigma , \Phi]$, and therefore the twisted chiral ring relations. Here, this gives $$\sigma^2 = e^t + u + \Lambda^4 e^{-t} \, . $$</p>
+<p>&nbsp;</p>

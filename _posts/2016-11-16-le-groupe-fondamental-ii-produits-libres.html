@@ -1,0 +1,37 @@
+---
+layout: post
+title: 'Le groupe fondamental (II) : Produits libres'
+date: 2016-11-16 22:02:11.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Maths
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+
+
+
+  
+---
+
+<p>J'ai commencé dans un <a href="http://antoinebourget.org/blog/index.php/2016/11/06/le-groupe-fondamental-i-tores-et-spheres/">précédent article</a> à parler du groupe fondamental, et nous avons vu quelques exemples simples. Les groupes obtenus étaient toujours le groupe des entiers $\mathbb{Z}$, ou éventuellement plusieurs copies de ce groupe dans le cas des tores. On pourrait croire que le groupe fondamental d'un espace est toujours de cette forme : un facteur $\mathbb{Z}$ pour chaque trou autour duquel on peut enrouler des lacets, et c'est tout. Mais nous allons voir ici que la vérité est très loin de cela.</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/cyclesTorus.svg"><img class=" wp-image-230 aligncenter" src="{{site.image_path}}/cyclesTorus.svg" alt="cyclestorus" width="350" height="158" /></a></p>
+<p>Certes, un tore possède deux cycles indépendants autour desquels on peut enrouler des lacets. Mais un tore a une propriété très spéciale : enrouler autour d'un cycle A puis autour de B est la même chose qu'enrouler autour de B puis de A. Autrement dit, le groupe est commutatif. On peut facilement visualiser cela sur un tore bi-dimensionnel, vu comme un carré aux bords identifiés, comme sur le dessin ci-dessus.</p>
+<p><strong>Groupe fondamental du chiffre 8</strong></p>
+<p><strong><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/8loops.svg"><img class=" wp-image-229 aligncenter" src="{{site.image_path}}/8loops.svg" alt="8loops" width="200" height="399" /></a></strong></p>
+<p>Mais considérons maintenant deux cercles accolés pour former la figure d'un chiffre 8. A présent, le lacet $ab$ est différent de lacet $ba$ (il est important de garder à l'esprit que le point de départ et d'arrivée est choisi une fois pour toutes, par exemple à l'intersection $I$ des deux cercles). On se convainc alors que le groupe fondamental est l'ensemble des mots de la forme $a^{n_1}b^{n_2}a^{n_3}b^{n_4}\cdots$ avec les $n_i$ des entiers relatifs quelconques. Ce groupe est le produit libre de deux copies de $\mathbb{Z}$, noté : $$\pi_1 ("8") = \mathbb{Z} \star \mathbb{Z} \, . $$ Il faut bien se rendre compte que ce groupe est énorme, beaucoup plus gros que $\mathbb{Z}^2$ (si on veut, on peut voir $\mathbb{Z}^2$ comme l'ensemble des mots $a^{n_1}b^{n_2}$, avec seulement deux entiers $n_1,n_2$).</p>
+<p><strong>Le subtil produit libre</strong></p>
+<p>Plus généralement, on définit le produit libre d'une famille de groupes $G_{\alpha}$ (où $\alpha$ est un indice prenant un nombre fini ou infini de valeurs) comme l'ensemble des mots de la forme $g_1 g_2 \cdots$ où chaque $g_i$ appartient à l'un des groupes, n'est pas trivial, et $g_i$ et $g_{i+1}$ appartiennent forcément à des groupes différents. Cet ensemble est muni d'une structure de groupe naturelle (on fait des simplifications dès que c'est possible, c'est la seule règle !). La simplicité de cette définition cache de redoutables complexités, dont je donne quelques exemples ci-dessous, mais cela n'est pas essentiel pour la suite (ceux qui ne sont intéressés que par la topologie peuvent sauter jusqu'au paragraphe suivant).</p>
+<p>Considérons par exemple $\mathbb{Z}_2 \star \mathbb{Z}_2 $. Dans $\mathbb{Z}_2$, il n'y a qu'un élément non-trivial, donc on n'a pas bien le choix, chaque lettre $g_i$ doit être soit le générateur du premier soit celui de second $\mathbb{Z}_2$. Autrement dit, on considère tous les mots de la forme $\cdots ababab \cdots$. C'est un groupe infini, ce qui n'est pas mal quand on se rappelle qu'on est parti du produit libre avec lui-même du plus simple de tous les groupes, qui n'a que deux éléments. En fait, la structure est tout de même relativement facile à découvrir : $$ \mathbb{Z}_2 \star \mathbb{Z}_2 \cong \mathbb{Z} \rtimes \mathbb{Z}_2 $$ où $\mathbb{Z}$ est généré par $ab$ (qui est bien d'ordre infini) et $\mathbb{Z}_2$ par $a$. Il est assez facile de voir cette structure sur un dessin qui construit systématiquement tous les éléments du groupe :</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/groupTree1.svg"><img class="wp-image-231 aligncenter" src="{{site.image_path}}/groupTree1.svg" alt="grouptree1" width="627" height="19" /></a></p>
+<p>Passons à l'exemple suivant, en termes de complexité : $\mathbb{Z}_2 \star \mathbb{Z}_3 $. Ici, si l'on note toujours $a$ et $b$ les générateurs des deux facteurs, on a maintenant le droit d'utiliser $b$ et $b^2$. Et cela change tout ! Alors que dans le cas précédent, la construction du groupe était linéaire parce qu'à chaque étape, on ne pouvait ajouter qu'une seule lettre, ici on a deux choix à une étape sur deux, comme illustré sur la construction ci-dessous :</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/groupTree2.svg"><img class="alignnone size-full wp-image-232" src="{{site.image_path}}/groupTree2.svg" alt="grouptree2" /></a></p>
+<p><strong>Théorème de Van Kampen et applications</strong></p>
+<p>Énonçons maintenant le théorème clé qui permet de calculer un tas de groupes fondamentaux. Pour cela, considérons un espace $X$ recouvert par des ouverts $A_i$ contenant le point de base $x_0$ tels que tous les $A_i$, tous les $A_i \cap A_j$ et tous les $A_i \cap A_j \cap A_k$ sont connexes par arcs. Alors $$\pi_1(X) = \left( \star_i \, \pi_1(A_i) \right) / N$$ où $N$ est le sous-groupe normal généré par tous les éléments $\omega_i \omega_j^{-1}$ où $\omega \in \pi_1 (A_i \cap A_j)$ et $\omega_i$ est cet élément vu comme élément de $\pi_1 (A_i)$. Ce théorème est appelé le théorème de <em>Van Kampen</em>.</p>
+<p>Pour notre exemple ci-dessus du chiffre 8, il est clair que l'on peut choisir chacun des cercles comme un ouvert dont on connait le groupe fondamental. Comme l'intersection est réduite à un point, le groupe $N$ est trivial, et on en déduit immédiatement que le groupe fondamental du chiffre 8 est $\mathbb{Z} \star \mathbb{Z}$. Si on rajoute une boucle de plus, comme dans la figure ci-dessous, on peut prendre pour ouverts un cercle et un chiffre 8, ce qui nous donne un groupe fondamental isomorphe à $\mathbb{Z} \star \mathbb{Z} \star \mathbb{Z}$.</p>
+<p><a href="http://antoinebourget.org/blog/wp-content/uploads/2016/11/8loopssupp.svg"><img class=" wp-image-234 aligncenter" src="{{site.image_path}}/8loopssupp.svg" alt="8loopssupp" width="140" height="419" /></a></p>
+<p>La prochaine fois nous verrons que l'on peut utiliser ce théorème pour calculer le groupe fondamental d'un très grand nombre d'espaces. Et si vous croyez que nous allons toujours obtenir des produits libres comme ici, vous ne pouvez pas plus vous tromper : en effet, nous allons voir que pour tout groupe $G$, quel qu'il soit, il existe des espaces ayant $G$ pour groupe fondamental !</p>

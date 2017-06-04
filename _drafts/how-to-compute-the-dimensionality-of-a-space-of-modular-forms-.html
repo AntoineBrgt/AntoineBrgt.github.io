@@ -1,0 +1,23 @@
+---
+layout: post
+title: How to compute the dimensionality of a space of modular forms?
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: ba819830-ovh
+  email: antoine.bourget@polytechnique.org
+  display_name: Antoine
+  first_name: Antoine
+  last_name: Bourget
+---
+<p>[latexpage]</p>
+<p>I warn the reader that this post is technical, although it is intended to explain in a simple and intuitive way a fundamental theorem of the theory of modular forms. I think it is only understandable by those who already have a basic knowledge of the objects involved. I use mainly the book by Diamond and Shurman, <em>A first course in modular forms</em>. Specifically, I will review how one can compute the dimension of the space $\mathcal{M}_k (\Gamma)$ of modular forms of weight $k$ even for a congruence subgroup $\Gamma$ of $SL(2,\mathbb{Z})$.</p>
+<p>The starting point is the set of automorphic forms $\mathcal{A}_k (\Gamma)$ of weight $k$, by which we mean all functions $f$ defined on the upper-half plane $\mathfrak{H}$ and valued in $\mathbb{C} \cup \{\infty \}$ that are meromorphic on $\mathfrak{H}$ and at the cusps, and that transform with weight $k$ under $\Gamma$. A crucial particular case is the field $\mathcal{A}_0 (\Gamma)$ of functions that are invariant under all transformations in $\Gamma$. As a consequence, these functions can be defined on the quotient $\Gamma \backslash \mathfrak{H}$, and even on its compactification that we denote $$X(\Gamma) = \Gamma \backslash (\mathfrak{H} \cup \mathbb{Q} \cup \{\infty\} \, . $$ The compactified quotient $X(\Gamma)$ can be seen as a compact Riemann surface, and elements of $\mathcal{A}_0 (\Gamma)$ are simply meromorphic functions on this Riemann surface. For the most important congruence subgroups, namely $\Gamma(N)$, $\Gamma_1(N)$ and $\Gamma_0(N)$, the field of those meromorphic functions is well known. For instance, for $\Gamma_0(N)$, this field is $$\mathbb{C} (X(\Gamma_0 (N)) ) = \mathcal{A}_0 (\Gamma_0 (N)) = \mathbb{C}(j,j_N)$$ where $j$ is the modular invariant (I have already shown <a href="http://antoinebourget.org/blog/index.php/2016/11/07/jouons-avec-des-fonctions-complexes-ii-la-fonction-j/">pictures</a> of this function), and $j_N$ is defined by the relation $j_N(\tau) = j (N \tau)$. What I want to explain here is how the knowledge of this field transaltes into the knowledge of the vector space of modular forms of weight $k$, that I choose to be an even positive integer for simplicity.</p>
+<p>It is easy to prove that if we know any non-zero function $f \in \mathcal{A}_k (\Gamma) $, then we have $$\mathcal{A}_k (\Gamma) = \mathcal{A}_0 (\Gamma) f  = \mathbb{C} (X(\Gamma) ) f \, . $$ Thus in some sense, all the spaces $\mathcal{A}_k (\Gamma) $ for all $k$ are the same, because there is an obvious bijection between them, which is the multiplication by a form of the appropriate weight. However, this ceases to be true for modular forms, where there is an additional assumption of holomorphy on the upper-half plane and the cusps $\mathfrak{H} \cup \mathbb{Q} \cup \{\infty\}$. Let us choose once and for all $f \in \mathcal{A}_k (\Gamma) $. If we want to be specific, we can choose for instance $$f = (E_6/E_4)^{k/2} \, . $$ The modular forms of weight $k$ are the $gf$ for $g \in  \mathbb{C} (X(\Gamma) ) $ that are holomorphic. In other words, the function $g$ has to cancel the poles of $f$. What are these poles? Well, since we have made a choice of $f$, it is simple to answer this question: there are poles when $E_4$ vanishes, that is to say at $\tau = e^{2 \pi i /3}$ and all its images by $SL(2,\mathbb{Z})$. At those points $E_4$ has a zero of order two.</p>
+<p>An annoying difficulty here is that we have an infinite number of poles, at all the conjugates of $\tau = e^{2 \pi i /3}$. The way out is obvious: go to the modular curve $X(\Gamma)$, where there will be only a finite number of such conjugates. But this is easier said than done, because the fact that $f$ has weight $k &gt; 0$ precisely means that $f$ is <strong>not</strong> defined on $X(\Gamma)$ because of the factor $(c \tau +d)^k$ in the modular transformations. However, there is a nice interpretation of the definition of modular forms that might help : if $f$ has weight $k$ then $\omega = f (\tau) (\mathrm{d} \tau)^{k/2}$ transforms with weight zero, and therefore is defined on the modular curve! So we are back in business.</p>

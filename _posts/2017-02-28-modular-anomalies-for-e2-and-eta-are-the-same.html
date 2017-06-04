@@ -1,0 +1,45 @@
+---
+layout: post
+title: Modular anomalies for E2 and eta are the same
+date: 2017-02-28 16:01:16.000000000 +01:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '1'
+  inline_featured_image: '0'
+
+use_math: true
+
+
+
+
+---
+
+<p>In a previous <a href="http://antoinebourget.org/blog/index.php/2017/02/15/rigor-and-the-modular-anomaly/">post</a>, I derived the modular anomaly using a straightforward computation (although a subtle one). Physicists may be more familiar with the transformation of the Dedekind eta function under S-duality,<br />
+\begin{equation}<br />
+\label{Seta}<br />
+\eta (-1/\tau) = \sqrt{- i \tau} \eta (\tau) \, .<br />
+\end{equation}<br />
+This transformation is equivalent to the modular anomaly for the Eisenstein series $E_2$, thanks to the relation \begin{equation}<br />
+\label{relation}<br />
+E_2 (\tau) = \frac{12}{\pi i} \frac{\mathrm{d}}{\mathrm{d} \tau} \log \eta (\tau) = \frac{12 \eta ' (\tau)}{\pi i \eta (\tau)} \, .<br />
+\end{equation}<br />
+Indeed, taking the differential of (\ref{Seta}), we have $\eta ' (-1/\tau) = \frac{1}{2} \sqrt{-i} \tau^{3/2} \eta (\tau) + \sqrt{-i} \tau^{5/2} \eta ' (\tau)$, and the transformation rule for $E_2$ follows.</p>
+<p>Let us then derive the relation (\ref{relation}). We use the well-known expansion for the eta function,<br />
+\begin{eqnarray}<br />
+\log \eta (\tau) &amp;=&amp; \log \left( q^{1/24} \prod\limits_{k=1}^{\infty} (1-q^k) \right) \\<br />
+&amp;=&amp; \frac{1}{24} \log q + \sum\limits_{k=1}^{\infty} \log (1-q^k) \\<br />
+&amp;=&amp; \frac{1}{24} \log q - \sum\limits_{k=1}^{\infty} \sum\limits_{n=1}^{\infty} \frac{q^{kn}}{n} \, .<br />
+\end{eqnarray}<br />
+Then with $\frac{\mathrm{d}}{\mathrm{d} \tau} = 2 \pi i q \frac{\mathrm{d}}{\mathrm{d} q}$ we compute<br />
+\begin{eqnarray}<br />
+\frac{12}{\pi i} \frac{\mathrm{d}}{\mathrm{d} \tau} \log \eta (\tau) &amp;=&amp; 24 q \frac{\mathrm{d}}{\mathrm{d} q} \log \eta (\tau) \\<br />
+&amp;=&amp; 24 q \left( \frac{1}{24 q} - \sum\limits_{k=1}^{\infty} \sum\limits_{n=1}^{\infty} k q^{kn -1} \right) \\<br />
+&amp;=&amp; 1 - 24 \sum\limits_{k=1}^{\infty} \sum\limits_{n=1}^{\infty} k q^{kn } \\<br />
+&amp;=&amp; 1 - 24 \sum\limits_{N=1}^{\infty} \left( \sum\limits_{k|N} k \right) q^{N } \\<br />
+&amp;=&amp; E_2 (\tau) \, .<br />
+\end{eqnarray}</p>
+<p>Of course, these computations, combined with the derivation presented in the other <a href="http://antoinebourget.org/2017/02/15/rigor-and-the-modular-anomaly.html">post</a>, can be seen as a proof of the transformation rule (\ref{Seta}).</p>

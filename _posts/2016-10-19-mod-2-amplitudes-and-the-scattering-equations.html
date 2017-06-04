@@ -1,0 +1,37 @@
+---
+layout: post
+title: 'MOD 2 : Amplitudes and the scattering equations'
+date: 2016-10-19 09:08:28.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Hep-th
+tags: []
+meta:
+  _edit_last: '1'
+
+use_math: true
+---
+
+<p><strong>Tree-level scattering amplitudes in pure Yang-Mills</strong></p>
+<p>Recently, there has been a renewed interest in the computation of tree-level scattering amplitudes in pure Yang-Mills theories. In a set of <a href="https://arxiv.org/abs/1610.05318">lecture notes</a> by Stefan Weinzierl that appeared today, this is presented as one of those prototype objects every physicist should know, alongside the harmonic oscillator for classical mechanics or the hydrogen atom in quantum physics. And indeed, Yang-Mills theories are at the heart of our comprehension of the standard model of particles, and the characteristic fields of these theories, those which are always present, are the gluons. Therefore, one of the most basic quantities one wishes to calculate is the amplitude of the process</p>
+<p style="text-align: center;">gluon + gluon + ... → gluon + gluon + ...</p>
+<p style="text-align: left;">where the number of gluons is arbitrary. As usual for this kind of central calculation in a theory, there are plenty of ways to carry it out. The lectures notes linked above present the most important methods:</p>
+<ul>
+<li style="text-align: left;">There is of course the method based on Feynman diagram, but it is highly inefficient. Although the result in in principle obtained after a finite number of steps, the number of diagrams to be considered grows extremely rapidly with the number of gluons involved. The <a href="http://oeis.org/">OEIS</a> even has the corresponding sequence, see <a href="http://oeis.org/A268163">here</a>. The first few terms are<br />
+$$4, 25, 220, 2485, 34300, 559405, 10525900, 224449225, 5348843500, 140880765025, \dots$$<br />
+and it grows like $O(C^n n^{n-1})$ where $C$ is a constant. This means that we will need to perform huge computations with very large intermediate expressions, to end up with a much simpler answer. This is probably not the right way to go.</li>
+<li style="text-align: left;">A series of technical tools have therefore been developed to provide an efficient method to compute the amplitudes numerically, and I refer to Weinzierl's notes for details.</li>
+<li style="text-align: left;">Finally, there is a set of methods that are able to produce analytical results, often using radically new ideas. One of them is the Britto-Cachazo-Feng-Witten recursion relation, where the idea is to break the $n$-point amplitude into amplitudes with fewer legs. This ensures that at all steps of the calculation everything is gauge invariant. There is an obvious drawback, namely that we don't want the particles in the smaller amplitudes to be on-shell. But the trick is to allow the momenta to be complex and to use the tools of complex analysis. Other methods rely on a new representation of the amplitude, like the famous amplituhedron (where the amplitude is represented as  residue on a Grassmannian manifold) or the Cachazo-He-Yuan formula, that I will explain in a future post. But in order to introduce it, we will need the <em>scattering equations</em>.</li>
+</ul>
+<p><strong>The scattering equations</strong></p>
+<p>The scattering equations rely on the observation that if you are given a set of $n$ null vectors $k^{\mu}_a$ for $a=1 , \dots , n$ and $\mu = 1 , \dots , D$, where $D$ is the dimension of space-time, you can represent them as (see <a href="https://arxiv.org/abs/1306.2962">here</a>) $$ k^{\mu}_a = \frac{1}{2 \pi i} \oint\limits_{\sigma_a} dz \frac{p^{\mu}(z)}{\prod\limits_{b=1}^n (z-\sigma_b)}$$ where $p^{\mu}(z)$ is a polynomial of degree $n-2$. One can even require that $p^{\mu}(z) p_{\mu}(z) =0 $ for all values of $z$, which means that $p^{\mu}$ defines a map from $\mathbb{CP}^1$ into the null cone in dimension $D$. Under this requirement, the points $\sigma_a$ on the $\mathbb{CP}^1$ have to satisfy the so-called scattering equations, $$ \sum\limits_{b \neq a} \frac{k_a \cdot k_b}{\sigma_a - \sigma_b} = 0$$ for $a = 1 , \dots , n$. In fact, only $n-3$ of these $n$ equations are independent, because of the $PSL(2,\mathbb{C})$ Möbius transformations of the $\mathbb{CP}^1$. One can show that in any number of dimensions, there are $(n-3)!$ solutions $\{\sigma_a\}$ for these equations (the proof can be found in section 3 of <a href="https://arxiv.org/abs/1306.6575">this</a> paper). Next time, we will see how these can be used to compute amplitudes.</p>
+<p>As a partial conclusion, let us stress the great (apparent) simplicity of the scattering equations, that are nevertheless the starting point of a derivation of a closed form for the tree-level amplitudes in Yang-Mills theory, and maybe surprisingly also in gravity! Moreover, in my field we are so used to consider supersymmetric theories that the letters YM of Yang-Mills are often found in the combination $\mathcal{N}=\dots$ SYM ; this is not the case here! The exact expressions that will be obtained next time do not rely on supersymmetry. However one should keep in mind that they are not strictly superior to supersymmetric methods, as one could naively think, imagining that we can just forget about supersymmetry. The reason is that in the setup reviewed here, we consider only <em>pure</em> Yang-Mills, which means that there are no fermion (in other words, no quarks, if you are concerned with the real world).</p>
+<p><strong>References</strong></p>
+<p><em>Tales of 1001 Gluons</em>, Stefan Weinzierl. Oct 17, 2016, arXiv:1610.05318</p>
+<p><em>Scattering equations and Kawai-Lewellen-Tye orthogonality</em>,<br />
+Freddy Cachazo, Song He, Ellis Ye Yuan. Jun 27, 2013, arXiv:1306.6575</p>
+<p><em>Scattering of Massless Particles in Arbitrary Dimensions</em>,<br />
+Freddy Cachazo, Song He, Ellis Ye Yuan. Jul 8, 2013, arXiv:1307.2199</p>
+<p>&nbsp;</p>
