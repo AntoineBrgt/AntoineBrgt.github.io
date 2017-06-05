@@ -23,6 +23,8 @@ image_path: "/attachments/images"
 file_path: "/attachments/files"
 #twitter_username: AntoineBrgt
 #github_username:  jekyll
+paginate: 10
+paginate_path: "/blog/page:num/"
 
 
 # Build settings
@@ -31,6 +33,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
