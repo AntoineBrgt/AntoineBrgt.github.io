@@ -4,3 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+
+Bienvenue sur mon site !
+
+Vous trouverez ici plein de choses

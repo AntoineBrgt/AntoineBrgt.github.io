@@ -7,7 +7,7 @@ categories:
 tags: []
 ---
 
-
+Nous avons tous appris à l'école ce qui est parfois connu sous le nom de "théorème fondamental de l'arithmétique", à savoir que tout nombre entier (positif) peut s'écrire de façon unique (à l'ordre des facteurs près) comme un produit de nombres premiers 
 
 Dans ce post, je vais considérer des anneaux $(A,+,\times)$ qui seront toujours commutatifs. Ces anneaux peuvent être naturellement quotientés par des *idéaux*, c'est-à-dire des sous-groupes additifs $\mathfrak{a}$ tels que $A \mathfrak{a} \subset \mathfrak{a}$. Des exemples importants d'idéaux sont les idéaux *principaux*, c'est-à-dire l'ensemble des multiples d'un élément $x \in A$, ce que l'on note $(x)$.
 
