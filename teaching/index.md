@@ -4,8 +4,6 @@ title: Teaching
 permalink: /teaching/
 ---
 
-
-
 J'ai eu la chance d'enseigner à l'Ecole Normale Supérieure à Paris. Vous trouverez ici certains documents utilisés durant ces séances.
   * Mécanique quantique (2015)
   * General Relativity (2015)
