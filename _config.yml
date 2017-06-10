@@ -26,7 +26,7 @@ paginate: 10
 paginate_path: "/blog/page:num/"
 google_analytics: "UA-68657513-1"
 disqus:
-  shortname: "antoine_bourget"
+  shortname: "antoinebourget"
 
 
 # Build settings
