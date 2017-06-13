@@ -15,20 +15,11 @@ use_math: true
 
 
 
-  
+
 ---
 
 <p>Let us first recall the strong form of the $AdS_5/CFT_4$ correspondence in the simplest setup.</p>
-<p>\begin{tikzpicture}<br />
-[+preamble]<br />
-\usepackage{tikz}<br />
-[/preamble]<br />
-\node[draw,text width=6cm,align=center](1) at (0cm,0cm) {$SU(N)$ $\mathcal{N}=4$ SYM with coupling constant $g_{YM}=\sqrt{\lambda / N}$};<br />
-\node[draw,text width=6cm,align=center](2) at (9cm,0cm) {IIB string with string length $l_s$ and coupling constant $g_s$ on $AdS_5 \times S^5$ with radius $L$, and $N$ units of $F_5$ flux on $S^5$};<br />
-\node[text width=6cm,align=center](3) at (0cm,-2cm) {Parameters : $N$ and $\lambda$};<br />
-\node[text width=6cm,align=center](4) at (9cm,-2cm) {Parameters : $g_s$ and $L/l_s$};<br />
-\draw[] (1) -- (2);<br />
-\end{tikzpicture}</p>
+<p><img src="{{site.image_path}}/holo-free-1.png" alt="holo-free-1.png" /></p>
 <p>There are two free parameters on each side, which are related by<br />
 \begin{equation}<br />
    \frac{\lambda}{N} = 2 \pi g_s \qquad \textrm{and} \qquad 2 \lambda = \left( \frac{L}{l_s}\right)^4 \, .<br />
@@ -36,14 +27,5 @@ use_math: true
 <p>Usually one considers the large $N$ and large $\lambda$ limit with small $g_s$ : this relates strongly coupled gauge theory to weakly coupled string theory on large $AdS$ space. In this situation, of course, it is the field theory that is hard to study analytically. </p>
 <p>But what happens if we consider instead the large $N$ limit with small $g_s$ but now $\lambda \rightarrow 0$ ? On the gauge theory side, this is a weakly coupled large $N$ theory (which can be understood perturbatively). On the gravity side, this is weakly coupled string theory but on a small $AdS$ space compared to the string length, in other words a strongly coupled sigma model, which is very difficult to study. In this limit, the strings become tensionless (in $AdS$ units), and the string spectrum should contain a tower of higher spin gauge fields. So we are lead to the idea that the gravitational dual of a large $N$ gauge theory in the free limit should by a higher spin theory. In that situation, it is the higher-spin side which is complicated. </p>
 <p>In 2002, Klebanov and Polyakov <a href="http://lanl.arxiv.org/abs/hep-th/0210114">conjectured</a> a relation between theories of infinite number of higher-spin massless gauge fields in $AdS_{d+1}$ and large $N$ $CFT_d$ containing $N$-component vector fields. Let us focus on dimension $d=3$. A substantial evidence for this conjecture was obtained by <a href="http://xxx.lanl.gov/abs/0912.3462">Giombi and Yin</a> in 2009 by comparing the three-point functions in the two theories. Let us be a bit more precise about the conjecture. The higher-spin theory can be related to two distinct field theories, depending on the choice of boundary condition for the scalar field (which has mass squared $m=2 = -2/L^2$ and dimension of dual operator $\Delta = 1$ for the first line and $\Delta = 2$ for the second): </p>
-<p>\begin{tikzpicture}<br />
-[+preamble]<br />
-\usepackage{tikz}<br />
-[/preamble]<br />
-\node[draw,text width=6cm,align=center](1) at (0cm,0cm) {Vasiliev's minimal bosonic higher spin theory in $AdS_4$};<br />
-\node[draw,text width=6cm,align=center](2) at (9cm,1cm) {3d free field theory of $N$ massless scalar fields in its $O(N)$-singlet sector (the "\textbf{free} $O(N)$ vector theory")};<br />
-\node[draw,text width=6cm,align=center](3) at (9cm,-1cm) {3d \textbf{critical} $O(N)$ vector model};<br />
-\draw[] (1) -- (2);<br />
-\draw[] (1) -- (3);<br />
-\end{tikzpicture}</p>
+<p><img src="{{site.image_path}}/holo-free-2.png" alt="holo-free-2.png" /></p>
 <p>The computation of Giombi and Yin found highly nontrivial agreement of the tree-level 3-point functions of Vasiliev theory with free and critical $O(N)$ vector models at leading order in their $1/N$ expansion. A few months ago, Simone Giombi wrote a nice <a href="http://xxx.lanl.gov/abs/1607.02967">review</a> of the recent advances in this field of study. </p>
