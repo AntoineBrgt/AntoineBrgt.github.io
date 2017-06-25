@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Antoine Bourget's Website
 email: antoine.brgt@gmail.com
-description: Antoine Bourget's Website. Science and History seen from Oviedo
+description: Antoine Bourget, theoretical physicist. Science and History seen from Oviedo. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://antoinebourget.org" # the base hostname & protocol for your site, e.g. http://example.com
 image_path: "/attachments/images"
