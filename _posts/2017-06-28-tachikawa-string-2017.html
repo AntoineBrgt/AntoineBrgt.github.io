@@ -1,0 +1,21 @@
+---
+layout: post
+title: Tachikawa's Talk at Strings 2017
+date: 2017-06-28 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> Today, Yuji Tachikawa gave a very nice talk at Strings in Tel Aviv. The slides are available on the website of the conference, and the talk is on Youtube along with all the other talks. </p>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/lk3j_etXVWs" frameborder="0" allowfullscreen></iframe></center>
+
+<p> Usually, when we first learn about quantum anomalies, it is about a continuous symmetry in even number of simensions, with massless excitations which are fermions. Here Tachikawa looks at a very different kind of anomaly: <em>discrete</em> symmetry in <em>odd</em> number of dimensions <em>without any massless excitations</em>, and with anyons! The example he discusses is $3d$ Chern-Simons $U(n)_{2n}$, which has a secret parity symmetry but with an anomaly $\nu = \pm 2 \in \mathbb{Z}_{16}$. </p>
+
+<p>The first surprising thing is that $U(n)_{2n}$ is parity symmetric! To show it, consider $4d$ $\mathcal{N}=1$ pure YM $SU(X)$ theory. It has $X$ vacua labeled by $\langle \lambda \lambda \rangle \sim e^{2 \pi i k/X}$, that can be separated by domain walls. Then you can ask: what is the $3d$ theory that lives on the domain wall between two vacua separated by $n$ steps? The answer is morally the $3d$ $\mathcal{N}=1$ $U(n)_X$ theory (as shown by Acharya and Vafa in 2001)! Therefore, it is natural to conclude that spacetime parity exchanges $$U(n)_X \leftrightarrow U(X-n)_X$$ and therefore $U(n)_{2n}$ is parity symmetric.</p>
+
+<p>Now that the theory is defined, we can place it on a non-orientable space-time, for instance a Möbius strip times a circle. The boundary of this space is a torus $T^2$, so we have created a state in the Hilbert space $\mathcal{H}_{T^2}$, that we call $$| \mathrm{crosscap} \rangle \, . $$ Note that another way to visualize the three-dimensional space-time is as a solid torus with a crosscap running inside (indeed, the Möbius strip can be seen as a disk with a crosscap inside, and we take the product with a circle). We recall that this construction is general (see for instance the
+<a href="https://arxiv.org/abs/hep-th/0406005">notes</a> by Marcos Marino): if $M$ is a three-manifold with boundary $\Sigma$, a Hilbert space $\mathcal{H}(\Sigma)$ is obtained by canonical quantization of the theory on $\Sigma \times \mathbb{R}$. This space has been described precisely in a groundbreaking article by Witten (Quantum field theory and the jones polynomial): it is the finite-dimensional space of conformal blocks of a WZW model on $\Sigma$ with gauge group and level corresponding to the Chern-Simons theory! But let's go back to our current theory. The state $| \mathrm{crosscap} \rangle$ should in principle be invariant under transformations of the geometry that leave it unchanged, for instance the $S$ and $T$ transformations of the solid torus. In the case of $U(3)_6$, a precise calculation gives $$S^{-1} T S| \mathrm{crosscap} \rangle  = e^{2 \pi i \times 2/16} | \mathrm{crosscap} \rangle \, .  $$ This is a manifestation of the parity anomaly.</p>
+
+<p>This may be important when one wants to use anomaly matching to constrain the dynamics. In that case, if the anomaly under consideration can be realized by a topological QFT, you can add it to match the missing anomaly. This means that it is very important to know when an anomaly can be realized by a TQFT. </p>
