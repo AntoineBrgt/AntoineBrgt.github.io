@@ -1,0 +1,176 @@
+---
+layout: post
+title: Séries divergentes -- définitions
+date: 2017-07-22 22:00:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> Je voudrais dans ce post faire le point sur un sujet récurrent en physique théorique, mais souvent mal compris par les physiciens : celui des séries divergentes. Le problème est le suivant : on veut associer à une suite réelle $(a_n)_{n \in \mathbb{N}}$ un nombre $\sum a_n$ satisfaisant certaines propriétés. Je reste très vague pour le moment, nous préciserons les choses plus tard. Introduisons une notation pour les sommes partielles :
+  \begin{equation}
+  s_N = \sum\limits_{n=0}^{N} a_n  \, .
+  \end{equation}
+Évidemment, pour les séries convergentes, on peut définir
+\begin{equation}
+\label{SerieConvergente}
+\sum\limits^{\mathrm{Conv}} a_n = \lim\limits_{N \rightarrow \infty} s_N \, .
+\end{equation}
+Mais est-il possible d'étendre cette définition de $\sum$ pour les cas où la limite (\ref{SerieConvergente}) n'existe pas ? On peut envisager plusieurs méthodes. En voici cinq parmi les plus classiques, que l'on peut désigner par les cinq remières lettres de l'alphabet, ce qui est bien pratique !
+<ul>
+<li> La méthode d'Abel
+\begin{equation}
+\sum\limits^{\mathrm{A}} a_n =  \lim\limits_{x \rightarrow 1^-} \sum\limits^{\mathrm{Conv}} a_n x^n \, .
+\end{equation}
+<li> La méthode de Borel
+\begin{equation}
+\sum\limits^{\mathrm{B}} a_n =  \int\limits_{0}^{\infty} \left( \sum\limits^{\mathrm{Conv}} \frac{a_n t^n}{n!}\right) e^{-t} \mathrm{d} t
+\end{equation}
+<li> La méthode de Cesàro,
+\begin{equation}
+\sum\limits^{\mathrm{C}} a_n = \lim\limits_{M \rightarrow \infty} \frac{1}{M+1} \sum\limits_{N=0}^M s_N \, .
+\end{equation}
+<li> La méthode de Dirichlet
+\begin{equation}
+\label{dirichlet}
+\sum\limits^{\mathrm{D}} a_n =  \lim\limits_{s \rightarrow -1} \sum\limits^{\mathrm{Conv}} \frac{a_n}{n^{s+1}} \, .
+\end{equation}
+<li> La méthode d'Euler
+\begin{equation}
+...
+\end{equation}
+</ul>
+</p>
+
+<p>Je n'ai donné ici que des formules brutes, et celles-ci n'ont guère de sens sans explications supplémentaires. Dans la suite de ce post, je vais donner quelques détails concernant ces méthodes, et d'autres qui les généralisent. Les théorèmes numérotés se réfèrent au livre de Hardy, <em>Divergent Series</em>, que j'utilise abondamment dans ce qui suit. </p>
+
+<h3> Quelques définitions générales </h3>
+
+<p>On dit qu'une méthode de sommation est <em>régulière</em> si, quand elle est appliquée à une série convergente, elle renvoie un résultat égal à la somme de la série calculée de la façon usuelle. </p>
+
+<p>On dit que deux méthodes sont <em>cohérentes</em> si, pour les séries auxquelles elles attribuent toutes les deux des limites, ces limites coïncident toujours.  </p>
+
+<p>On dit qu'une méthode est <em>incluse</em> dans une autre si la convergence vers une limite dans la première implique la convergence vers la même limite dans la seconde. Deux méthodes mutuellement incluses l'une dans l'autre sont dites <em>équivalentes</em>. </p>
+
+<p>Toute méthode de sommation est limitée. Ainsi, étant donnée une méthode,
+<ul>
+  <li> Il est assez intuitif qu'elle ne pourra pas sommer des séries trop rapidement divergentes.
+  <li> Mais elle ne peut pas non plus sommer des séries qui divergent trop lentement ! Ce principe est contenu dans les théorèmes dits <em>tauberiens</em>, qui sont de la forme : "Si une série est sommable avec la méthode M et satisfait une certaine condition limitant sa vitesse de divergence, alors la série est en fait convergente".
+</ul>
+ </p>
+
+<h3> Sommation de Cesàro et généralisations </h3>
+
+<p>Considérons les transformations du type
+\begin{equation}
+t_m  =  \sum\limits_{n=0}^{\infty} c_{m,n} s_n \, ,
+\end{equation}
+dont un exemple est donné par la somme de Cesàro. On peut alors montrer (Hardy, Théorème 2) que la méthode est régulière si et seulement si la suite $\sum\limits_{n}^{\mathrm{Conv}} |c_{m,n}|$ existe et est bornée, et pour tout $n$, $c_{m,n} \rightarrow 0$ et $\sum\limits_{n}^{\mathrm{Conv}} c_{m,n} \rightarrow 1$ quand $m$ tend vers $+ \infty$. On vérifie ainsi facilement que la sommation de Cesàro est régulière. On peut généraliser la sommation de Cesàro en définissant les <em>moyennes de Nördlund</em> :
+\begin{equation}
+t_m  =  \frac{p_m s_0 + \dots + p_0 s_m}{p_0 + \dots + p_m} \, ,
+\end{equation}
+avec $p_n \geq 0$,$p_0 > 0$, et $p_n / (p_0 + \dots + p_n) \rightarrow 0$. Toutes ces moyennes sont régulières (Théorème 16) et cohérentes entre elles (Théoreme 17).
+</p>
+
+<p>Une autre généralisation possible est d'itérer le processus de moyenne de Cesàro. Autrement dit, étant donnée une série divergente, on calcule sa moyenne de Cesàro. Si celle-ci est toujours divergente, on recommence. Cette méthode est baptisée méthode des <em>moyennes de Hölder</em>. </p>
+
+<h3> Sommation d'Abel et généralisations </h3>
+
+<p>Considérons une suite $(\lambda_n)$ positive, strictement croissante et tendant vers l'infini. Si la série $\sum\limits^{\mathrm{Conv}} a_n e^{- \lambda_n x}$ existe pour tout $x>0$ et si la fonction ainsi définie admet une limite lorsque $x \rightarrow 0$, alors on pose
+\begin{equation}
+\sum\limits^{(\mathrm{A},\lambda)} a_n =  \lim\limits_{x \rightarrow 0} \sum\limits^{\mathrm{Conv}} a_n e^{- \lambda_n x} \, .
+\end{equation}
+Il est clair que la sommation d'Abel définie ci-dessus est un cas particulier de cette sommation plus générale (il suffit de prendre $\lambda_n = - \log n$), que l'on qualifie par conséquent d'abélienne. On montre alors (Théorème 27) que toutes les méthodes de sommation abéliennes sont régulières. En revanche, elles ne sont en général pas cohérentes entre elles. </p>
+
+<p>Profitons de cette occasion pour citer un théorème tauberien (Théorème 90) s'appliquant à la sommation d'Abel : Si $\sum\limits^{\mathrm{A}} a_n = s$ et $a_n = O(1/n)$, alors $\sum\limits^{\mathrm{Conv}} a_n=s$. </p>
+
+<h3> Sommation de Borel faible et généralisations </h3>
+
+<p> On a vu dans la section précédente comment associer à chaque suite $(\lambda_n)$ positive, strictement croissante et tendant vers l'infini une méthode de sommation. Nous pouvons faire de même en partant d'une série entière à coefficients positifs. Considérons ainsi $J(x) = \sum\limits^{\mathrm{Conv}} p_n x^n$ pour tout $x$ réel. Si la limite du membre de droite existe, on pose alors
+  \begin{equation}
+  \label{SsurJ}
+  \sum\limits^{\mathrm{J}} a_n =  \lim\limits_{x \rightarrow \infty} \frac{\sum\limits^{\mathrm{Conv}} p_n s_n x^n}{\sum\limits^{\mathrm{Conv}} p_n x^n} \, .
+  \end{equation}
+Appelons cette méthode de sommation la <em>méthode $J$</em>.  Si on choisit $J(x)=e^x$, on obtient la méthode dite de <em>Borel faible</em> (cette méthode est équivalente à la méthode de Borel introduite ci-dessus pourvu que $e^{-x} \sum\limits^{\mathrm{Conv}} a_n x^n \rightarrow 0$ quand $x \rightarrow + \infty$ (Théorème 123); comme les noms le suggèrent, la méthode de Borel est cependant légèrement plus forte que la méthode de Borel faible (Théorème 125)). On montre alors que toutes les méthodes $J$ sont régulières.
+ </p>
+
+ <p>Ici encore, on dispose de théorèmes tauberiens. Énonçons celui qui est relatif à la sommation de Borel faible (Théorème 156) : Si $\sum\limits^{J=e^x} a_n = s$ et $a_n = O(1/\sqrt{n})$, alors $\sum\limits^{\mathrm{Conv}} a_n=s$. </p>
+
+ <p>Regardons un exemple. La fonction
+ \begin{equation}
+ f(x) = \int_0^{\infty} \frac{e^{-t/x}}{1+t}   \mathrm{d} t
+ \end{equation}
+ "correspond" si l'on fait un développement en $x$ et que l'on intègre terme à terme, à la série
+ \begin{equation}
+ \sum (-1)^{n} n! x^{n+1} \, .
+ \end{equation}
+ Cette série a un rayon de convergence nul, et pourtant, elle est bien intuitivement reliée d'une façon ou d'une autre à la fonction $f(x)$. Plus précisément, la façon dont elle est reliée à cette fonction est via la sommation de Borel introduite ci-dessus. Autrement dit, on a
+ \begin{equation}
+ \sum\limits^{\mathrm{B}} (-1)^{n} n! x^{n+1}  =  \int_0^{\infty} \frac{e^{-t/x}}{1+t}   \mathrm{d} t \, .
+ \end{equation}
+On le voit, cette méthode de sommation d'une série divergente revient d'une certaine façon à annuler un échange illégal entre deux opérateurs qui ne commutent pas (ici, une limite et une intégrale). Cette caractéristique est en fait assez générale, et s'applique à ma connaissance à tous les procédés de sommation usuels.
+</p>
+
+ <h3> Somme d'Euler-Maclaurin </h3>
+
+ <p>Dans ce paragraphe, nous décrivons une méthode de sommation assez différente de toutes les précédentes. Elle se base sur des propriétés analytiques des fonctions $\mathbb{R} \rightarrow \mathbb{R}$ suffisamment régulières (par opposition au paragraphe suivant, où l'on exploite les propriétés analytiques des fonctions holomorphes et méromorphes). </p>
+
+
+  <p>Considérons une fonction réelle $f$ de classe $C^{\infty}$ sur $]0,+ \infty[$, intégrable en $0$. On peut alors définir la primitive $F(x) = \int_0^x f(t) \mathrm{d} t$. Supposons de plus qu'il existe un entier $K$ tel que pour tout $k \geq K$, $\int^{\infty} |f^{(2k+2)}| < \infty$ et $\lim\limits_{x \rightarrow \infty} f^{(2k+1)}(x) =0$. On a alors pour tout $k \geq K$
+    \begin{equation}
+\lim\limits_{n \rightarrow \infty} \sum\limits_{m=1}^n f(m) - F(n) - \frac{1}{2} f(n) - S_k (n) = C
+    \end{equation}
+    où
+    \begin{equation}
+S_k (n) = \sum\limits_{r=1}^k \frac{(-1)^{r-1} B_r}{2r!}f^{(2r-1)} (m)
+    \end{equation}
+avec $B_r$ les nombres de Bernoulli. La limite $C$ ne dépend pas de $k$ ! On l'appelle <em>constante d'Euler-Maclaurin</em> de $f$, et on pose
+\begin{equation}
+\sum\limits_{n \geq 1}^{\mathfrak{R}} f(n) = C \, .
+\end{equation}
+La lettre $\mathfrak{R}$ représente Ramanujan, qui s'est basé sur cette définition pour ses travaux sur les séries divergentes.
+    </p>
+
+ <h3>Régularisation holomorphes</h3>
+
+
+  <h4>Régularisation zéta</h4>
+
+ <p>Changeons une nouvelle fois de sujet, pour nous intéresser certains aspects de la théorie des <a href="https://fr.wikipedia.org/wiki/Op%C3%A9rateur_pseudo-diff%C3%A9rentiel">opérateurs pseudo-différentiels</a>. Étant donné un tel opérateur $A$, et sous certaines conditions (il faut que l'opérateur soit elliptique et défini positif), on peut définir la fonction zéta associée $\zeta_A (s) = \mathrm{tr} \, A^{-s}$, pour tout complexe $s$ de partie réelle suffisamment grande (supérieure à un réel $s_0$ appelé abscisse de convergence). Cette fonction possède un prolongement méromorphe à l'ensenble du plan complexe $\mathbb{C}$. On peut alors calculer une résularisation du déterminant de $A$ via la formule
+   \begin{equation}
+   \mathrm{det}_{\zeta} A = e^{- \zeta '_A (0)} \, .
+   \end{equation}
+   J'imagine qu'il est aussi possible de poser (bien que je n'aie pas trouvé cela explicitement dans la littérature mathématique)
+   \begin{equation}
+   \mathrm{tr}_{\zeta} A = \zeta_A (-1) \, .
+   \end{equation}
+ </p>
+
+ <p>Cette dernière équation peut être vue comme une méthode de sommation pour des séries divergentes de réels positifs (ici, les valeurs propres de $A$). L'idée est de définir la fonction méromorphe
+   \begin{equation}
+   \sum\limits^{\mathrm{Conv}} (a_n)^{-s}
+   \end{equation}
+   pour $s$ complexe de partie réelle grande, puis d'utiliser s'il existe le prolongement analytique en $s=-1$ pour obtenir une valeur pour la série.
+ </p>
+
+ <h4>Régularisation de Dirichlet</h4>
+
+ <p>La même idée de prolongement analytique est à la base d'une autre méthode, auquel est associé le nom de Dirichlet. Il s'agit de définir, toujours pour $s$ complex de partie réelle suffisamment grande,
+   \begin{equation}
+   \sum\limits^{\mathrm{Conv}} \frac{a_n}{n^{s+1}} \, ,
+   \end{equation}
+et d'évaluer le prolongement analytique, s'il existe, en $s=-1$. C'est dans ce sens qu'il faut comprendre l'équation (\ref{dirichlet}).
+ </p>
+
+ <p>Notons que ces deux méthodes (zeta et Dirichlet) sont souvent confondues, et c'est sans doute à cause de la fameuse somme $0+1+2+3+...$, qui donne lieu dans les deux cas au même calcul (en effet, prendre $a_n=n$ transforme la série de Dirichlet en $\sum n^{-s}$, ce qui la transforme en série zéta). </p>
+
+ <h3>Exemples</h3>
+
+ <h4>Exemple 1 : $\sum (-1)^n$</h4>
+
+ <p>Illustrons les techniques introduites avec la somme $\sum (-1)^n$. Dans ce cas, on a $s_n=1$ si $n$ est pair et $s_n=0$ si $n$ est impair. La sommation de Cesàro donne donc
+ $\sum\limits^{\mathrm{C}} (-1)^n = \frac{1}{2}$. On en déduit, par cohérence des moyennes de Nördlund, que toutes les sommations de Nördlund donneront le même résultat, $\frac{1}{2}$. </p>
+
+ <p>Regardons maintenant la sommation d'Abel. Comme $(-1)^n$ n'est pas un $O(1/n)$, il est envisageable que la méthode fonctionne. Prenons donc $\lambda_n = - \log n$, et regardons $\sum\limits^{\mathrm{Conv}} (-1)^n x^n = \frac{1}{1+x}$. La limite quand $x$ tend vers $1$ donne alors à nouveau $\frac{1}{2}$.  </p>
+
+  <p>Tournons-nous vers la sommation de Borel, avec $J(x) = e^x$. À nouveau, le théorème tauberien autorise une sommabilité. Le numérateur de (\ref{SsurJ}) est égal à $\cosh x$, et le dénominateur est $e^x$. La limite du rapport donne donc $\frac{1}{2}$. Ceci est le résultat de la sommation de Borel faible, mais on sait alors que la sommation de Borel forte donnera le même résultat.  </p>
