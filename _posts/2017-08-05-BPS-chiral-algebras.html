@@ -1,0 +1,24 @@
+---
+layout: post
+title: BPS particles and chiral algebras
+date: 2017-08-05 11:38:56.000000000 +02:00
+---
+
+<p> Many results in 4d N=2 theories come from the combination of two principles: renormalization group and supersymmetry. Computing a protected observable in the UV and the IR gives different expressions for the same quantity, and this can be interesting. Let us see an example, following a talk Clay Cordova gave at String-Maths 2017. </p>
+
+<p>The physics of a generic RG flow goes as follows:
+  <ul>
+<li> UV is asymptotically free or CFT. Characterized by spectrum of local operators and OPE.
+<li> IR is gapped of free. Characterized by spectrum of one-particle states and S-matrix.
+</ul>
+What is the relation between these concepts? We will see an explicit formula relating them in a supersymmetric context.</p>
+
+<p>Look at the Schur index $\mathcal{I}(q)$, that can be associated to any N=2 theory.
+  <ul>
+<li> UV side : the index is a sum over local operators $$\mathcal{I}(q) = \sum (-1)^F q^{R+J_1 + J_2}$$ where $R$ is the R-charge and the $J$s are the two Lorentz spins. If UV theory is conformal, then it is the character of a $2d$ chiral algebra, as I explained in a previous <a href="http://www.antoinebourget.org/2017/07/05/chiral-algebras-higher-dimension.html">post</a>.
+<li> IR : involves the rank $r$ of the Coulomb branch and the generating function of BPS particles. Let's explain briefly what this is. The construction of BPS particles depends on a central charge $Z$ which can be varied in a finite dimensional complex moduli space. The BPS spectrum is locally constant but jumps across walls of real codimension one. What are the wall-crossing invariants? An invariant is $\mathcal{O}(q)$ (constructed in <a "href=https://arxiv.org/abs/1303.3253"> Kontsevitch-Soibelman</a> and understood in physics by Gaiotto, Moore and Neitzke), valued in a quantum torus algebra. A simpler invariant is obtained by taking its trace $\mathrm{Tr} \, \mathcal{O} (q)$.
+</ul> </p>
+
+<p>The conjecture of Cordova and Shao is then that for any $\mathcal{N}=2$ theory, $$\mathcal{I}(q) = (q)^{2r}_{\infty} \mathrm{Tr} \, \mathcal{O} (q) \, . $$ The left-hand side is UV, the right-hand side is IR. In general, they look very different from each other (see for instance the BPS generating function for the $A_2$ Argyres-Douglas theory, and the $(2,5)$ Virasoro minimal model vacuum character), and it is a miracle that the formula works! </p>
+
+<p> Note that what has been done here for particles can be generalized to lines, or surfaces! This leads to the Cordova-Gaiotto-Shao conjecture.  </p>
