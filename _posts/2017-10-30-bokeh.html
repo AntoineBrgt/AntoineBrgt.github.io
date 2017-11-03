@@ -1,0 +1,29 @@
+---
+layout: post
+title: Bokeh
+date: 2017-10-30 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> Le bokeh est un effet utilisé en photographie dans lequel un plan de l'image est volontairement flou, afin de faire ressortir un autre plan qui, lui, est net. On peut se demander quels sont les différents paramètres influant sur l'effet de bokeh. Je présente ici une formule simple pour quantifier les effets des paramétres standards, dans le cadre de l'optique géométrique, et en supposant que l'objectif est assimilable à une lentille mince.  </p>
+
+<p> On considère deux plans : le plan de l'objet que l'on veut représenter nettement (situé à une distance $d_O$ de l'objectif), et celui du fond, que l'on veut rendre flou (situé à une distance $d_F$ de l'objectif). Pour caractériser le niveau de flou, on peut regarder la taille, en nombre pixels $B$ sur la photo, de la tache produite par un objet ponctuel situé dans le fond. C'est ce nombre $B$ que j'appelle le bokeh. On a alors
+$$ B = \frac{1- \frac{d_O}{d_F}}{n \times \frac{p}{f} \left( \frac{d_O}{f} -1 \right)} \, . $$
+Dans cette formule, $f$ est la distance focale, $n$ est le nombre qui caractérise l'ouverture ($n = \frac{f}{D}$) et $p$ est la taille d'un pixel sur le capteur. On suppose $f < d_O < d_F$.  </p>
+
+<p>On peut regarder les influences des différents paramètres:
+  <ul>
+    <li> Si l'objet et le fond sont proches, le bokeh disparaît : $d_O = d_F$ implique $B=0$.
+      <li> À l'inverse, plus l'objet est proche de l'objectif, plus le bokeh est important : quand $d_O = f$, on a $B = \infty$.
+        <li> Plus l'ouverture est grande, i.e. plus $n$ est petit, plus $B$ est grand.
+          <li> Plus la focale est grande (i.e. plus le zoom est important), plus $B$ est grand. En fait, c'est ce facteur qui est le plus important, car la dépendance est quadratique. 
+  </ul>
+</p>
+
+<p>Donnons maintenant deux exemples pour illustrer le calcul. Dans le premier cas, je ne fais pas d'effort particulier pour avoir le bokeh. J'utilise mon objectif dans des conditions moyennes : ouverture $f/8$, pas de zoom particulier $f=24$ mm. Comme je ne connais pas la taille des pixels de mon appareil, je la laisse égale à $p$ inconnu. Je considére un objet situé à deux mètres, et le fond situé à vingt mètres. Je trouve $B = 0,033 mm/p$. </p>
+
+<p>Maintenant, avec la même scène ($d_O=2$ m et $d_F = 20$ m) je prends une focale plus grande, $f=100$ mm, et j'ouvre le diaphragme au maximum à $f/2,8$. Je trouve alors $B=1,69 mm/p$. Le bokeh est 50 fois plus important ! Si je me rapproche de la scène d'un mètre, de sorte que $d_O=1$ m et $d_F = 19$ m, je monte à $B = 3,76 mm/p$, et on voit que le bokeh a plus que doublé. </p>
+
+<p>On le voit, il est important de se placer dans de bonnes conditions si on veut réaliser cet effet. Il peut être nécessaire d'utiliser un objectif adapté. Par exemple, avec une ouverture de $f/1$ et une focale de $f = 200$ mm, on obtient (toujours avec $d_O=1$ m et $d_F = 19$ m) un bokeh énorme de $B = 47,4 mm/p$. </p>
