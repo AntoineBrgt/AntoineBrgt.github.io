@@ -1,0 +1,49 @@
+---
+layout: post
+title: Characters of finite groups
+date: 2018-01-18 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> Consider a finite group $G$. In this note, I will define a (complex) representation of $G$ to be any group homomorphism $\rho : G \rightarrow GL(n,\mathbb{C})$. Working on the field of complex numbers instead of an arbitrary field has many advantages:
+<ul>
+  <li> The concepts of reducible representation (one that is equivalent to a block upper triangular representation) and decomposable representation (one that is equivalent to a direct sum of non-trivial representations)  coincide. </li>
+  <li> Any representation is equivalent to a direct sum of irreducible representations. </li>
+  <li> Any representation is equivalent to a unitary representation. </li>
+</ul>
+For the finite group $G$, one can then restrict our attention to the irreducible and unitary representations.
+ </p>
+
+ <p> When considering a representation, a very natural quantity to evaluate is the character, which is simply the trace of the matrix, $$\chi_{\rho} (g) = \mathrm{Tr}(\rho (g))$$ for $g \in G$. This is a good object because it is naturally invariant under conjugation, thanks to the cyclic property of the trace. Moreover, this also implies that $\chi_{\rho} (g)$ only depends on the conjugacy class of $g$ in $G$, not on the element itself. Obviously, there is a finite number of conjufacy classes, let us call this number $N$. Now comes the first surprise, which is a non-trivial fact : <b>the number of (equivalence classes of) irreducible representations of $G$ is $N$ !</b> This is noce, because it means we have a finite number of irreducible characters to study, and each character is characterized (!) by a finite number of numbers. We can put these numbers is a table, which is squared because of the above property. </p>
+
+ <p> Let's give an example. Consider the most elementary non-abelian group, $G=\mathfrak{S}_3$, the group of permutations of three objects. It has six elements: $$G = \{ 1 , (12) , (13) , (23) , (123) , (132) \} \, . $$ Of course, all the 2-cycles are conjugate to each other, and as are the 3-cycles. So there are three conjugacy classes. This immediately tells us that there are three inequivalent irreducible representations. One of them is the trivial representation, of dimension $1$, which associated the number $1$ to every element of $G$. Another one-dimensional representation is the "signature", which gives $-1$ on the 2-cycles, and $1$ on the other elements. Finally, we know we need one more, let's call it $R$ -- at this point, we don't know anything about it. The character table will then be : $$\begin{array}{c|ccc}
+  \mathrm{Class}& 1 & (12) & (123) \\ \hline
+ 1 & 1 & 1 & 1 \\
+ \mathrm{sign} & 1 & -1 & 1 \\
+ R & ? & ? & ?
+   \end{array}$$
+ Is there an easy way to fill in the interrogation marks? Yes, there is, using the astonishing properties of the characters! </p>
+
+ <p> So let's come back to a generic finite group $G$. One can prove the following facts about the character table -- I'll call these facts the "basic character theory". <b>
+   <ul>
+     <li> The character table has the same number of lines, labeled by characters $\chi_1$,...,$\chi_N$ (the first of which is the trivial representation $1$), and columns, labeled by representatives $g_1$,...,$g_N$ of conjugacy classes (the first of which being the unit element $1$). </li>
+     <li> The columns are pairwise orthogonal for the Hermitian product, and the norm squared of a column is $|G|$ divided by the cardinality of the corresponding class.   </li>
+     <li> The lines, taking into account the cardinalities of the classes, are pairwise orthogonal, and the norm squared is equal to $|G|$. </li>
+     <li> The first column gives the dimensions of the irreducible representations. </li>
+   </ul></b>
+ </p>
+
+ <p> Using the facts above, one can easily fill in the $\mathfrak{S}_3$ table above. From the normalization of the columns, we have $1+1+(\mathrm{dim} \, R)^2=|G|=6$, so $\mathrm{dim} \, R = 2$. Then the orthogonality of the columns give the two last entries:
+   $$\begin{array}{c|ccc}
+    \mathrm{Class}& 1 & (12) & (123) \\
+   \mathrm{Card} & 1 & 3 & 2 \\ \hline
+   1 & 1 & 1 & 1 \\
+   \mathrm{sign} & 1 & -1 & 1 \\
+   R & 2 & 0 & -1
+     \end{array}$$
+ </p>
+
+ <p> Much more can be said on the characters of finite groups, but my point here was to give this very brief introduction, to compare with the theory of characters of connected Lie groups. Then, if we want to understand the characters of (finitely-)disconnected Lie groups, one will need to put the two aspects together.
+ </p>
