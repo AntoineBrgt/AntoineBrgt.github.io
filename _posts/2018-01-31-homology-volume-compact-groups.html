@@ -1,0 +1,28 @@
+---
+layout: post
+title: Homology and Volumes of compact Lie groups
+date: 2018-01-31 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> Let me start with a bit of history, taken from the book <i>History of Topology</i>, edited by I.M. James. I quote from the chapter dedicated to Heinz Hopf (the action probably takes place in 1935):  </p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+  After his return to Switzerland, Hopf took part in a conference on topology in Geneva. Elie Cartan talked on his result that the homology of the classical compact simple Lie groups is the homology of a product of spheres of odd dimensions. Afterwards Cartan posed the question of whether this is also true for the exceptional groups and, hence, because of the structure theorems, in general for all compact Lie groups.
+
+  Hopf was able to solve this problem in an utterly new way in the course of the following years. The resulting paper appeared in 1941 in the Annals of Mathematics. It had been submitted to the Compositio Mathematica in August 1939, but because of the war this journal had to be discontinued. Like Elie Cartan, Hopf was not satisfied by a proof by direct verification because such a proof contained no general reasons for the truth of the theorem. He therefore tried to determine the homology of a compact Lie group using only general properties. For this goal he introduced so-called $\Gamma$-manifolds; these are manifolds on which a continuous but not necessarily associative product is defined. So, group spaces are particular examples of $\Gamma$-manifolds. Hopf then showed that the intersection ring of a $\Gamma$-manifold is isomorphic to a product of intersection rings of spheres of odd dimension. It is essential for his proof that the product structure of the manifold induces a coproduct in homology via the inverse homomorphism. The intersection ring therefore becomes - as it is called nowadays - a Hopf algebra. The result then follows because the algebra structure of a Hopf algebra is very restricted. In the case of a $\Gamma$-manifold one gets an exterior algebra with generators in odd dimensions.
+</blockquote>
+
+<p> This illustrates well the fact that the problem of the homology of compact Lie groups was central at the time, and led to the development of numerous more general ideas, the most famous of which is maybe the concept of Hopf algebra. It is not my goal here to talk too much about the details of this fascinating story; here I simply want to emphasize the connection between certain Lie groups and products of spheres. I found it very difficult to encounter modern references, probably due to my lack of knowledge in topology -- early references, available online
+<a href="https://pdfs.semanticscholar.org/d2d4/63dfb329406a4cbfcf3ae1904e549182ace7.pdf">here</a> and
+<a href="http://www.ams.org/journals/bull/1952-58-01/S0002-9904-1952-09544-6/S0002-9904-1952-09544-6.pdf">there</a>
+, are two reviews, by Hans Samelson from 1950 and by Armand Borel from 1955. One good modern reference is the book by Félix, Oprea and Tanré, <i>Algebraic Models in Geometry</i>. </p>
+
+<p>The important point is that, as far as the cycles go, a classical group behaves as if it were the product of odd spheres. The number of the spheres is equal to the rank of the group, and their dimension is $2d_i -1$, where the $d_i$ are the degrees of fundamental invariants (see <a href="https://en.wikipedia.org/wiki/Coxeter_element">Wikipedia</a> for the list of these numbers). This means in particular that the Poincaré polynomials, whose coefficients are the Betti numbers, can be written as $$P = \prod\limits_{i=1}^{r} (1+t^{2d_i -1}) \, , $$ where $r$ is the rank of the group. Note that the degrees $d_i$ are related to the exponents $m_i$ by the relation $$d_i = m_i +1 \, . $$ An other guise of the statement is that (Theorem 1.34 in the Félix-Oprea-Tanré book) if $G$ is a compact connected Lie group, then there exist elements of odd degrees $x_{2p_i +1} \in H^{2 p_i +1} (G , \mathbb{Q})$ such that, as an algebra, $$H^{*}(G,\mathbb{Q}) = \wedge (x_{2p_1 +1} , \dots , x_{2p_r +1}) \, . $$</p>
+
+<p>As an application of this theorem, one can derive the Macdonald formula for the volume of a connected and simply-connected compact Lie group $G$ with simple Lie algebra $\mathfrak{g}$: $$\mathrm{Vol}(G) = \mathrm{Vol}(\mathfrak{g}/\mathfrak{g}_{\mathbb{Z}}) \prod\limits_{i=1}^r \mathrm{Vol}(S^{2d_i -1}) = \mathrm{Vol}(\mathfrak{t}/\mathfrak{t}_{\mathbb{Z}}) \left( \prod\limits_{\alpha >0} |\alpha^{\vee}|^2 \right) \left( \prod\limits_{i=1}^r \frac{2 \pi^{d_i}}{(d_i -1) !} \right) \, . $$ Here $\mathfrak{g}_{\mathbb{Z}}$ is the Chevalley lattice. </p>
+
+<p>As an application, let's compute the volume of $SU(N)$. There are $\frac{1}{2}N(N-1)$ positive roots, for which $|\alpha^{\vee}|^2 = 2$, so the first term contributes $2^{\frac{1}{2}N(N-1)}$. The second term contributes $2^{N-1} \pi^{\frac{1}{2}N(N-1) -1} / G(N+1)$, where $G$ is the Barnes G-function. I think the first factor is just trivial, $\mathrm{Vol}(\mathfrak{t}/\mathfrak{t}_{\mathbb{Z}}) = 1$ (how should one compute that?). Putting all together, we obtain $$\mathrm{Vol}(SU(N)) = \frac{(2 \pi)^{N(N+1)/2-1}}{G(N+1)} \, . $$</p>
+
+<p>One can also deduce the volume of the group $U(N)$, which is obtained by multiplying by $2 \pi$, for the additional $U(1)$ : $$\mathrm{Vol}(U(N)) = \frac{(2 \pi)^{N(N+1)/2}}{G(N+1)} \, . $$ This way we have recovered a known result, see for instance Corollary 3.5.2 in the book <i>Graphs on Surfaces and Their Applications</i>, by Lando and Zvonkin. </p>
