@@ -1,0 +1,45 @@
+---
+layout: post
+title: Exact correlators on the Wilson Loop in $\mathcal{N}=4$ SYM
+date: 2018-02-19 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> I'm talking here about the
+<a href="https://arxiv.org/pdf/1802.05201.pdf">paper text</a> which appeared last week, by Simone Giombi and Shota Komatsu.
+</p>
+
+<p>The paper starts with delimitating three possible methods that can lead to exact solutions of interacting 4d QFTs:
+<ul>
+<li> Supersymmetry (via BPS observables and supersymmetric localization)</li>
+<li> The conformal bootstrap </li>
+<li> Integrability </li>
+</ul>
+The authors study quantities at the crossroads of these three methods, namely correlation functions of local operator insertions on the $1/8$-BPS Wilson loop in $\mathcal{N}=4$ SYM.
+ </p>
+
+ <h2> Wilson loops in $\mathcal{N}=4$ SYM</h2>
+
+ <p>We start with a review of well-known facts about Wilson loops in $\mathcal{N}=4$ SYM. First of all, what is a Wilson loop? The basic idea is that when a particle describes a loop in space, the corresponding field will pick up a complex phase. For instance, in pure Yang-Mills theory with gauge group $SU(N)$, the Wilson loop for a quark (in the fundamental representation) is $$ \mathcal{W}(\mathcal{C}) = \frac{1}{N} \mathrm{Tr} \left( \mathcal{P} \exp \left[ i \oint_{\mathcal{C}} \mathrm{d} x^{\mu} A_{\mu} \right]\right) \, . $$ It is important to stress that the quarks that is moving around does not affect the gauge field: it is viewed as an infinitely heavy test particle. </p>
+
+ <p>Now we want to consider a similar operator in $\mathcal{N}=4$ SYM. For that, one has to "construct" an infinitely massive probe particle transforming in the fundamental representation (recall that all the fields of the theory transform in the adjoint). To do that, we may use the brane realization: the theory is the world-volume theory of $N$ D3 branes. Adding an other D3 brane at some large distance in the remaining six coordinates will provide for the heavy fundamental. This shows that we have to take into account the movement in the six transverse directions in string theory, which translate in $\mathcal{N}=4$ SYM to the six adjoint scalars $\Phi_i$, $i=1,\dots,6$. Hence the Wilson line operator is now (in Euclidean signature) $$ \mathcal{W}(\mathcal{C}) = \frac{1}{N} \mathrm{Tr} \left( \mathcal{P} \exp \left[  \oint_{\mathcal{C}} \mathrm{d} s (i \dot{x}^{\mu} A_{\mu}  + \dot{y}^i \Phi_i \right]\right) \, .   $$ In the case where $\dot{x}^2 = \dot{y}^2$, one can show that the Wilson loop is $1/2$-BPS. This equation, which says that the $y^i$ live on a sphere $S^5$, is related by holography to the fact that the dual of $\mathcal{N}=4$ SYM is string theory on $AdS_5 \times S^5$.  </p>
+
+ <p>The gravity dual of the $1/2$-BPS Wilson loop is a minimal surface in $AdS_5$, with boundary given by the curve $\mathcal{C}$, as well as Dirichlet conditions on the $S^5$. In the non-supersymmetric case, these Dirichlet conditions are replaced by Neumann conditions on the sphere.  </p>
+
+
+  <h2> Wilson loops and supersymmetric localization</h2>
+
+  <p>In fact, many Wilson loops have been constructed; for instance, $1/16$-BPS Wilson loops with arbitrary shape on an $S^3 \subset \mathbb{R}^4$. Restricting these loops to the equator $S^2  \subset S^3$, one obtains $1/8$-BPS loops. To be more precise, the loops studied in the present paper are of the form $$ \mathcal{W}(\mathcal{C}) = \frac{1}{N} \mathrm{Tr} \left( \mathcal{P} \exp \left[  \oint_{\mathcal{C}}   (i  A_{j}  + \epsilon_{klj} x^k \Phi^l ) \mathrm{d} x^j \right]\right) \, ,   $$ where $i,j,k=1,2,3$ and $x_1^2+x_2^2+x_3^2=1$ is the equation of $S^2$. Computing the VEV of this Wilson loop by localization shows that it depends only on $N$, the coupling constant and the area on the $S^2$ encircled by the contour.  </p>
+
+
+  <p>In 2007, Drukker, Giombi, Ricci and Trancanelli conjectured that the VEV of such loops is captured by <b>the zero-instanton sector of the ordinary bosonic two-dimensional Yang-Mills living on the $S^2$</b>. The coupling constants are related by $g_{2}^2 = -g_4^2 / (2 \pi r^2)$, with $r$ the radius of the $S^2$. This has been proven two years later by Pestun (see <a href="https://arxiv.org/pdf/0906.0638.pdf">here</a>).   </p>
+
+  <h2> Correlators on the $1/8$-BPS loop</h2>
+
+  <p>The correlator of local operators on the Wilson loop is defined by $$ \langle  O_1(\tau_1)  \cdots  O_n(\tau_n) \rangle  = \langle \frac{1}{N} \mathrm{Tr}\mathcal{P}  \left( O_1(\tau_1)  \cdots  O_n(\tau_n) \exp \left[  \oint_{\mathcal{C}}   (i  A_{j}  + \epsilon_{klj} x^k \Phi^l ) \mathrm{d} x^j \right]\right) \rangle _{\mathcal{N}=4}\, ,   $$ where the loop is parametrized by $\tau \in [0,2 \pi]$, and $O_i (\tau_i) = \tilde{\Phi}^{L_i} (\tau_i)$ with $$\tilde{\Phi}  (\tau) = x_1(\tau) \Phi_1 + x_2(\tau) \Phi_2 + x_3(\tau) \Phi_3 + i \Phi_4 \, .  $$ These operators are such that the correlators above are "topological", in that they don't depend on the positions $\tau_i$. </p>
+
+  <p>Let's now explain the main lines of the computation of the correlator. First, one constructs an orthonormal basis, i.e. one changes the basis $$\{\tilde{\Phi}^L\} \rightarrow \{ : \tilde{\Phi}^L : \}$$ using a Gram-Schmidt process. This can be expressed in a closed form using determinants (see eq. (3.14)). In particular, writing $\langle \mathcal{W} \rangle^{(k)} = (\partial_A)^k \langle \mathcal{W} \rangle$ (the derivatives of the Wilson loop VEV with respect to the area of the loop on the $S^2$), one can show that $$\langle : \tilde{\Phi}^L :: \tilde{\Phi}^M : \rangle = \frac{D_{L+1}}{D_L} \delta_{LM}$$ where $D_L = \det (\langle \mathcal{W} \rangle^{(i+j-2)})_{1 \leq i,j \leq L}$. This generalizes to extremal correlators, such that $L_1 = L_2 + \dots + L_m$ to $$\langle : \tilde{\Phi}^{L_1} :: \tilde{\Phi}^{L_2} : \cdots : \tilde{\Phi}^{L_m} : \rangle = \frac{D_{L_1+1}}{D_{L_1}} \, . $$ For non-extremal correlators, the correlator can also be computed, but the formulas are more involved.  </p>
+
+  <p>Importantly, in the large $N$ limit the correlators (extremal or not) can be written as a simple integral. This is related to the appearance of integrability in the large $N$ limit. </p>
