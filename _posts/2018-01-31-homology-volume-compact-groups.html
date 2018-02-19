@@ -7,6 +7,10 @@ categories:
 tags: []
 ---
 
+<p> In this post, I would like to show a nice relation between some Lie groups and products of spheres of odd dimensions. This can be made precise in the context of homology, and is useful to compute the volumes of compact Lie groups. </p>
+
+<h2>Historical introduction</h2>
+
 <p> Let me start with a bit of history, taken from the book <i>History of Topology</i>, edited by I.M. James. I quote from the chapter dedicated to Heinz Hopf (the action probably takes place in 1935):  </p>
 <blockquote cite="http://www.worldwildlife.org/who/index.html">
   After his return to Switzerland, Hopf took part in a conference on topology in Geneva. Elie Cartan talked on his result that the homology of the classical compact simple Lie groups is the homology of a product of spheres of odd dimensions. Afterwards Cartan posed the question of whether this is also true for the exceptional groups and, hence, because of the structure theorems, in general for all compact Lie groups.
@@ -19,10 +23,48 @@ tags: []
 <a href="http://www.ams.org/journals/bull/1952-58-01/S0002-9904-1952-09544-6/S0002-9904-1952-09544-6.pdf">there</a>
 , are two reviews, by Hans Samelson from 1950 and by Armand Borel from 1955. One good modern reference is the book by Félix, Oprea and Tanré, <i>Algebraic Models in Geometry</i>. </p>
 
+<h2>Lie groups and products of odd spheres</h2>
+
 <p>The important point is that, as far as the cycles go, a classical group behaves as if it were the product of odd spheres. The number of the spheres is equal to the rank of the group, and their dimension is $2d_i -1$, where the $d_i$ are the degrees of fundamental invariants (see <a href="https://en.wikipedia.org/wiki/Coxeter_element">Wikipedia</a> for the list of these numbers). This means in particular that the Poincaré polynomials, whose coefficients are the Betti numbers, can be written as $$P = \prod\limits_{i=1}^{r} (1+t^{2d_i -1}) \, , $$ where $r$ is the rank of the group. Note that the degrees $d_i$ are related to the exponents $m_i$ by the relation $$d_i = m_i +1 \, . $$ An other guise of the statement is that (Theorem 1.34 in the Félix-Oprea-Tanré book) if $G$ is a compact connected Lie group, then there exist elements of odd degrees $x_{2p_i +1} \in H^{2 p_i +1} (G , \mathbb{Q})$ such that, as an algebra, $$H^{*}(G,\mathbb{Q}) = \wedge (x_{2p_1 +1} , \dots , x_{2p_r +1}) \, . $$</p>
 
-<p>As an application of this theorem, one can derive the Macdonald formula for the volume of a connected and simply-connected compact Lie group $G$ with simple Lie algebra $\mathfrak{g}$: $$\mathrm{Vol}(G) = \mathrm{Vol}(\mathfrak{g}/\mathfrak{g}_{\mathbb{Z}}) \prod\limits_{i=1}^r \mathrm{Vol}(S^{2d_i -1}) = \mathrm{Vol}(\mathfrak{t}/\mathfrak{t}_{\mathbb{Z}}) \left( \prod\limits_{\alpha >0} |\alpha^{\vee}|^2 \right) \left( \prod\limits_{i=1}^r \frac{2 \pi^{d_i}}{(d_i -1) !} \right) \, . $$ Here $\mathfrak{g}_{\mathbb{Z}}$ is the Chevalley lattice. </p>
+<h2>Volume of compact Lie groups</h2>
 
-<p>As an application, let's compute the volume of $SU(N)$. There are $\frac{1}{2}N(N-1)$ positive roots, for which $|\alpha^{\vee}|^2 = 2$, so the first term contributes $2^{\frac{1}{2}N(N-1)}$. The second term contributes $2^{N-1} \pi^{\frac{1}{2}N(N-1) -1} / G(N+1)$, where $G$ is the Barnes G-function. I think the first factor is just trivial, $\mathrm{Vol}(\mathfrak{t}/\mathfrak{t}_{\mathbb{Z}}) = 1$ (how should one compute that?). Putting all together, we obtain $$\mathrm{Vol}(SU(N)) = \frac{(2 \pi)^{N(N+1)/2-1}}{G(N+1)} \, . $$</p>
+<p>As an application of this theorem, one can derive the <b>Macdonald formula</b> for the volume of a connected and simply-connected compact Lie group $G$ with simple Lie algebra $\mathfrak{g}$: $$\mathrm{Vol}(G) = \mathrm{Vol}(\mathfrak{g}/\mathfrak{g}_{\mathbb{Z}}) \prod\limits_{i=1}^r \mathrm{Vol}(S^{2d_i -1}) = \mathrm{Vol}(\mathfrak{g}/\mathfrak{g}_{\mathbb{Z}}) \prod\limits_{i=1}^r \frac{2 \pi^{d_i}}{(d_i -1)!} \, . $$ Here $\mathfrak{g}_{\mathbb{Z}}$ is the Chevalley lattice. What is important to notice in this formula is that the normalization for the volume of $G$ comes from a normalization for the measure of $\mathfrak{g}$; more precisely, one first defines a measure on the Lie algebra, and then obtain from it a Haar measure on $G$. This apparently anodine question can give headaches to the reader who tries to put all normalization factors correctly. I had to struggle for a few hours before getting it right, so I'll illustrate with some detail, hoping it might be useful. </p>
 
-<p>One can also deduce the volume of the group $U(N)$, which is obtained by multiplying by $2 \pi$, for the additional $U(1)$ : $$\mathrm{Vol}(U(N)) = \frac{(2 \pi)^{N(N+1)/2}}{G(N+1)} \, . $$ This way we have recovered a known result, see for instance Corollary 3.5.2 in the book <i>Graphs on Surfaces and Their Applications</i>, by Lando and Zvonkin. </p>
+<h3>Metrics and measures for $U(N)$</h3>
+
+<p>Let's consider the case of $U(N)$. The Lie algebra $\mathfrak{u}(N)$ is the subalgebra of $\mathfrak{gl}(N,\mathbb{C})$ of matrices satisfying $M=M^{\ast}$. There is a natural metric defined on $\mathfrak{gl}(N,\mathbb{C})$ (I recall that this is the set of <i>all</i> $N \times N$ complex matrices $Z=X+iY$): $$\mathrm{d}s^2_{\mathfrak{gl}(N,\mathbb{C})} = \sum\limits_{i,j} \mathrm{d}X_{i,j}^2 + \mathrm{d}Y_{i,j}^2 \, . $$ Now we consider the induced metric on the subspace $\mathfrak{u}(N)$. For that, the easiest way is to define adapted coordinates : we use $H_{i,j}$ and $A_{i,j}$ ($i \leq j$), for Hermitian and anti-Hermitian parts. More precisely, set
+  $$\begin{cases}
+H_{i,i} = \frac{1}{c'}X_{i,i} \\
+A_{i,i} = \frac{1}{c'}Y_{i,i} \\
+\mathrm{Re} \, H_{i,j} = \frac{1}{c} (X_{i,j} + X_{j,i} )\\
+\mathrm{Im} \, H_{i,j} = \frac{1}{c} (Y_{i,j} - Y_{j,i} )\\
+\mathrm{Re} \, A_{i,j} = \frac{1}{c} (X_{i,j} - X_{j,i} )\\
+\mathrm{Im} \, A_{i,j} = \frac{1}{c} (Y_{i,j} + Y_{j,i} )
+\end{cases}$$
+where $c$ is a constant. Then the metric on $\mathfrak{gl}(N,\mathbb{C})$ becomes
+$$\mathrm{d}s^2_{\mathfrak{gl}(N,\mathbb{C})} = c'^2\sum\limits_{i}( \mathrm{d}H_{i,i}^2 +  \mathrm{d}A_{i,i}^2) + \frac{c^2}{2} \sum\limits_{i< j}( \mathrm{d}(\mathrm{Re} \, H_{i,j})^2 +\mathrm{d}(\mathrm{Im} \, H_{i,j})^2 +\mathrm{d}(\mathrm{Re} \, A_{i,j})^2 +\mathrm{d}(\mathrm{Im} \, A_{i,j})^2 )\, . $$
+Finally, the induced metric on $\mathfrak{u}(N)$ is
+$$\mathrm{d}s^2_{\mathfrak{u}(N)} = c'^2 \sum\limits_{i} \mathrm{d}H_{i,i}^2 + \frac{c^2}{2} \sum\limits_{i< j}( \mathrm{d}(\mathrm{Re} \, H_{i,j})^2 +\mathrm{d}(\mathrm{Im} \, H_{i,j})^2)\, . $$
+The volume form is then
+$$ \mathrm{d}H = \sqrt{\mathrm{det}(\mathrm{d}s^2_{\mathfrak{u}(N)})} = c'^{N} \left( \frac{c^2}{2} \right)^{N(N-1)/2} \prod\limits_{i} \mathrm{d}H_{i,i} \prod\limits_{i< j} \mathrm{d}(\mathrm{Re} \, H_{i,j}) \mathrm{d}(\mathrm{Im} \, H_{i,j}) \, . $$
+If we choose $c= \sqrt{2}$ and $c'=1$, then the prefactor disappears, while the other common choice $c=2$, $c'=1$ gives a prefactor $2^{N(N-1)/2}$. This will enter in the computation of the volume via
+$$\mathrm{Vol}(\mathfrak{u}(N)/\mathfrak{u}(N)_{\mathbb{Z}}) = c'^{N} \left( \frac{c^2}{2} \right)^{N(N-1)/2} \, . $$
+Note that the choice where the prefactor disappears should be preferred, since this is an orthonormal change of basis.
+</p>
+
+<h3>Volume of $U(N)$</h3>
+
+<p>One can now deduce the volume of the group $U(N)$,
+$$\mathrm{Vol}(U(N)) = c'^{N} \left( \frac{c^2}{2} \right)^{N(N-1)/2}  \frac{2^N \pi^{N(N+1)/2}}{G(N+1)} \, . $$
+Setting $c=2$, $c'=1$, we obtain
+ $$\mathrm{Vol}(U(N)) = \frac{(2 \pi)^{N(N+1)/2}}{G(N+1)} \, . $$
+ This way we have recovered a known result, see for instance Corollary 3.5.2 in the book <i>Graphs on Surfaces and Their Applications</i>, by Lando and Zvonkin (in <a href="https://arxiv.org/pdf/1509.00537.pdf">this paper</a>, this corresponds to the so-called Hilbert-Schmidt volume, see eq. 5.8).
+ Setting $c=\sqrt{2}$, $c'=1$, we just have
+ $$\mathrm{Vol}(U(N)) =   \frac{2^N \pi^{N(N+1)/2}}{G(N+1)} \, . $$
+ </p>
+
+<h3>The case $SO(N)$</h3>
+ <p>We can make a similar discussion for $SO(N)$. But we can avoid the tricky prefactors by just saying that we perform the orthonormal change of basis, such that $\mathrm{Vol}(\mathfrak{g}/\mathfrak{g}_{\mathbb{Z}})$. Then we are left with the product of the volumes of the spheres. In the case of $SO(2N)$, we have $$d_i = 2,4,\dots,2N-2 ; N \, . $$
+ Then
+$$ \frac{2^N \pi^{N^2}}{(N-1)! \prod\limits_{i=1}^{N-1} (2i-1)!}$$</p>

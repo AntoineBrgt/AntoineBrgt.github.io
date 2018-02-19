@@ -1,0 +1,16 @@
+---
+layout: post
+title: Vandermonde Gaussian Integral
+date: 2018-01-31 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> This is just to signal the formula for an integral that is useful in many matrix model computations:
+$$\int_{\mathbb{R}^n} \mathrm{d} \Lambda |\Delta (\Lambda)|^{\beta} \mathrm{exp} \left( - \frac{\mathrm{Tr} \, \Lambda^2 }{g^2}\right) = \frac{g^{n+ \beta n(n-1)/2} \pi^{n/2}}{2^{\beta n(n-1)/4}} \prod\limits_{j=1}^n \frac{\Gamma \left(1+ j \frac{\beta}{2} \right)}{\Gamma \left(1+ \frac{\beta}{2} \right)} \, . $$ In this formula, $\beta = 1,2,4$ determines which Gaussian ensemble is used (respectively Orthogonal, Unitary and Symplectic), $\Lambda = \mathrm{diag} (\lambda_1 , \dots , \lambda_n)$ is a diagonal matrix, the measure is $\mathrm{d} \Lambda = \mathrm{d} \lambda_1 \dots \mathrm{d} \lambda_n$ and $$\Delta (\Lambda) = \prod\limits_{1 \leq i < j \leq n} (\lambda_i - \lambda_j)$$ is the Vandermonde determinant.
+</p>
+
+<p>For $\beta = 2$, this formula simplifies, using the Barnes $G$-function:
+  $$\int_{\mathbb{R}^n} \mathrm{d} \Lambda |\Delta (\Lambda)|^{2} \mathrm{exp} \left( - \frac{\mathrm{Tr} \, \Lambda^2 }{g^2}\right) = \frac{g^{n^2} \pi^{n/2}}{2^{n(n-1)/2}} G(n+2) \, . $$
+</p>

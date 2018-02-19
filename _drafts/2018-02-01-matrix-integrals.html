@@ -1,0 +1,36 @@
+---
+layout: post
+title: Matrix Integrals
+date: 2018-01-31 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> Our aim in this note will be to say something about integrals of the form $$Z = \int_E \mathrm{d}M \, e^{-\mathrm{Tr} V (M)} \, , $$ where for simplicity we will consider $V(M)$ to be a polynomial in $M$. We will follow closely the excellent review by Bertrand Eynard, Taro Kimura and Sylvain Ribault called <i>Random matrices</i>, available <a href="https://arxiv.org/pdf/1510.04430.pdf">here</a>. </p>
+
+<p>The "say something" is purposely unclear for the moment. Before going further, we have to specify what is the set $E$ on which we are integrating. Here we will consider certain sets of $N \times N$ matrices, known as Gaussian matrices,<sup><a href="#fn1" id="ref1">1</a></sup> which fall into three categories $E_N^{\beta}$, labeled by a number $\beta = 1,2,4$:
+<ul>
+  <li>For $\beta = 1$, we have the Gaussian Orthogonal Ensemble, i.e. <b>real symmetric matrices</b>. </li>
+  <li>For $\beta = 2$, we have the Gaussian Unitary Ensemble, i.e. <b>complex Hermitian matrices</b>. </li>
+  <li>For $\beta = 4$, we have the Gaussian Symplectic Ensemble, i.e. <b>quaternionic Hermitian matrices</b>. </li>
+</ul>
+A matrix $M \in E_N^{\beta}$ has real eigenvalues, and can be written $$M = U \Lambda U^{-1}$$ with $\Lambda = \mathrm{diag}(\lambda_1 , \dots , \lambda_N) \in \mathbb{R}^N$ and $U \in U_N^{\beta}$, with
+<ul>
+  <li>For $\beta = 1$, $U_N^{\beta} = O(N)$. </li>
+  <li>For $\beta = 2$, $U_N^{\beta} = U(N)$. </li>
+  <li>For $\beta = 4$, $U_N^{\beta} = Sp(N)$. </li>
+</ul>
+For the computation of integrals, we will use the more precise isomorphism<sup><a href="#fn2" id="ref2">2</a></sup> $$E_N^{\beta} \simeq \frac{\frac{U_N^{\beta}}{T_N^{\beta}} \times \mathbb{R}^N}{\mathrm{Weyl}(U_N^{\beta})} \, . $$ Here $T_N^{\beta}$ is the maximal torus of $U_N^{\beta}$.
+</p>
+
+<p>Using the decomposition $M = U \Lambda U^{-1}$, the measure $\mathrm{d}M$ becomes $$\mathrm{d}M = |\Delta (\Lambda)|^{\beta} \mathrm{d}\Lambda \mathrm{d}U $$ where $$\Delta (\Lambda) = \prod\limits_{i< j} (\lambda_i - \lambda_j)$$ is the Vandermonde determinant, $\mathrm{d}U$ is the Haar measure for the group $U_N^{\beta}$, and $\mathrm{d}\Lambda = \mathrm{d}\lambda_1 \dots \mathrm{d}\lambda_N$ is just the measure on $\mathbb{R}^N$. Because the integrand does not depend on $U$, we will obtain a volume factor. More precisely, $$Z = \frac{1}{|\mathrm{Weyl}(U_N^{\beta})|} \mathrm{Vol} \left( \frac{U_N^{\beta}}{T_N^{\beta}} \right) \int_{\mathbb{R}^N} |\Delta (\Lambda)|^{\beta} \,  \mathrm{d}\Lambda \,  e^{-\mathrm{Tr} V (\Lambda)} \, .  $$ I explained how to compute the volumes of those Lie groups in this
+<a href="http://www.antoinebourget.org/physics/2018/01/31/homology-volume-compact-groups.html">previous post</a>. For instance, in the case $\beta = 2$ the prefactor is $$ \frac{1}{|\mathrm{Weyl}(U_N^{\beta})|} \mathrm{Vol} \left( \frac{U_N^{\beta}}{T_N^{\beta}} \right) =  \frac{1}{N!}  \frac{ \frac{2^N \pi^{N(N+1)/2}}{G(N+1)} }{(2 \pi)^N}  = \frac{\pi^{N(N-1)/2}}{N! \, G(N+1)} $$
+</p>
+
+<h2>The Gaussian integral</h2>
+<p>Let us consider a special case, where $V(M) = \frac{\alpha}{2} M^2$. We can compute $Z$ directly as a Gaussian integral, using $\int_{\mathbb{R}} e^{-\frac{\alpha}{2} x^2 } \mathrm{d}x = \sqrt{\frac{2 \pi}{\alpha}}$. For that, we have to recognize that $$ \mathrm{d}M   = \prod\limits_{i=1}^N \mathrm{d}M_{ii}  \prod\limits_{i < j} \prod\limits_{k=0}^{\beta -1} \mathrm{d}M_{ij}^{(k)} \, .    $$ Let's consider $\beta = 2$ for simplicity. Then $$Z = \int_E \mathrm{d}M \, e^{- \frac{\alpha}{2} \mathrm{Tr} M^2} =  \sqrt{\frac{2 \pi}{\alpha}}^{N} \sqrt{\frac{2 \pi}{2 \alpha}}^{N(N-1)} = 2^{N/2}  \left( \frac{\pi}{\alpha} \right)^{N^2/2} \, .  $$ This simple computation will allow us to make a less trivial one, involving the Vandermonde determinant! Indeed, we also have $$Z =\frac{ \pi^{N(N-1)/2}}{N! \, G(N+1)} \int_{\mathbb{R}^N} |\Delta (\Lambda)|^{2} \,  \mathrm{d}\Lambda \,  e^{- \frac{\alpha}{2} \mathrm{Tr} \Lambda^2 } \, .  $$ Putting everything together, we obtain $$ \boxed{\int_{\mathbb{R}^N} |\Delta (\Lambda)|^{2} \,  \mathrm{d}\Lambda \,  e^{- \frac{\alpha}{2} \mathrm{Tr} \Lambda^2 }  = \frac{N! \, G(N+1) (2\pi)^{N/2}}{\alpha^{N^2/2}}} \, . $$   </p>
+
+<sup id="fn1">1. This is the occasion to mention a first possible source of confusion: the term "Gaussian" here refers to the set of matrices on which we are integrating. It does not mean anything about the nature of the integral! It so happens that if $V(M)$ is quadratic, then the integral itself is called Gaussian, but this is unrelated. <a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+
+<sup id="fn2">2. Which holds only on the subset of $E_N^{\beta}$ where the eigenvalues are distincts. But for our integrals, since the complementary has measure $0$, this will be enough.  <a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
