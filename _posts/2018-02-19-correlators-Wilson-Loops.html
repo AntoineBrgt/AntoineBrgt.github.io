@@ -8,7 +8,7 @@ tags: []
 ---
 
 <p> I'm talking here about the
-<a href="https://arxiv.org/pdf/1802.05201.pdf">paper text</a> which appeared last week, by Simone Giombi and Shota Komatsu.
+<a href="https://arxiv.org/pdf/1802.05201.pdf">paper</a> which appeared last week, by Simone Giombi and Shota Komatsu.
 </p>
 
 <p>The paper starts with delimitating three possible methods that can lead to exact solutions of interacting 4d QFTs:
@@ -31,7 +31,7 @@ The authors study quantities at the crossroads of these three methods, namely co
 
   <h2> Wilson loops and supersymmetric localization</h2>
 
-  <p>In fact, many Wilson loops have been constructed; for instance, $1/16$-BPS Wilson loops with arbitrary shape on an $S^3 \subset \mathbb{R}^4$. Restricting these loops to the equator $S^2  \subset S^3$, one obtains $1/8$-BPS loops. To be more precise, the loops studied in the present paper are of the form $$ \mathcal{W}(\mathcal{C}) = \frac{1}{N} \mathrm{Tr} \left( \mathcal{P} \exp \left[  \oint_{\mathcal{C}}   (i  A_{j}  + \epsilon_{klj} x^k \Phi^l ) \mathrm{d} x^j \right]\right) \, ,   $$ where $i,j,k=1,2,3$ and $x_1^2+x_2^2+x_3^2=1$ is the equation of $S^2$. Computing the VEV of this Wilson loop by localization shows that it depends only on $N$, the coupling constant and the area on the $S^2$ encircled by the contour.  </p>
+  <p>In fact, many Wilson loops have been constructed; for instance, $1/16$-BPS Wilson loops with arbitrary shape on an $S^3 \subset \mathbb{R}^4$. Restricting these loops to the equator $S^2  \subset S^3$, one obtains $1/8$-BPS loops. To be more precise, the loops studied in the present paper are of the form $$ \mathcal{W}(\mathcal{C}) = \frac{1}{N} \mathrm{Tr} \left( \mathcal{P} \exp \left[  \oint_{\mathcal{C}}   (i  A_{j}  + \epsilon_{klj} x^k \Phi^l ) \mathrm{d} x^j \right]\right) \, ,   $$ where $i,j,k=1,2,3$ and $x_1^2+x_2^2+x_3^2=1$ is the equation of $S^2$. Computing the VEV of this Wilson loop by localization shows that it depends only on $N$, the coupling constant and the area on the $S^2$ encircled by the contour. More precisely, one can show that $$\langle \mathcal{W} \rangle = \frac{1}{N} L_{N-1}^1 \left(- \frac{\lambda '}{4N} \right) \exp \frac{\lambda '}{8N} \, , \qquad \lambda ' = \lambda \left( 1- \frac{(A-2\pi)^2}{4 \pi^2}\right)$$ with $\lambda$ the 't Hooft coupling and $L_{N-1}^1$ a Laguerre polynomial. </p>
 
 
   <p>In 2007, Drukker, Giombi, Ricci and Trancanelli conjectured that the VEV of such loops is captured by <b>the zero-instanton sector of the ordinary bosonic two-dimensional Yang-Mills living on the $S^2$</b>. The coupling constants are related by $g_{2}^2 = -g_4^2 / (2 \pi r^2)$, with $r$ the radius of the $S^2$. This has been proven two years later by Pestun (see <a href="https://arxiv.org/pdf/0906.0638.pdf">here</a>).   </p>
@@ -42,4 +42,8 @@ The authors study quantities at the crossroads of these three methods, namely co
 
   <p>Let's now explain the main lines of the computation of the correlator. First, one constructs an orthonormal basis, i.e. one changes the basis $$\{\tilde{\Phi}^L\} \rightarrow \{ : \tilde{\Phi}^L : \}$$ using a Gram-Schmidt process. This can be expressed in a closed form using determinants (see eq. (3.14)). In particular, writing $\langle \mathcal{W} \rangle^{(k)} = (\partial_A)^k \langle \mathcal{W} \rangle$ (the derivatives of the Wilson loop VEV with respect to the area of the loop on the $S^2$), one can show that $$\langle : \tilde{\Phi}^L :: \tilde{\Phi}^M : \rangle = \frac{D_{L+1}}{D_L} \delta_{LM}$$ where $D_L = \det (\langle \mathcal{W} \rangle^{(i+j-2)})_{1 \leq i,j \leq L}$. This generalizes to extremal correlators, such that $L_1 = L_2 + \dots + L_m$ to $$\langle : \tilde{\Phi}^{L_1} :: \tilde{\Phi}^{L_2} : \cdots : \tilde{\Phi}^{L_m} : \rangle = \frac{D_{L_1+1}}{D_{L_1}} \, . $$ For non-extremal correlators, the correlator can also be computed, but the formulas are more involved.  </p>
 
+  <h2>The large $N$ limit</h2>
+
   <p>Importantly, in the large $N$ limit the correlators (extremal or not) can be written as a simple integral. This is related to the appearance of integrability in the large $N$ limit. </p>
+
+    <p>It turns out in the large $N$ limit, the expression of $\langle \mathcal{W} \rangle$ in terms of Laguerre polynomial can be rewritten in terms of the Bessel function $I_1$, $$\langle \mathcal{W} \rangle = \frac{2}{\sqrt{\lambda '}}I_1 (\sqrt{\lambda '}) \, . $$ The Bessel function admits an integral expression, and this can be used to write $$\langle \mathcal{W} \rangle = \oint \mathrm{d} \mu  $$ for some measure $\mu$ (see equation (5.5)). Using this rewriting, the correlators can be expressed as $$\langle : \tilde{\Phi}^{L_1} :: \tilde{\Phi}^{L_2} : \cdots : \tilde{\Phi}^{L_m} : \rangle = \oint \mathrm{d} \mu \prod\limits_{k=1}^m Q_{L_k} (x) \, , $$ where the functions $Q$ can be expressed in terms of determinants. In fact, they constitute the Gram-Schmidt basis, with respect to the measure $\mu$, obtained from the basis $\{1,x,x^{-1},x^2,x^{-2},...\}$. Moreover these are related to the so-called Q-functions in the Quantum Spectral Curve.  </p>

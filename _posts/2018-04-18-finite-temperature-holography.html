@@ -1,0 +1,55 @@
+---
+layout: post
+title: Finite temperature holography
+date: 2018-04-18 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> The $AdS/CFT$ correspondence is one of the central discoveries of the last decades in high-energy physics. As we know, in one of its incarnation it relates supergravity on $AdS_5 \times S^5$ with $\mathcal{N}=4$ SYM with gauge group $SU(N)$ in the large $N$ limit and large 't Hooft coupling. But what's the relation to the real world? $\mathcal{N}=4$ SYM is an elegant theory, but certainly very different from what we find in experiments, so it seems holography (at least in this restricted sense) allows us to gain little if not no knowledge about the real world.  </p>
+
+<p>Here I will describe how to introduce finite temperature into $AdS/CFT$. Because of a sort of universality for finite temperature phenomena, this will allow us to use some of the calculations made in the context of finite temperature $\mathcal{N}=4$ SYM to describe the real world, for instance QCD at finite temperature. </p>
+
+<br />
+
+<h3>$AdS/CFT$ at finite temperature</h3>
+
+<p>But before talking about holography, what does putting a QFT at finite temperature even means? Well, as a standard field theory computation shows, for time-independant quantities <i>the finite temperature field theory is obtained by considering periodic imaginary time with period $\beta = 1/T$</i>. This fact can be used, for instance, to "derive" the Hawking temperature of the Schwarzschild black hole: take the metric, change the sign in front of the time component of the metric from $-$ to $+$ and read what time periodicity is required to make the horizon non-singular. More precisely, zoom near the horizon and interpret the Euclidean time as an angular coordinate, in such a way that the periodicity is exactly $2 \pi$ so that there is no angular deficit. Putting back the parameters, one obtains $$T_{BH} = \frac{1}{8 \pi M G_N}$$ where $M$ is the mass of the black hole and $G_N$ is Newton's constant. The interpretation is that a QFT in the presence of the black hole has a temperature $T_{BH}$. However there is a small problem: the black hole in flat space is thermodynamically unstable (since $\partial M / \partial T <0$ the black hole will decay (lose energy) and become hotter). </p>
+
+<p>The solution to this stability problem is very convenient to our goals: put the black hole in $AdS$ and it can be thermodynamically stable! Indeed in that case, repeating the computation of the temperature given above, one finds $$T = \frac{n r_+^2 + (n-2) R^2}{4 \pi R^2 r_+}$$ where $R$ is the $AdS_{n+1}$ space, and $r_+$ is the largest solution of the equation $$\frac{r^2}{R^2} +1-\frac{8 \pi M G_n^{(n+1)}}{(n-2) \Omega_{n-1} r^{n-2}} = 0 \, . $$ You can check that putting $n=2$ and $R = \infty$ gives back the temperature given above for flat space $\mathbb{R}^4$. But the important point for us here is that now the function $T(M)$ has a minimum for a particular mass $M_{\textrm{min}}$. A black hole with mass $M \geq  M_{\textrm{min}}$ is thermodynamically stable, as $\partial M / \partial T >0$.   </p>
+
+<p>What happens on the field theory side? Well, on general grounds putting a theory at finite temperature breaks supersymmetry, by giving a mass to the fermions after dimensional reduction along the Euclidean time circle, and not necessarily to the bosons. What happens here, at infinity in our $AdS_5$, is that reducing along the Euclidean time circle not only gives a mass to the fermions, but also to the six scalars of $\mathcal{N}=4$ SYM (through a one-loop effect), and therefore we are left with the gauge bosons alone! This three-dimensional theory is pure QCD glue, with no supersymmetry left! It seems the real world is not far. And in fact even if we don't make this dimensional reduction and remain with good old $\mathcal{N}=4$ SYM we can learn things about QCD because of certain universal behaviours.  </p>
+
+
+<p> In fact there are subtleties hidden in the previous paragraphs. One is that the geometry at infinity in the black hole has the topology of $S^1 \times S^{n-1}$ instead of $S^1 \times \mathbb{R}^{n-1}$, where the circle is the Euclidean time circle (more on that at the end of this note). In order to recover flat space, the mass of the black hole should be taken to be infinite. Then the metric obtained is that of the near-horizon limit of a black D3 brane, i.e. a non-extremal D3 brane. The interpretation is that the temperature breaks the supersymmetry condition for the D3 brane. Moreover, I have glossed over technicalities like the various coordinate patches for describing $AdS_{n+1}$.  </p>
+
+<br />
+
+<h3>The consequences for strongly coupled QFT</h3>
+
+<p>So let's focus on $\mathcal{N}=4$ SYM at finite temperature and see what we can compute.
+<ul>
+<li>The black hole has an entropy, given by the famous Bekenstein-Hawking formula. It is natural to associate it with the entropy of the field theory. Of course, this is infinite, but one can compute a finite <it>entropy density</it>. This computation can be trusted only at infinite 't Hooft coupling $\lambda$, and one finds $$s_{\lambda = \infty} = \frac{\pi^2}{2} N^2 T^3 \, . $$ This can be compared with a direct computation at weak coupling ($\lambda = 0$), which boils down to counting degrees of freedom perturbatively. One finds $$s_{\lambda = 0} = \frac{2\pi^2}{3} (N^2-1) T^3 \, .$$ One obtains a ratio between strong and weak coupling $$\frac{s_{\lambda = \infty} }{s_{\lambda = 0}} \sim \frac{3}{4}$$ in the large $N$ limit. </li>
+<li>Once the entropy density is known as a function of the temperature, one can compute the pressure and the energy density, simply using the thermodynamic identities. These quantities can also be compared between strong and weak coupling, and the same ratio of $3/4$ is found. This can be computed for QCD using lattice numerical computations, and the numerical result that is obtained is quite close to this $3/4$. This indicates that, at least for this observable, QCD and $\mathcal{N}=4$ SYM behave similarly.  </li>
+<li>One can also compute the energy and momentum loss of a heavy quark going through the plasma. In holography, this is done by considering a string stretching from the boundary of $AdS$ at infinity and the horizon of the black hole. One finds a drag coefficient $$\eta = \frac{\pi}{2M} \sqrt{\lambda} T^2 \, .$$ This can be compared to the phenomemon of "jets" in accelerator physics.  </li>
+</ul>
+</p>
+
+<p>Beyond these observables, one might want to make the situation more realistic by adding a finite charge density, or a finite chemical potential. First, let's come back to finite temperature field theory. We assume that the dynamics is specified by a Hamiltonian $\hat{H}$ and that there are global $U(1)$ symmetries (labelled by an index $a$) associated with conserved currents and commuting conserved charges $\hat{Q}_a$. The expectation values $N_a = \langle \hat{Q}_a \rangle$ are interpreted as the particule numbers of the particule type $a$. We will distinguish two thermodynamic ensembles:
+  <ul>
+<li>The canonical ensemble has fixed temperature $T$, volume $V$ and particle number $N_a$. Its thermodynamic potential is the free energy $F(T,V,N_a) = -T \log Z_{\textrm{can}}$, and the partial derivatives give access to the entropy, the pressure and the chemical potential through $\mathrm{d} F = -S \mathrm{d} T - p \mathrm{d} V + \mu_a \mathrm{d} N_a$. We recall that $Z_{\textrm{can}} = \mathrm{tr} \exp (- \beta \hat{H})$.     </li>
+<li> The grand canonical ensemble instead has fixed chemical potential, in addition to fixed temperature and volume. Its thermodynamical potential is $\Omega (T,V,\mu_a) = -T \log Z_{\textrm{grand}}$, with $Z_{\textrm{grand}} = \mathrm{tr} \exp (- \beta (\hat{H} - \mu_a \hat{Q}_a))$, and the entropy, pressure and particle numbers can be read from $\mathrm{d} \Omega = -S \mathrm{d} T - p \mathrm{d} V - N_a \mathrm{d} \mu_a$ </li>
+</ul> </p>
+
+<p>Now in $AdS_{d+1}/CFT_d$ gauge fields in $AdS$ correspond to conserved currents on the boundary, i.e. we have a coupling $\int \mathrm{d}^d x J_i(\vec{x}) a_i(\vec{x})$ where the source $a_i(\vec{x})$ is the boundary value of the bulk gauge field $A_{\mu}(x_0,\vec{x})$. This means we need to have an electrically charged black hole solution in $AdS_{d+1}$, and this will be provided by a slight modification of the flat space Reissner-Nordstrom solution. The holographic dictionnary then says that for the Einstein-Maxwell supergravity action $S_{\mathrm{sugra}}$, we have $$ \Omega = T S_{\mathrm{sugra}} \, . $$ This can be made into an explicit expression by computing the on-shell supergravity action. </p>
+
+<p>Similarly, one can add an external magnetic field in $\mathcal{N}=4$ SYM (with respect to the R-symmetry group) by adding a magnetic field in $AdS_5$.</p>
+
+<br />
+
+<h3>Thermal $AdS$ and Hawking-Page transition</h3>
+
+<p>It should also be mentioned that the solution on $S^1 \times S^{n-1}$, which we mentioned above, is interesting in itself. There are then two dimensionful "inverse temperature", the usual $\beta = 1/T$ and a second $\beta ' = 1/l$ where $l$ is the radius of $S^{n-1}$. The physics naturally depends on the ratio $\beta / \beta '$. In addition to the $AdS$-Schwarzschild black hole, we can imagine another gravitational dual that has this boundary geometry, called <it>thermal $AdS$</it>.
+There is a competition between these two solutions, and one can show (comparing the free energies) that even in the range of thermodynamically stable black holes $M \geq  M_{\textrm{min}}$, some black holes below a certain mass $M_{\textrm{min}} \geq M \geq M_{1} $ will decay into thermal $AdS$. There is a phase transition that occurs at a temperature $$T_{HP} = (n-1)/(2 \pi R)\, , $$ called the Hawking-Page transition. To conclude, large black holes are stable while small ones decay into thermal $AdS$ for $T \leq T_{HP}$ and into large black holes for $T> T_{HP}$. The field theory dual to this transition shows some characteristics of a confinement-deconfinement phase transition. For $T> T_{HP}$ (the deconfined phase) we can have charged states in the field theory, and this explains why the free energy $F$ scales like $N^2$. In the confined phase, all field theory states are singlets of the gauge group, of which there are a small number compared to $N^2$, so in this phase $F/N^2 \rightarrow 0$.
+</p>
