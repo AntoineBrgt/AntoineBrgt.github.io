@@ -1,0 +1,28 @@
+---
+layout: post
+title: Coulomb branches with complex singularities
+date: 2018-04-19 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p>Last week, Philip Argyres and Mario Martone published a <a href="https://arxiv.org/abs/1804.03152">very interesting paper</a>, <i>Coulomb branches with complex singularities</i>. Some of the results are similar to those presented in my <a href="https://arxiv.org/abs/1804.01108">last publication</a>, with Alessandro Pini and Diego Rodriguez-Gomez, <i>The Importance of Being Disconnected, A Principal Extension for Serious Groups</i>.  </p>
+
+<p> Consider $\mathcal{N}=4$ SYM for a given simply laced gauge Lie algebra $\mathfrak{g}$. This theory is invariant under the S-duality group $SL(2,\mathbb{Z})$, which acts on the exactly marginal coupling $\tau$, and also on the chiral supercharges:
+$$\tau \rightarrow \frac{a \tau + b}{c \tau + d} \, \qquad Q^i_{\alpha} \rightarrow \sqrt{\frac{|c \tau +d |}{c \tau +d}}  Q^i_{\alpha} =: e^{i \chi} Q^i_{\alpha}$$ for $\sigma = \left( \begin{array}{cc} a & b \\ c & d \end{array} \right)$. Certain values $\tau = \tau_k$ are left invariant under a subgroup $\mathbb{Z}_k \subset SL(2,\mathbb{Z})$ (these are $\tau_3 = e^{i \pi /3}$, $\tau_4 = i$, $\tau_6 = e^{2i \pi /3}$; in addition, for any other $\tau$ we have a $\mathbb{Z}_2$ symmetry). At these couplings, some S-duality identifications supply extra R-symmetries, belonging to $SU(4)_R \times \Gamma_k$. Let's investigate those in more detail:
+<ul>
+  <li>For $k=2$ we have an $\mathcal{N}=4$ preserving symmetry. It acts as $(-I,-I) \in SU(4)_R \times \mathbb{Z}_2$, and explicitly $Q^i_{\alpha} \rightarrow e^{i \pi /2} Q^i_{\alpha}$, and $\tau \rightarrow \tau$. This corresponds to gauging the outer automorphism of the Lie algebra.  </li>
+  <li>Then we have $\mathcal{N}=3$ preserving symmetries, which exist only at the special values of the gauge coupling mentioned above. Note that to determine if a given $k \in \{3,4,6\}$ will give rise to such a symmetry, one has to check the action not just on the gauge coupling, but also on the discrete data that specify the theory (i.e. the global form of the gauge group and a maximal set of mutually local line operators, as explained <a href="https://arxiv.org/abs/1305.0318">here</a>).  </li>
+</ul> </p>
+
+<p>Now we want to gauge these symmetries. We recall that the moduli space of $\mathcal{N}=4$ SYM is the flat orbifold $\mathcal{M}(\mathfrak{g}) = \mathbb{C}^{3r}/\mathcal{W}(\mathfrak{g})$, where $r$ is the rank of $\mathfrak{g}$. Viewed as an $\mathcal{N}=2$ theory, $\mathcal{M}(\mathfrak{g})$ factorizes into a Coulomb branch $\mathcal{C}(\mathfrak{g})=\mathbb{C}^{r}/\mathcal{W}(\mathfrak{g})$ and a Higgs branch $\mathcal{H}(\mathfrak{g})=\mathbb{C}^{2r}/\mathcal{W}(\mathfrak{g})$. Now upon gauging of the discrete symmetries listed above, $\mathcal{M}(\mathfrak{g})$ will undergo further identifications, yielding $$\mathcal{M}_k(\mathfrak{g}) = \mathbb{C}^{3r}/(\mathcal{W}(\mathfrak{g}) \rtimes \Gamma_k) \, , $$ and similarly for the Higgs and Coulomb branches. The main topic of the paper is the analysis of the Coulomb branch, $$\mathcal{C}_k(\mathfrak{g}) = \mathbb{C}^{r}/(\mathcal{W}(\mathfrak{g}) \rtimes \Gamma_k) \,. $$   </p>
+
+<p>To analyze the structure of the Coulomb branch, the authors use the standard techniques of commutative algebra (polynomial rings, invariants, Hilbert series, Molien integral). As a result, they obtain Coulomb branches with complex singularities in $\mathcal{N}=4$ theories when the rank is high enough. In addition to type $\mathfrak{su}(N)$ algebras, they consider the interesting case of $\mathfrak{so}(8)$. In this case, they find:
+<ul>
+<li>For the $\mathfrak{S}_3$ gauging, one obtains the (regular) $F_4$ Coulomb branch. This can be understood as the factorization of the $F_4$ Weyl group.  </li>
+<li>If only $\mathbb{Z}_3 \subset \mathfrak{S}_3$ is gauged, then there is a singular Coulomb branch, with a non-freely generated coordinate ring. </li>
+</ul>
+</p>
+
+<p>Finally, the $\mathcal{N}=3$ theories are examined. Because of the subtleties related to the global aspects of the definition of the theories, the authors focus mainly on one example, the $[SU(4)/\mathbb{Z}_2]_+$ theory, for which we can gauge $\mathbb{Z}_k$ for $k=3,4,6$. In all three cases, the Coulomb branch is not freely generated (the plethystic logarithm of the Hilbert series displays one term with a minus sign). At higher rank, the authors note that the situation becomes even more intricate, the CB not being a complete intersection in most cases. </p>

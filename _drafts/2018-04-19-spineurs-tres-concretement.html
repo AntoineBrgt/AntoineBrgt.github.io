@@ -1,0 +1,16 @@
+---
+layout: post
+title: Les spineurs, très concrètement
+date: 2018-04-19 11:38:56.000000000 +02:00
+categories:
+- Physics
+tags: []
+---
+
+<p> En physique théorique, il y a une famille d'objets qui fascine et effraie, ce sont les spineurs. Cette perception est un peu ambivalente. D'une part, les spineurs sont des objets absolument fondamentaux, au coeur de toute la physique (quantique) moderne ; on sait qu'ils décrivent les fermions qui constituent les particules de  matière de notre univers, et en tant que tels ils sont manipulés par une large proportions de physiciens, des plus appliqués aux plus théoriciens (la supersymétrie en regorge, par définition). Et pourtant, il me semble qu'ils sont toujours cernés d'une aura de mystère : on sait qu'ils sont reliés à ces étranges variables de Grassmann, qui sont des nombres qui anti-commutent, on sait aussi qu'ils expliquent les étranges propriétés (en général attribuées à la mécanique quantique) des fermions, avec l'idée qu'en leur faisant subir une rotation de 360 degrés, ils ne retrouvent pas leur état initial. Quand on fouille un peu plus dans les détails, on se trouve confronté à une multiplication des genres (Dirac, Weyl, Majorana...), à de curieux indices pointés et à des identités étranges. </p>
+
+<p>Pourtant, pas de panique, il s'agit juste d'algèbre linéaire tout ce qu'il y a de plus classique, et de théorie des groupes ! </p>
+
+<h3>Les quaternions</h3>
+
+<p>Commençons par rappeler les matrices de Pauli, $$\sigma^0 = \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right) \qquad \sigma^1 = \left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right)$$ $$\sigma^2 = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right) \qquad \sigma^3 = \left( \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array} \right)$$ qui forment une base (réelle) de l'algèbre $\mathfrak{u}(2)$ des matrices carrées $X$ de taille 2 à coefficients complexes telles que $X^{\dagger} = X$. Ces matrices sont précisément les quaternions ! Autrement dit, le quaternion traditionnellement noté $a+ib+jc+kd$ abec $a,b,c,d$ réels et $i^2=j^2=k^2=ijk=-1$ est la matrice $$ \left( \begin{array}{cc} a+d & b-ic \\ b+ic & a-d \end{array} \right) \, .  $$ </p>
