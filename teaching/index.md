@@ -5,10 +5,9 @@ permalink: /teaching/
 ---
 
 J'ai eu la chance d'enseigner à l'Ecole Normale Supérieure à Paris. Vous trouverez ici certains documents utilisés durant ces séances.
-  * Mécanique quantique (2015)
-  * General Relativity (2015)
+  * [General Relativity](relativite/index.html) (2015-2016)
   * Physique pour tous
-  * [Mécanique quantique](teaching/mecanique-quantique-2014/index.html) (2014)
+  * [Mécanique quantique](mecanique-quantique/index.html) (2014-2016)
 
 ### Colles
 
