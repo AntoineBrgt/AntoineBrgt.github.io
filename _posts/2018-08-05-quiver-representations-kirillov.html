@@ -1,0 +1,66 @@
+---
+layout: post
+title: Introduction to Quiver Representations
+date: 2018-05-31 11:38:56.000000000 +02:00
+categories:
+- Maths
+tags: []
+---
+
+<p>A quiver $\vec{Q}$ is a directed graph, defined by a set of vertices $I$ and a set of edges $\Omega$, with two maps $s,t : \Omega \rightarrow I$ that indicate respectively the source and the target of the oriented edges. Here I will focus only on finite and connected quivers (the number of edges and vertices are finite, and the underlying graph $Q$ is connected). My main concern today will be <i>quiver representations</i>. A representation $V$ of $\vec{Q}$ is comprised of a finite-dimensional vector space $V_i$ associated to each vertex $i \in I$, together with linear operators $x_h : V_i \rightarrow V_j$ for each edge $h \in \Omega$ with source $i$ and target $j$. There is a natural notion of morphisms between two representations, and I will denote by  $\mathrm{Rep}(\vec{Q})$ the category of representations of $\vec{Q}$. The main goal is to classify these representations. </p>
+
+<p> I will describe the theory and the results first, and then illustrate with some examples. I follow closely the textbook by Kirillov [1].  </p>
+
+<h2>Simple and Indecomposable representations</h2>
+
+<p>There are basic operations one can perform on quiver representations. For instance, if two representations $V$ and $W$ are given, we can build their direct sum $V \oplus W$ by summing at each vertex the corresponding vector spaces, and defining the linear maps in the obvious way. Similarly, one can define the concept of <i>subrepresentation</i>. Using this, we have the standard terminology: a representation is
+<ul>
+  <li><i>simple</i> (or irreducible) if it contains no nontrivial subrepresentation, </li>
+  <li><i>semisimple</i> if it is isomorphic to a direct sum of simple representations, </li>
+  <li><i>indecomposable</i> if it cannot be written as a direct sum of nonzero subrepresentations.  </li>
+</ul>
+The simple representations are very easy (simple!) to describe. For that, let's introduce the representation $S(i)$ (for a given vertex $i$), defined by putting the base field $k$ as the vector space $V_i$, and $0$ for all the other vertices. We also set all the maps to zero. Clearly, the $S(i)$ are simple, they are pairwise non-isomorphic, and most importantly <b>they form a full list of simple representations of $\vec{Q}$</b>. In other words, the simple representations are not really exciting, but fortunately not every representation is semisimple! So knowing simple representations is not enough to classify all representations. What would be enough, on the other hand, is to know all indecomposable representations, since <b>any representation of $\vec{Q}$ can be written uniquely (up to reordering) as a direct sum of indecomposable representations</b>.
+</p>
+
+<h2>Dynkin Quivers and Gabriel's Theorem</h2>
+
+<p>In the study of group or algebra representations, we usually pay much attention to the dimension (this is sometimes even used as a name for the representations, particularly in the physics literature). For a quiver representation $V$, we can do the same, and construct the vector $\mathbf{v} = \mathbf{dim} \,  V \in \mathbb{Z}^I$, which contains the dimensions of the various spaces at the various vertices. </p>
+
+<p>Now, given two representations $V$ and $W$ and their dimension vectors $\mathbf{v}$ and $\mathbf{w}$, we can construct a bilinear form $$ \langle \mathbf{v} , \mathbf{w} \rangle = \sum\limits_{i \in I} \mathbf{v}_i \mathbf{w}_i -  \sum\limits_{h \in \Omega} \mathbf{v}_{s(h)} \mathbf{w}_{t(h)} \, . $$ This bilinear form has a homological interpretation as
+$$ \langle V , W \rangle =\sum\limits_{i} (-1)^i \mathrm{dim} \, \mathrm{Ext}^i(V,W) \in \mathbb{Z} \, ,  $$ but we will not make use of that here. We then introduce the quadratic form $q_{\vec{Q}}(\mathbf{v}) = \frac{1}{2}\langle \mathbf{v} , \mathbf{v} \rangle$, called the Tits form. Note that it is independent of the orientation of the edges, and depends only on the underlying graph $Q$. </p>
+
+<p>With all these preliminary definitions, we can now introduce a particular class of quivers. We say that a connected graph $Q$ is <i>Dynkin</i> if the associated Tits form is positive definite. The reason for this terminology is that <b>a connected graph is Dynkin if and only if it is an ADE Dynkin diagram</b>. A quiver with a Dynkin graph will be called a <i>Dynkin quiver</i>.   </p>
+
+<p>The previous result is interesting but not too surprising, given the construction of Dynkin diagrams. What would be more exciting would be a connection with the representation theory of the underlying Lie algebra. As we will see, such a connection exists. First, we introduce yet another definition: we say that the quiver $\vec{Q}$ is of <i>finite type</i> if for any $\mathbf{v} \in \mathbb{Z}_+^I$, the number of isomorphism classes of indecomposable representations of dimension $\mathbf{v}$ is finite. We also denote by $K(\vec{Q})$ the Grothendieck group of the abelian category of representations of $\vec{Q}$; in this group, which is generated by the symbols $[A]$ for $A$ a representation, we have $[A]=[B]$ if $A$ and $B$ are isomorphic, and $[A \oplus B] = [A] + [B]$. This is the appropriate tool to study isomorphism classes of representations. One of the main results of quiver representation theory is Gabriel's theorem: </p>
+
+<p><center><b>A connected quiver $\vec{Q}$ is of finite type if and only it is a Dynkin quiver. Moreover, in that case the map
+\begin{eqnarray*}
+\mathbf{dim} &:& K(\vec{Q}) \rightarrow \mathbb{Z}^I \\
+& & [V] \mapsto \mathbf{dim} \, [V]
+\end{eqnarray*}
+is an isomorphism which gives a bijection between the set of isomorphism classes of nonzero indecomposable representations of $\vec{Q}$ and the set of positive roots of the corresponding Lie algebra.
+</b></center></p>
+
+  <p>I will not give the proof here, rather I will try to show the theorem at work on two simple examples. </p>
+
+  <h2>Examples </h2>
+
+  <h3>Cyclic quiver with one node</h3>
+
+  <p>Let's take as a first example the quiver with only one vertex, and one arrow having source and target this vertex. This is not a Dynkin quiver, of course. A representation of this quiver is a pair $(V,x)$ where $V$ is a finite-dimensional vector space, and $x$ is an endomorphism of $V$. Classifying these representations is therefore equivalent to classifying matrices up to conjugation. If the base field is (infinite and) algebraically closed, the classification is given by the Jordan form of the matrix. We see that in that case, the number of isomorphism classes of indecomposable representations is infinite. </p>
+
+  <h3>The $A_2$ quiver</h3>
+
+  <p>Now let's take the quiver with two nodes linked by one arrow. A representation is given by two vector spaces $V_1$ and $V_2$ and one linear operator $x : V_1 \rightarrow V_2$. By a change of basis, the operator can be brought to the form $$x = \left( \begin{array} I_{r \times r} & 0 \\ 0 & 0 \end{array} \right) \, ,$$ where $I_{r \times r}$ is the unit $r \times r$ matrix. This means that any representation is (isomorphic to) a direct sum of representations of the type $1 : k \rightarrow k$ and $0 : k \rightarrow k$. Let's analyze these two representations:
+<ul>
+<li>The representation $0 : k \rightarrow k$ is actually semisimple, it can be decomposed as the sum of the two simple representations $0 : k \rightarrow 0$ and $0 : 0 \rightarrow k$. These are the representations that we called $S(1)$ and $S(2)$ above. </li>
+<li>The representation $1 : k \rightarrow k$ is not simple (because it is not of the type $S(i)$), indeed it contains $0 : k \rightarrow 0$ as a subrepresentation. Clearly it is not semisimple, but it is indecomposable. </li>
+</ul>
+We have found three indecomposable representations,
+$$0 : k \rightarrow 0 \, \qquad 1 : k \rightarrow k  \, , \qquad 0 : 0 \rightarrow k \, . $$
+This fits nicely with Gabriel's theorem: the dimensions of these representations are $(1,0)$, $(1,1)$ and $(0,1)$, which correspond to the three positive roots of the algebra $A_2$.
+    </p>
+
+<h2>Reference</h2>
+
+<p>[1] Kirillov, <i>Quiver representations and quiver varieties</i>. Vol. 174. American Mathematical Soc., 2016.</p>
