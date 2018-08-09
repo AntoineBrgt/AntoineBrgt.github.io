@@ -1,0 +1,52 @@
+---
+layout: post
+title: Embedding the Hyperbolic Plane
+date: 2018-08-08 11:38:56.000000000 +02:00
+categories:
+- Maths
+tags: []
+---
+
+<p>I define the hyperbolic plane as the space $$\mathbb{H} = \left\{ (x,y) \in \mathbb{R}^2 | y>0 \right\}$$ endowed with the metric $$\mathrm{d}s^2_{\mathbb{H}} = \frac{\mathrm{d} x^2 + \mathrm{d} y^2}{y^2} \, . $$ I want to study here various "models" of this hyperbolic plane. Most of what I will say has an analogous un higher dimension, but I will keep the discussion as simple and as visual as possible, so I will stick to two dimensions. </p>
+
+<h3>The Poincaré disk</h3>
+
+<p>First of all, I recall that there is a version of the hyperbolic plane that has the shape of a disk. To see that, define the complex coordinate $z=x+iy$, and define the new complex coordinate $u$ by the relation $$iu = \frac{1+iz}{1-iz} \qquad \Leftrightarrow \qquad iz = \frac{-1+iu}{1+iu} \, . $$ It is easy to check that this establishes a bijection between $\mathbb{H}$ parametrized by $z$ and the Poincaré disk $$\mathbb{D} = \{ u \in \mathbb{C} \mid |u|<1 \} \, . $$ The metric on the hyperbolic plane and the Poincaré disk in complex coordinates are
+  \begin{equation}
+  \label{met1}
+   \mathrm{d}  s^2_{\mathbb{H}} = \frac{\mathrm{d}  z \mathrm{d}  \bar{z}}{(\mathrm{Im} \, z)^2} = \frac{4 \mathrm{d} u \mathrm{d} \bar{u}}{(1-|u|^2)^2} \, .
+   \end{equation}
+    One can check that the Ricci scalar is constant and equal to $R=-2$ (obviously, this can be computed in any of the three models). </p>
+
+<h3>Embedding in Minkowski space</h3>
+
+  <p>Now consider the upper sheet of a hyperboloid in Minkowski space $\mathbb{R}^{1,2}$. The metric on this space is $\mathrm{d}  s^2_{\textrm{Mink}} = -\mathrm{d} X_0^2 + \mathrm{d} X_1^2 + \mathrm{d} X_2^2$, and the hyperboloid sheet is defined by the equation $$X_0^2 - X_1^2 - X_2^2 = 1 \, , \qquad X_0>0 \, .  $$ We can parametrize this by two angles $\alpha$ and $\beta$:
+\begin{eqnarray*}
+X_0 &=& \cosh \alpha \\
+X_1 &=& \sinh \alpha \cos \beta \\
+X_2 &=& \sinh \alpha \sin \beta
+\end{eqnarray*}
+Using these coordinates, we find that the metric on the sheet is
+\begin{equation}
+\label{met2}
+\mathrm{d} s^2_{\mathbb{H}} = \mathrm{d} \alpha ^2 + (\sinh \alpha)^2 \mathrm{d} \beta^2 \, , \end{equation}
+and again we can compute the Ricci scalar and find $R=-2$. The relation between this model and the Poincaré disk model is given by a stereographic projection. More precisely, the Poincaré disk is the stereographic projection of the hyperboloid sheet on the plane $X_0=0$ with respect to the point $(X_0,X_1,X_2)=(-1,0,0)$.
+     <center><img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/HyperboloidProjection.png"> </center>
+Let us work out the details: a point $(X_0,X_1,X_2)$ on the hyperboloid sheet is mapped by this projection to the point $$ \left( 0 , \frac{X_1}{1+X_0} ,  \frac{X_2}{1+X_0} \right) \, . $$ Using that, we obtain the relation between the coordinate on the disk $u$ and the coordinates $\alpha$ and $\beta$ on the hyperboloid, $$u = \frac{\sinh \alpha}{1+\cosh \alpha} e^{i \beta} \, . $$ The consciencious reader will now check that the two metrics \ref{met1} and \ref{met2} are the same.
+  </p>
+
+  <h3>Embedding in Euclidean space</h3>
+
+  <p>We have just seen that it is possible to embed isometrically the full hyperbolic plane into Minkowski space. Is it possible to do the same in Euclidean space? By this, I mean to find a (regular) map $f : \mathbb{H} \longrightarrow \mathbb{R}^3$ such that the metric induced on the image of $f$ by the Euclidean metric $\mathrm{d}  s^2_{\textrm{Eucl}} = \mathrm{d} X_0^2 + \mathrm{d} X_1^2 + \mathrm{d} X_2^2$ be, possibly up to a change of coordinates, the metric $\mathrm{d} s^2_{\mathbb{H}}$ considered in the previous paragraphs. We will see in a minute that the answer is no. In fact, the hyperbolic plane is simply "too big" for $\mathbb{R}^3$. However, if we pick a constant $c>0$ and remove the part of $\mathbb{H}$ that satisfies $y < c$, then a solution is available. Because of a problem of universal covering, we also have to take a part of $\mathbb{H}$ of width $2 \pi c$ in the $x$ direction, for instance $0 \leq x < 2 \pi c$. Then, define $t=\mathrm{ArcCosh} \frac{y}{c}$ and
+    \begin{eqnarray*}
+    X_0 &=& t - \tanh t \\
+    X_1 &=& \mathrm{sech} \, t \cos \frac{x}{c}\\
+    X_2 &=& \mathrm{sech} \, t \sin \frac{x}{c}
+    \end{eqnarray*}
+    A cumbersome computation shows that the metric induced on that surface is indeed $\mathrm{d} s^2_{\mathbb{H}}$. This surface is called a (half) pseudosphere. Here is a picture (taken from wikipedia)
+     <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Pseudosphere.png" alt="W3Schools.com"> </center>
+   </p>
+
+   <p>So, as we see, it is possible to embed part of the hyperbolic plane in Euclidean $\mathbb{R}^3$. But if you want to embed all of it, this is simply not possible, by a
+<a href="https://en.wikipedia.org/wiki/Hilbert%27s_theorem_(differential_geometry)">theorem</a>
+ of Hilbert that says that there exists no complete regular surface of constante negative (Gaussian) curvature immersed in $\mathbb{R}^3$. However, for the curvature to be defined, you need to be able to differentiate at least twice on the manifold - this is hidden in the word "regular". To be more precise, a theorem of Efimov tells you that there is no $C^2$ embedding of a complete surface in $\mathbb{R}^3$ with curvature satisfying $K<-\epsilon$ for some strictly positive constant $\epsilon$. But if you're satisfied with a $C^1$ embedding, then the <a href="https://en.wikipedia.org/wiki/Nash_embedding_theorem">Nash-Kuiper theorem</a> tells you that a $C^1$ isometric embedding of the full hyperbolic plane in Euclidean $\mathbb{R}^2$ does exist! And things become even more counter-intuitive when you know that this embedding can be put inside a ball of arbitrarily small size... </p>
