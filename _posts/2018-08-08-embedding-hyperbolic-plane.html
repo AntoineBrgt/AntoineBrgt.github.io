@@ -45,6 +45,13 @@ Let us work out the details: a point $(X_0,X_1,X_2)$ on the hyperboloid sheet is
     \end{eqnarray*}
     A cumbersome computation shows that the metric induced on that surface is indeed $\mathrm{d} s^2_{\mathbb{H}}$. This surface is called a (half) pseudosphere. Here is a picture (taken from wikipedia)
      <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Pseudosphere.png" alt="W3Schools.com"> </center>
+     Note that if you don't want to make the computation yourself, you can put this code in Mathematica:
+     <tt><br>
+       t = ArcCosh[y/c]; <br>
+       x0 = t - Tanh[t]; <br>
+       x1 = Sech[t]*Cos[x/c]; <br>
+       x2 = Sech[t]*Sin[x/c]; <br>
+       Dt[x0]^2 + Dt[x1]^2 + Dt[x2]^2 /. Dt[c] -> 0 // PowerExpand // Simplify</tt> <br> and you should recover the metric of the hyperbolic plane.
    </p>
 
    <p>So, as we see, it is possible to embed part of the hyperbolic plane in Euclidean $\mathbb{R}^3$. But if you want to embed all of it, this is simply not possible, by a

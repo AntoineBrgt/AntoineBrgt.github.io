@@ -1,0 +1,66 @@
+---
+layout: post
+title: Geometric Invariant Theory
+date: 2018-08-22 11:38:56.000000000 +02:00
+categories:
+- Maths
+tags: []
+---
+
+<p>Today I continue my reading of Kirillov's textbook on quiver representations. Before coming to quiver varieties, we need to review the basics of Geometric Invariant Theory (GIT), some symplectic geometry, and see how these are combined to provide symplectic resolution of singular spaces. Again I will follow very closely Kirillov's book [1]. </p>
+
+<h2>The spectrum of a ring</h2>
+
+<p>The GIT quotient that we will introduce in the next paragraph is defined in term of the spectrum of a ring (in this case, the ring of polynomial invariants under the action of a group). It is useful to review this construction before we proceed. For a good explanation, see Vakil's notes <a href="http://math.stanford.edu/~vakil/216blog/"> here</a>. </p>
+
+<p>If $A$ is a ring, the spectrum of $A$, denoted $\mathrm{Spec} \, A$, is the set of all prime ideals in $A$. An element $a \in A$ is called a <i>function</i> on $\mathrm{Spec} \, A$, and the value of this function at a prime ideal $p$ is simply $a$ modulo $p$. </p>
+
+<p>It is very rewarding to take some time to think about the previous definitions, and then to look at some simple examples. For instance, in the case $A = \mathbb{C}[x]$, everything is elementary, and one finds that the spectrum is the complex line, plus a point that is everywhere at the same time. In a sense, this additional "point" has dimension 1, and we see that the spectrum has "points" of various dimensions. I will probably talk about that in more detail another time, but for the moment I refer to Vakil's very illuminating list of examples. </p>
+
+<h2>Overview of GIT</h2>
+
+<p>Let $G$ be a reductive linear algebraic group acting algebraically on an affine algebraic variety $M$. We recall that
+<ul>
+<li>Each orbit is a non-singular subvariety of $M$</li>
+<li>For every orbit $\mathbb{O}$, the boundary of $\mathbb{O}$ (i.e. the complement of $\mathbb{O}$ in its closure) is a union of orbits of lower dimension. </li>
+</ul>
+We define the GIT quotient of $M$ by the action of $G$ by $$M//G = \mathrm{Spec} (\mathbf{k}[M]^G) \, . $$ This is always an affine algebraic variety. The various constructions are summarized in the following diagram, where we introduce also the twisted GIT quotient with respect to a character $\chi : G \rightarrow \mathbf{k}^{\ast}$.
+</p>
+<br />
+<center><img src="{{site.image_path}}/GIT/summaryGIT.png"></center>
+<br />
+<h2>Symplectic geometry and Hamiltonian reduction</h2>
+
+
+
+<p>On any symplectic manifold $M$ (i.e. such that there is a 2-form $\omega \in \Omega^2(M)$ which is closed and non-degenerate), there is a notion of <i>skew-gradient</i>. Indeed, for any function $f$ on $M$ (more properly, we should say that $f$ is a local section of the structure sheaf of $M$), there is a unique vector field $X_f$ such that $\omega (\cdot , X_f) = \mathrm{d}f$. This is analogous to the standard definition of the gradient, but using the symplectic form instead of the metric. </p>
+
+<p>Any symplectic manifold is a <i>Poisson manifold</i>, i.e. we can define a Poisson bracket between functions on $M$. This is done through the skew-gradient construction. Recall that a Poisson bracket is a bilinear antisymmetric morphism $\{\cdot , \cdot \} : \mathcal{O}_M \times \mathcal{O}_M \rightarrow \mathcal{O}_M$ (where $\mathcal{O}_M$ is the structure sheaf, which we identify here to its local sections) which satisfies the Jacobi identity and the Leibniz derivation property. Here, the Poisson bracket is given by $\{f,g\} = \omega (X_f , X_g)$. </p>
+
+<p>Let $M$ be a symplectic manifold  and let $G$ be an appropriate<sup><a href="#fn1">1</a></sup> Lie group acting on $M$ and preserving the symplectic form. An element $a \in \mathfrak{g}$ defines a vector field $\xi_a$ on $M$, and this vector field preserves $\omega$ (in the sense that the Lie derivative of $\omega$ with respect to $\xi_a$ vanishes). One can show that locally, such a vector field is always the skew-gradient of some function. So there exist functions $H_a$, called the Hamiltonians, such that $\xi_a = X_{H_a}$. We would like to define a "good situation" in which the Poisson bracket of the Hamiltonians and the Lie bracket in the Lie algebra correspond to the same operation, and where the Hamiltonians $H_a$ depend linearly on $a \in \mathfrak{g}$. When we are in this good situation, we say that the action of $G$ is Hamiltonian. </p>
+
+  <p>To formalize this, we will introduce the key concept of <i>moment map</i>. More precisely, we say that a symplectic action of $G$ on $M$ is <i>Hamiltonian</i> if there exists a $G$-equivariant map $\mu : M \rightarrow \mathfrak{g}^\ast$, called the <i>moment map</i>, such that
+<ul>
+<li>The Hamiltonian of the vector field $\xi_a$ is given by $H_a(x) = \langle \mu(x),a \rangle$; </li>
+<li>For any $a,b \in \mathfrak{g}$, $\{H_a , H_b \} = H_{[a,b]}$.   </li>
+</ul>
+In that case, $\mu$ is a Poisson morphism between $M$ and $\mathfrak{g}^\ast$.
+</p>
+
+<p>A very important example of Hamiltonian action is given by the action of the cotangent bundle. Let $X$ be a manifold with an action of $G$. Then the corresponding action on $T^{\ast}X$ is Hamiltonian, the moment map being given by $\langle \mu (x,\lambda) , a \rangle = \langle \lambda , \xi_a (x) \rangle$, for $x \in X$, $\lambda \in T_x^\ast X$ and $a \in \mathfrak{g}^\ast$. In that case, if we assume furthermore that the action of $G$ is free, then $\mu^{-1}(0)/G$ is a smooth manifold, called the (a) <i>Hamiltonian reduction</i>, and by a theorem of Mardsen and Weinstein, <b>the space $\mu^{-1}(0)/G$ has a canonical structure of a symplectic manifold, inherited from $T^{\ast}X$. </b> We then have the symplectomorphism $$T^{\ast}(X/G) = \mu^{-1}(0)/G \, . $$</p>
+
+<h2>Resolutions</h2>
+
+<p>Now we want to combine the concepts of the two previous sections, namely GIT and Hamiltonian reductions. The problem is natural: how to generalize the construction of the Hamiltonian reduction $\mu^{-1}(0)/G$ when the action of $G$ is not free, and therefore $\mu^{-1}(0)/G$ is not smooth? We will use GIT. Define $$\mathcal{M}_0 = \mu^{-1}(0) // G \, , \qquad \mathcal{M}_\chi = \mu^{-1}(0) //_{\chi} G \,  $$ for a character $\chi : G \rightarrow \mathbf{k}^{\ast}$. </p>
+
+<p>Then one can prove that <b>for any $\chi$, $\mathcal{M}_\chi$ has a Poisson structure, and the morphism $\pi : \mathcal{M}_\chi \rightarrow \mathcal{M}_0$ is a Poisson morphism and a resolution of singularities.</b> </p>
+
+
+
+<h2>Reference</h2>
+
+<p>[1] Kirillov, <i>Quiver representations and quiver varieties</i>. Vol. 174. American Mathematical Soc., 2016.</p>
+
+<hr></hr>
+
+<sup id="fn1">1. Here "appropriate" refers to the fact that I didn't specify exactly what I mean by "manifold". If we work with real $\mathcal{C}^{\infty}$ manifolds, then I mean a real Lie group. If we work with non-singular algebraic varieties over an algebraically closed field, I mean a linear algebraic group. </sup>
