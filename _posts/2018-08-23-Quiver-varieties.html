@@ -1,0 +1,60 @@
+---
+layout: post
+title: Definition of Quiver varieties
+date: 2018-08-23 11:38:56.000000000 +02:00
+categories:
+- Maths
+tags: []
+---
+
+<p>This is the third post of a series (see <a href="http://www.antoinebourget.org/maths/2018/08/05/quiver-representations-kirillov.html">here</a> and <a href="http://www.antoinebourget.org/maths/2018/08/22/Geometric-Invariant-Theory.html">there</a>) where I explore the mathematical theory of quivers, following [1]. Today, we will focus on the geometry of the isomorphism classes of quiver representations, and proceed to the definition of the quiver varieties.  </p>
+
+<h2>The geometry of orbits</h2>
+
+<p>In all the following we fix a quiver $\vec{Q}$, and we will drop the $\vec{Q}$ dependence although of course all the construction depends on $\vec{Q}$. Let $V$ be a finite-dimensional representation of $\vec{Q}$, with dimension vector $\mathbf{v}$ (see the first post for definitions and notations). When the dimension is fixed, we can assume the vector spaces at nodes of the quiver are just $\mathbb{C}^{\mathbf{v}_i}$, and the particular representation $V$ is specified by the matrices of the various linear maps corresponding to the edges. Let's call $$R( \mathbf{v}) = \bigoplus\limits_{h \in \Omega} \mathrm{Mat}_{\mathbf{v}_{t(h)} \times \mathbf{v}_{s(h)}}(\mathbb{C})$$ the representation space. The group $$\mathrm{PGL}( \mathbf{v}) = \left( \prod\limits_{i \in I} \mathrm{GL}( \mathbf{v}_i) \right) / \mathbb{C}^{\ast}$$ acts on $R( \mathbf{v})$ by conjugation, and <b>two elements of $R( \mathbf{v})$ define isomorphic representations if and only if they are in the same $\mathrm{PGL}( \mathbf{v})$ orbit</b>. So, in other words, <b>the isomorphism classes of representations $V$ of dimension $\mathbf{v}$ are the $\mathrm{PGL}( \mathbf{v})$ orbits $\mathbb{O}_V$ in $R( \mathbf{v})$</b>. </p>
+
+<p>Now we can state an important result: <b>the orbit $\mathbb{O}_V$ is closed if and only if $V$ is semisimple</b>, and <b>the closure of any $\mathbb{O}_V$ contains a unique closed orbit, namely $\mathbb{O}_{V^{\mathrm{ss}}}$. </b></p>
+
+<p>These facts should resonate with the GIT theory! Indeed, these can be reformulated as $$R( \mathbf{v})/\mathrm{PGL}( \mathbf{v}) = \{\textrm{Isomorphism classes of reps of dimension } \mathbf{v}\}$$ $$\mathcal{R}_0 ( \mathbf{v}) :=  R( \mathbf{v})// \mathrm{PGL}( \mathbf{v}) = \{\textrm{Isomorphism classes of semisimple reps of dimension } \mathbf{v}\} \, . $$ Finally, this begs for the introduction of twisted GIT quotients. For that, note that the characters of $\mathrm{PGL}( \mathbf{v})$ are of the form $$\chi_{\theta} : g \mapsto \prod\limits_{i \in I} \det (g_i)^{- \theta_i} \qquad \textrm{with} \qquad \theta \in \mathbb{Z}^I \, , \quad \theta \cdot \mathbf{v} = 0 \, . $$ As we know from GIT theory, the twisted GIT quotient $$\mathcal{R}_\theta ( \mathbf{v}) :=  R( \mathbf{v})//_\theta \mathrm{PGL}( \mathbf{v})$$ has an interpretation as the set of closed semistable orbits <i>inside the set of semistable elements</i>. The concepts of stability and semistability depend on the character $\chi_\theta$, and by a theorem of King, we have that for any representation $V$ of dimension $\mathbf{v}$, and for any $\theta\in \mathbb{Z}^I$ such that $\theta \cdot \mathbf{v} = 0$, $$V  \textrm{ is } \chi_\theta\textrm{-semistable} \quad \Leftrightarrow \quad \textrm{for any subrepresentation } V' \subset V \, , \quad \theta \cdot (\mathbf{dim} \, V') \leq 0$$ $$V  \textrm{ is } \chi_\theta\textrm{-stable} \quad \Leftrightarrow \quad \textrm{for any nonzero proper subrepresentation } V' \subset V \, , \quad \theta \cdot (\mathbf{dim} \, V') < 0 \, . $$ </p>
+
+<h2>Double quivers</h2>
+
+<p>We know introduce the intuitive notion of <i>double quiver</i>. If $Q$ is a graph, the double quiver $Q^\sharp$ is the quiver with the vertices of $Q$ and such that each edge connecting vertices $i$ and $j$ in $Q$ give rise to two edges $h : i \rightarrow j$ and $\bar{h} : j \rightarrow i$ in $Q^\sharp$. Because of that, we have $$R(Q^\sharp , \mathbf{v}) = R(\vec{Q} ,  \mathbf{v}) \oplus R(\vec{Q} ,  \mathbf{v}) ^{ast} = T^{\ast} ( R(\vec{Q} ,  \mathbf{v})) \, , $$ and as for any cotangent bundle, this space has a canonical symplectic structure. So we see the interest of considering double quivers: the symplectic geometric aspects of GIT will come into play. In fact, let's be more general and introduce a function $\epsilon : H \rightarrow \mathbb{C}^\ast$ such that $\epsilon (h) +\epsilon (\bar{h}) = 0$ for all $h$. Then we can define the symplecic form $$\omega_\epsilon (z,w) = \mathrm{tr}_V \left( \sum\limits_{h \in H} \epsilon(h) z_{\bar{h}} w_h\right) \qquad \textrm{for} \quad z,w \in R(Q^\sharp , \mathbf{v}) \, . $$ Then <b>the action of $\mathrm{PGL}( \mathbf{v})$ on $R(Q^\sharp , \mathbf{v})$ is Hamiltonian, and the corresponding moment map is </b>
+\begin{eqnarray*}
+\mu_{\mathbf{v}} & : & R(Q^\sharp , \mathbf{v}) \longrightarrow \bigoplus\limits_{i \in I} \mathfrak{gl}(\mathbf{v}_i , \mathbb{C}) \\
+ & & z \mapsto \bigoplus\limits_{i \in I} \sum\limits_{t(h)=i} \epsilon(h) z_h z_{\bar{h}} \, .
+\end{eqnarray*}
+We can then define the GIT quotients
+$$\mathcal{M}_0 (\mathbf{v}) = \mu_{\mathbf{v}}^{-1}(0) // \mathrm{PGL}( \mathbf{v})  \, , \qquad \mathcal{M}_\theta (\mathbf{v}) = \mu_{\mathbf{v}}^{-1}(0) //_{\chi_\theta} \mathrm{PGL}( \mathbf{v}) \,  $$
+and also, introducing $(\mu_{\mathbf{v}}^{-1}(0))^\mathrm{s} = \{z \in R(Q^\sharp , \mathbf{v}) \mid \mu_{\mathbf{v}}(z) = 0 \textrm{ and } z \textrm{ is } \chi_\theta \textrm{-stable}\}$, $$\mathcal{M}^\mathrm{s}_\theta (\mathbf{v}) = (\mu_{\mathbf{v}}^{-1}(0))^\mathrm{s} //_{\chi_\theta} \mathrm{PGL}( \mathbf{v})  \subset  \mathcal{M}_\theta (\mathbf{v})  \, . $$
+ </p>
+
+<h2>Framing</h2>
+
+<p>We need a last ingredient before coming at last to quiver varieties. This is called <i>framing</i>. Let $\vec{Q}$ be a quiver with set of vertices $I$ and set of edges $\Omega$. Let $W$ be a $I$-graded vector space. A $W$-framed representation of $\vec{Q}$ is a representation $V = (V_h , x_h)$ of $\vec{Q}$ together with a collection of linear maps $j_k : V_k \rightarrow W_k$ for any $k \in I$. A morphism of two $W$-framed representations is a morphism of representations of $\vec{Q}$, $f : V \rightarrow V'$, which commutes with the $j$s, $j'_k \circ f_k = j_k$ for all $k \in I$. </p>
+
+<p>We define in an obvious way the representation space $R(\mathbf{v},\mathbf{w})$ where $\mathbf{v}$ and $\mathbf{v}$ are the graded dimensions of $V$ and $W$. The group $\mathrm{GL}(\mathbf{v})$ acts on this space<sup><a href="#fn1">1</a></sup>, and we define as above the GIT quotients $\mathcal{R}_0 (\mathbf{v},\mathbf{w})$ and<sup><a href="#fn2">2</a></sup> $\mathcal{R}_\theta (\mathbf{v},\mathbf{w})$ </p>
+
+<h2>Doubling and Framing : Quiver varieties</h2>
+
+<p>It is now time to combine together all the previous ingredients. We take a graph $Q$ (with set of vertices $I$), and consider the double quiver $Q^\sharp$ (with set of edges $H$), and $V$, $W$ two $I$-graded vector spaces. The framed-representation space of the double quiver is
+$$R(Q^\sharp , V , W) = \left( \bigoplus\limits_{h \in H} \mathrm{Hom}(V_{s(h)} , V_{t(h)})\right) \oplus \left( \bigoplus\limits_{k \in I} \mathrm{Hom}(V_{k} , W_{k})\right)\oplus \left( \bigoplus\limits_{k \in I} \mathrm{Hom}(W_{k} , V_{k})\right) \, .
+$$
+As for any double quiver, the action of $\mathrm{GL}(V)$ is Hamiltonian, with moment map
+\begin{eqnarray*}
+\mu_{V,W} & : & R(Q^\sharp , V,W) \longrightarrow \mathfrak{gl}(V) \\
+ & & (z,i,j)) \mapsto \sum\limits_{h \in H} \epsilon(h) z_h z_{\bar{h}} - \sum\limits_{k \in I} i_k j_k  \, .
+\end{eqnarray*}
+Finally, we introduce the symplectic (twisted) GIT quotients
+$$\mathcal{M}_0 (V,W) = \mu_{V,W}^{-1}(0) // \mathrm{GL}(V)  \, , \qquad \mathcal{M}_\theta (V,W) = \mu_{V,W}^{-1}(0) //_{\chi_\theta} \mathrm{GL}(V) \, .  $$
+The variety $\mathcal{M}_\theta (V,W)$ is called a <i>quiver variety</i>. In the next episode, we will explore the properties of these varieties! 
+</p>
+
+<h2>Reference</h2>
+
+<p>[1] Kirillov, <i>Quiver representations and quiver varieties</i>. Vol. 174. American Mathematical Soc., 2016.</p>
+
+</br><hr></hr> </br>
+
+<sup id="fn1">1. Warning! there is no $\mathbf{w}$ involved in this group, and the subgroup of scalars is included, so this is not $\mathrm{PGL}$. </sup></br>
+<sup id="fn2">2. Because the group of scalars act, we no longer require $\theta \cdot \mathbf{v} = 0$ here.  </sup>
