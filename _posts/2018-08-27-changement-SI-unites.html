@@ -1,0 +1,20 @@
+---
+layout: post
+title: Une remarque sur les unités SI
+date: 2018-08-27 10:38:56.000000000 +02:00
+categories:
+- physique
+tags: []
+---
+
+<p>La semaine dernière, j'ai posé le petit problème suivant sur discord : calculer la quantité $$5000000 \frac{h \alpha}{c e^2}$$ où $h$ est la constante de Planck, $c$ la vitesse de la lumière dans le vide, $e$ la charge de l'électron, et $\alpha$ la constante de structure fine. On veut le résultat dans le système international d'unités (SI), et on demande de commenter la valeur obtenue. </p>
+
+<p>Il n'est pas difficile de faire l'application numérique : on trouve $$5000000 \frac{h \alpha}{c e^2} = 3,14159265 \, \textrm{m}.\textrm{kg}.\textrm{s}^{-2}.\textrm{A}^{-2} \, . $$ On reconnaît évidemment le nombre $\pi$. Mais cette valeur est-elle exacte ? Et cette question de l'exactitude d'une constante physique a-t-elle un sens ? </p>
+
+<p>En fait, il se trouve que la quantité ci-dessus est, à une constante entière près, égale à la perméabilité magnétique du vide $\mu_0$, et c'est cette grandeur qui sert à définir l'ampère. Plus précisément, la seconde, le mètre et le kilogramme ayant été définis préalablement, on définit l'ampère par la relation $$\mu_0 = 4 \pi \times 10^{-7} \,  \textrm{m}.\textrm{kg}.\textrm{s}^{-2}.\textrm{A}^{-2}  \, . $$ Et comme par définition de la constante de structure fine, $\mu_0 = \frac{2 h \alpha}{c e^2}$, on obtient bien $$5000000 \frac{h \alpha}{c e^2} = \pi \, \textrm{m}.\textrm{kg}.\textrm{s}^{-2}.\textrm{A}^{-2} \, . $$ C'est une valeur exacte. </p>
+
+<p>Il faut noter que dans le SI, ni la constante de Planck $h$, ni la charge de l'électron $e$, ni la constante de structure fine $\alpha$ ne sont définies comme des valeurs exactes. Toutes dépendent d'expériences réalisées pour les déterminer, dans un système d'unités donné à l'avance par d'autres définitions (la vitesse de la lumière, elle, est définie exactement, $c=299792458 \, \textrm{m}.\textrm{s}^{-1}$). Il est amusant de voir que ces incertitudes "conspirent" pour donner une valeur exacte (même si évidemment, il n'y a rien de remarquable à cela : par exemple la constante de structure fine $\alpha$ conspire également avec $\pi - \alpha$ pour donner une somme égale à $\pi$). </p>
+
+<p>Ce qui est plus amusant est de remarquer que cet état de fait va bientôt changer. En effet, prochainement la définition des unités SI devrait être modifiée (voir par exemple cet <a href="https://en.wikipedia.org/wiki/Proposed_redefinition_of_SI_base_units">article Wikipedia</a>). La définition de la seconde n'est pas modifiée, celle du mètre non plus (ainsi la valeur exacte de $c$ perdure), mais les définitions du kilogramme et de l'ampère se feront en termes de $h$ et $e$ respectivement. Autrement dit, ces deux valeurs seront alors parfaitement exactes dans le nouveau système SI. En revanche, $\mu_0$ perdra son statut de constante exacte. Il est amusant de voir que dans le rapport $\frac{h \alpha}{c e^2}$, on passera donc de une à trois constantes exactes, mais que sa valeur cessera d'être exacte.  </p>
+
+<p>Bref, ce petit calcul était l'occasion de mentionner cette prochaine modification des définitions du SI (voir aussi sur le blog de David Madore <a href="http://www.madore.org/~david/weblog/d.2018-08-15.2546.html">ici</a>) et de susciter la réflexion sur ce que signifie être exact pour une grandeur physique. </p>
