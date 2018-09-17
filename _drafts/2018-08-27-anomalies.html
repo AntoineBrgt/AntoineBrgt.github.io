@@ -1,0 +1,51 @@
+---
+layout: post
+title: Anomalies in QFT
+date: 2018-08-27 10:38:56.000000000 +02:00
+categories:
+- physique
+tags: []
+---
+
+<p> In QFT, anomalies play a crucial role. There are several kinds of anomalies, and it is not always clear what are the implications of having a non-vanishing anomaly of each kind.  </p>
+
+<p>The appearance of anomalies can be seen through various points of views:
+<ul>
+<li>Let's recall that a classical symmetry is a symmetry of the classical action, a transformation of the fields that leaves the action invariant. In the path integral formalism of QFT, <i>if the measure is invariant under these symmetries</i>, they translate to Ward identities for correlators or Slavnov-Taylor identities for the quantum effective action. When that's not the case, the identities are violated by an <i>anomaly</i>.   </li>
+<li><b>impossibility of regulating a theory while preserving a classical symmetry</b> (explain... see http://gsfp.physi.uni-heidelberg.de/graddays/content/en/zubehoer/anhaenge/serone/Anomalies_Review_9.10.2016.pdf). </li>
+<li>Conservation of a classically conserved current at the quantum level. </li>
+</ul>
+    </p>
+
+<p>Implications of an anomaly :
+<ul>
+<li> For global symmetries : classical selection rules are not obeyed, classically forbidden processes can occur in the quantum theory. </li>
+<li> For a gauge "symmetry" : an anomaly would spoil unitarity and renormalizability (potentially). </li>
+</ul>
+</p>
+
+<p>Another kind of anomaly is the Witten anomaly. </p>
+
+<h2>Global anomalies</h2>
+
+<p>For instance we have rescaling anomaly, dimensional transmutation. The quantum theory is no longer scale invariant. </p>
+
+<p>other example : axial anomaly. </p>
+
+<p>The chiral anomaly. Consider a massless Dirac fermion in $2n$ dimensions in a representation $\mathcal{R}$ of a gauge group $G$. The classical Lagrangian is invariant under $\psi \rightarrow e^{i \alpha \gamma_{2n+1}} \psi$, where $\gamma_{2n+1}$ is the chirality matrix in $2n$ dimensions. The associated classically conserved current is called the chiral current. But because the fermion measure in the path integral is not invariant under the chiral symmetry, we have a quantum anomaly: $$\delta_{\alpha} [\mathcal{D} \psi \mathcal{D} \bar{\psi}] = [\mathcal{D} \psi \mathcal{D} \bar{\psi}] \exp \left( -2i \int \alpha \mathcal{A} \right) \, . $$  </p>
+
+<h2>Gauge anomalies</h2>
+
+<p>No anomaly at all, or cancellation of anomalies is required. </p>
+
+<h2>Witten anomalies</h2>
+
+<p>"It is also a gauge anomaly" (https://physik.uni-graz.at/~axm/anomalies2013.pdf). This is a problem exclusively applying to the $Sp(N)$ (that includes $SU(2)$ of course) and $O(2< N< 6)$ gauge theories. This depends on the fourth homotopy group of the gauge group.  </p>
+
+<p>We have $\pi_4(U(N)) = \pi_4(SU(N))$ for all positive integers $N$ (https://math.stackexchange.com/questions/2454985/homotopy-groups-un-and-sun-pi-mun-pi-msun).  We have $\pi_4(U(N)) = 0$ for all positive integers $N$ except for $N=2$, where $\pi_4(U(2)) = \mathbb{Z}_2$. </p>
+
+<p>We have $\pi_4(SO(N)) = 0$ for all positive integers $N$ except for $N=3,4,5$, where $\pi_4(SO(3))  = \pi_4(SO(5)) = \mathbb{Z}_2$ and $\pi_4(SO(4)) = \mathbb{Z}_2^2 $. </p>
+
+<p>We have $\pi_4(Sp(N)) = \mathbb{Z}_2$ for all positive integers $N$. </p>
+
+<p>We have $\pi_4(G) = 0$ for the five exceptional groups $G$. </p>

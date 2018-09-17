@@ -1,0 +1,72 @@
+---
+layout: post
+title: Unicity of Primary Decomposition
+date: 2018-09-17 10:38:56.000000000 +02:00
+categories:
+- maths
+tags: []
+---
+
+<p> Let's recall the fundamental theorem of arithmetics: every integer decomposes in a unique way in a product of prime factors, and a unit $u \in \{+1,-1\}$. Phrased in terms of ideals, this statement becomes: any non-zero ideal can be written in a unique way as the intersection of ideals of the form $\langle p_i^{e_i}\rangle$ where the $p_i$ are prime numbers and the $e_i$ are positive integers. In this post, I will examine how this theorem generalizes to ideals in polynomial rings, with a special emphasis on the unicity property.   </p>
+
+<h2>Some preliminary definitions</h2>
+
+<p>First, we introduce the ring we will be working in. Here I will use $$R = \mathbb{C}[x_1 , \dots , x_n] \, , $$ the polynomial ring in $n$ variables with complex coefficients. This is a nice ring: it is Noetherian, which means that every ideal $I$ if $R$ is finitely generated. Moreover, the base field $\mathbb{C}$ is algebraically closed, which will be important at some points of the discussion.
+ </p>
+
+ <p>Now we need to introduce a concept analogous to the prime numbers in the fundamental theorem of arithmetics. However we will see that two related but distinct notions are required:
+<ul>
+  <li>An ideal $I$ is called <i>prime</i> if $fg \in I$ implies either $f \in I$ or $g \in I$. </li>
+  <li>An ideal $I$ is called <i>primary</i> if $fg \in I$ implies either $f \in I$ or $g^m \in I$ for some integer $m>0$. </li>
+  </ul>
+I find it useful to give a third definition now, because of its similarities with the definitions above:
+  <ul>
+  <li>An ideal $I$ is called <i>radical</i> if $f^m \in I$ for some integer $m>0$ implies implies $f \in I$.</li>
+</ul>
+The notion of radical ideal is of tremendous importance in the dictionary between algebra and geometry. In fact, to any ideal $I$ we can associate a unique radical ideal, therefore called <i>the radical</i> of $I$, and denoted $\sqrt{I}$:
+$$\sqrt{I} = \{f \in R | \exists m>0 \, : \, f^m \in I\} \, . $$
+Note that the three notions of prime, primary and radical ideals are connected by the following lemma: <b>if $I$ is primary, then $\sqrt{I}$ is prime, and it is the smallest prime ideal containing $I$</b>. Because of that, if $P$ is a prime ideal and $I$ is a primary ideal such that $\sqrt{I}=P$, we say that $I$ is $P$-primary. This will be crucial to understand in which sense the primary decomposition of ideals is unique in the next section.
+</p>
+
+<p>The importance of radical ideals comes in part from the fact that they are the ideals that correspond to varieties. If $V \subset \mathbb{C}^n$ is a variety, then the vanishing ideal $\mathcal{I}(V)$ is radical, and more importantly (and here we use the fact that $\mathbb{C}$ is algebraically closed), we have the Nullstellensatz
+$$\mathcal{I}(\mathcal{V}(I)) = \sqrt{I} \, , $$
+where $\mathcal{V}(I)$ is the variety defined by the ideal $I$. We will come back later to the connection between ideals and varieties, in relation to the decompositions of ideals, to which we turn now.
+ </p>
+
+ <h2>Ideal decompositions</h2>
+
+ <h3>Prime decomposition</h3>
+
+ <p>We begin with the theorem of prime decomposition. Here we use the fact that $\mathbb{C}$ is algebraically closed. The theorem of prime decomposition tells us that <b>any <i>radical</i> ideal $I \subset R$ can be written uniquely as a finite intersection of prime ideals $$I = P_1 \cap \dots \cap P_r$$ with $P_i \not\subset P_j$ for $i \neq j$.  </b></p>
+
+ <p>The crucial assumption in the previous theorem is the fact that $I$ must be radical. Note that, as we said above, this is always satisfied if $I = \mathcal{I}(V)$ is the vanishing ideal of a variety. In the next section, we state a theorem that gives a decomposition for any (not necessarily radical) ideal. </p>
+
+  <h3>Primary decomposition</h3>
+
+  <p>We now state the main theorem of this note, called the principal decomposition theorem, of the <i>Lasker-Noether theorem</i> (note that Emanuel Lasker is maybe more well-known today for his career as a chess player: he reined as World Chess Champion for 27 years, more than any other World Chess Champion, and he is regarded as one of the strongest players of all times). </p>
+
+  <p><b>Any ideal $I \subset R$ has a decomposition $$I = Q_1 \cap \dots \cap Q_r$$ where the $Q_i$ are primary ideals, the prime ideals $P_i = \sqrt{Q_i}$ are all distinct and $\cap_{j \neq i} Q_j \not\subset Q_i$ for all $i$. Moreover, the $P_i$ are uniquely determined, and are called the <i>associated primes</i> (but the $Q_i$ are not uniquely determined in general).   </b></p>
+
+  <p>The above theorem is also true if the base field $\mathbb{C}$ is replaced by an arbitrary (not necessarily algebraically closed) field. Also, there is a slightly stronger result concerning the unicity: the $Q_i$ associated to a <i>minimal</i> prime $P_i$ (in the sense that no $P_j$ is strictly contained in $P_i$) is uniquely determined. In the ring of integers, the minimal prime ideals over a nonzero ideal $\langle m \rangle$ are the ideals $\langle p_i \rangle$ where the $p_i$ are the prime divisors of $m$. This means that in the primary decomposition of $\langle m \rangle$, the primary ideals (which correspond to powers of the primes $p_i$) are uniquely determined -- this is the fundamental theorem of arithmetics! </p>
+
+  <p>As we see, the primary decomposition is <i>almost</i> unique, in the sense that we have some degree of freedom in the choice of the $Q_i$, but only among the primary ideals whose radical correspond to the uniquely determined prime ideals $P_i$ that are not minimal. </p>
+
+  <p>Let's give an example. Consider in $R=\mathbb{C}[x,y]$ the ideal $I = \langle x^2 , xy \rangle$. Then the associated primes are $P_1 = \langle x \rangle$ and $P_2 = \langle x,y \rangle$. Note that $P_1 \subset P_2$, so $P_1$ is minimal but $P_2$ is not. This means that in primary decompositions of $I$, the primary ideal $Q_1$ will be uniquely determined, but not the primary ideal $Q_2$. Indeed, we find that for any integer $m>0$, a primary decomposition of $I$ is $$I = \langle x \rangle \cap \langle x^2 , xy , y^m \rangle \, . $$ </p>
+
+ <h2>The relation with geometry</h2>
+
+ <p>Let $V \subset \mathbb{C}^n$ be an affine variety. Then $V$ is irreducible if and only if the ideal $\mathcal{I}(V)$ is a prime ideal. We have the following result, which mirrors the prime decomposition of ideals: <b>if $V \subset \mathbb{C}^n$ is an affine variety, then it has a unique decomposition $$V = V_1 \cup \dots \cup V_r$$ where the $V_i$ are irreducible and $V_i \not\subset V_j$ for $i \neq j$. Furthermore, this decomposition is unique up to the order in which the $V_i$ are written. </b> </p>
+
+ <p>Now let's turn to the primary decomposition of ideals. The decomposition $$I = Q_1 \cap \dots \cap Q_r$$ defined a decomposition
+$$\mathcal{V}(I) = \mathcal{V}(Q_1) \cup \dots \cup \mathcal{V}(Q_r) = \mathcal{V}(P_1) \cup \dots \cup \mathcal{V}(P_r) \, , $$ where we have used the fact that $\mathcal{V}(P_i) = \mathcal{V}(Q_i)$. In fact, one can even write (as far as algebraic varieties are concerned -- i.e. not schemes) $\mathcal{V}(I)$ as the union of the $\mathcal{V}(P_j)$ where the $P_j$ are the <i>minimal</i> primes.    </p>
+
+<p>Let's illustrate that with our example above. To the ideal $I = \langle x^2 , xy \rangle$ is associated the line of equation $x=0$. In the decomposition of that variety given by the primary decompositions above, we have the two varieties $\mathcal{V}(P_1) = \{x=0\}$ and $\mathcal{V}(P_2) = \{x=y=0\}$. We see that $P_1 \subset P_2$ translates into $\mathcal{V}(P_2) \subset \mathcal{V}(P_1)$, as expected, and we can remove the component $\mathcal{V}(P_2)$ from the union.   </p>
+
+<p> In summary, <b>although the primary decomposition is not unique, the corresponding decomposition in terms of varieties is unique, and is given by the mininal prime ideals among the radical of the primary ideals present in any primary decomposition.</b>  </p>
+
+<h2>References</h2>
+
+<ul>
+<li>Cox, David, John Little, and Donal O'shea. <i>Ideals, varieties, and algorithms.</i> Vol. 3. New York: Springer, 2007. In particular, chapter 4. </li>
+<li>Wikipedia article on <a href="https://en.wikipedia.org/wiki/Primary_decomposition">primary decomposition</a>. </li>
+</ul>
