@@ -1,0 +1,38 @@
+---
+layout: post
+title: Blow-ups
+date: 2019-05-29 10:38:56.000000000 +02:00
+categories:
+- Math
+tags: []
+---
+
+<p> First we will define the blow-up of the affine space $\mathbb{A}^n$ at the origin, that I call $O$. For this, we choose coordinates $x_1,\dots , x_n$ on $\mathbb{A}^n$ and $y_1 , \dots , y_n$ on the projective space $\mathbb{P}^{n-1}$. These are homogeneous coordinates, i.e. subjected to the usual equivalence relation. The <i>blow-up of $\mathbb{A}^n$ at $O$</i> is $$X = \{ (x_1 , \dots , x_n , y_1 , \dots , y_n) \in  \mathbb{A}^n \times \mathbb{P}^{n-1} | x_i y_j = x_j y_i \textrm{ for all } i,j=1,\dots,n\} \,. $$ There is a natural map $$\varphi : X \rightarrow  \mathbb{A}^n$$ obtained from the projection map $\mathbb{A}^n \times \mathbb{P}^{n-1} \rightarrow  \mathbb{A}^n$ by restriction. The set $X$ and the map $\varphi$ have several interesting properties :
+<ul>
+  <li>$\varphi$ gives an isomorphism $X-\varphi^{-1}(O) \rightarrow \mathbb{A}^n-\{O\}$. </li>
+  <li>$\varphi^{-1}(O)$ is in bijection with the lines of $\mathbb{A}^n$ passing through $O$, and therefore is isomporphic to $\mathbb{P}^{n-1}$. </li>
+  <li>$X$ is irreducible. </li>
+</ul>
+Now we can come to the really interesting point: the definition of the blow-up of a variety. Let $Y$ be a subvariety of $\mathbb{A}^n$ passing through $O$. The <i>blowing-up of $Y$ at $O$</i> is $$\widetilde{Y} = \overline{\varphi^{-1}(Y-\{O\})} \,.$$
+</p>
+
+<p>Let's immediately look at an example. We consider the curve $$Y=\left\{(x,y) \in \mathbb{A}^2 \mid y^2=x^2(x+1) \right\} \,. $$ We call $t$ and $u$ a pair of homogeneous coordinates on $\mathbb{P}^1$, so that the equation of the blow-up $X$ is $xu=ty$. Then for $(x,y,t,u) \in \mathbb{A}^2 \times \mathbb{P}^{1} $, we have
+\begin{eqnarray*}
+(x,y,t,u) \in \varphi^{-1}(Y-\{O\}) & \Longleftrightarrow & xu=ty \textrm{ and } y^2=x^2(x+1)  \textrm{ and } (x,y) \neq (0,0)
+\end{eqnarray*}
+Now we can choose a patch of $\mathbb{P}^{1}$, say the one where $t \neq 0$. There, we can choose $t=1$, and $u \in \mathbb{A}^{1}$. In that patch, $\varphi^{-1}(Y-\{O\})$ is a subset of $\mathbb{A}^{3}$ that is given by the equations
+\begin{eqnarray*}
+xu=y \textrm{ and } y^2=x^2(x+1)  \textrm{ and } (x,y) \neq (0,0)   & \Longleftrightarrow & xu=y \textrm{ and } x^2(x+1-u^2)=0  \textrm{ and } (x,y) \neq (0,0)  \\
+& \Longleftrightarrow & xu=y \textrm{ and } u^2=x+1  \textrm{ and } (x,y) \neq (0,0)
+\end{eqnarray*}
+As a consequence, we obtain the curve
+\begin{equation*}
+\begin{cases}
+u^2=x+1 \\ y=xu
+\end{cases}
+\end{equation*}
+</p>
+<center>
+<iframe src="https://www.wolframcloud.com/objects/b822b467-460f-4d06-ac29-c2b926bde74c?_embed=iframe" width="400" height="400"></iframe>
+</center>
+<p>In the above picture, the initial curve is in orange, the blowup is in blue. In orange is the $\mathbb{P}^{1}$, which we call the <i>exceptional curve</i> $E$. Of course here we see only one patch of $E$, the patch parametrized by $u$ and whose equation is $x=y=0$. One point is missing, namely $t=0$ (or equivalently $u=\infty$). The blowup $\widetilde{Y}$ meets $E$ at two points, $u=\pm 1$, which correspond to the two slopes of the initial curve at $O$. </p>
