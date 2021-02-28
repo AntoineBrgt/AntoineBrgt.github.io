@@ -32,3 +32,32 @@ Dans ma troisième vidéo, je franchis enfin de pas et commence à construire le
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/CZ8cT-rUyps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/MKOpsYrtyNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+
+<h3>Topologie algébrique</h3>  
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/3D6fQ1fdp1o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Ws4bjDJoARo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/P2_-PSIbgM4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<h3>Théorie quantique des champs</h3>  
+
+
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/yZq5wcLFo7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/NVIXFx6ksbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/LyoTTcFJvQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/A7gpCb9zkBM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ydYSruzBGEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/f5ZnHKrOuqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Et8qmxHNJzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JtN8dkFglsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
