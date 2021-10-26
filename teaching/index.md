@@ -9,12 +9,21 @@ J'ai eu la chance d'enseigner à l'Ecole Normale Supérieure à Paris. Vous trou
   * Physique pour tous
   * [Mécanique quantique](mecanique-quantique/index.html) (2014-2016)
 
+
+
+### Cours sur Youtube
+
+Voir la [page dédiée](/videos/). 
+
+
+### Special Topics
+
+Cours de fin de Master donnés à Imperial College (Quantum Fields and Fundamental Forces), "Singularities in supersymmetric gauge theories and string theory" ([2020](/teaching/Special-Topics/Special-Topics-abstracts-2020.pdf) et [2021](/teaching/Special-Topics/Special-Topics-abstracts-2021.pdf)). 
+
+
 ### Colles
 
 J'ai donné des colles en physique à l'Institut Bossuet en 2014 et 2015. A toutes fin utiles, voici une partie des [sujets]({{site.file_path}}/Colles_Sujets.pdf) (manuscrits!).
-
-You can find [here]({{site.file_path}}/Colles_Sujets.pdf) some of the oral examinations that I gave to second-year students in prépa PC/PC*. These take into account the new programs of 2014. I don't have a complete set of solutions, but if you encounter a difficulty in solving one of the exercises I would be glad to help with an indication on how to start.
-
 
 
 ### Rencontres des jeunes physiciens
