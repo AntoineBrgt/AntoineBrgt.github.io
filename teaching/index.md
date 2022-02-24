@@ -4,10 +4,11 @@ title: Teaching
 permalink: /teaching/
 ---
 
-J'ai eu la chance d'enseigner à l'Ecole Normale Supérieure à Paris. Vous trouverez ici certains documents utilisés durant ces séances.
+Vous trouverez ici certains documents utilisés durant les cours enseignés à l'Ecole Normale Supérieure de Paris.
   * [General Relativity](relativite/index.html) (2015-2016)
   * Physique pour tous
   * [Mécanique quantique](mecanique-quantique/index.html) (2014-2016)
+  * [Physique des particules](particules/index.html) (2022)
 
 
 
