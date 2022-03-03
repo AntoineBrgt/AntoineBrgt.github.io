@@ -6,7 +6,7 @@ permalink: /teaching/
 
 Vous trouverez ici certains documents utilisés durant les cours enseignés à l'Ecole Normale Supérieure de Paris.
   * [General Relativity](relativite/index.html) (2015-2016)
-  * Physique pour tous
+  * [Physique pour tous](https://tilloy.wordpress.com/teaching/physique-pour-tous/) (2014-2016)
   * [Mécanique quantique](mecanique-quantique/index.html) (2014-2016)
   * [Physique des particules](particules/index.html) (2022)
 
