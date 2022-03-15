@@ -22,6 +22,10 @@ Voir la [page dédiée](/videos/).
 Cours de fin de Master donnés à Imperial College (Quantum Fields and Fundamental Forces), "Singularities in supersymmetric gauge theories and string theory" ([2020](/teaching/Special-Topics/Special-Topics-abstracts-2020.pdf) et [2021](/teaching/Special-Topics/Special-Topics-abstracts-2021.pdf)). 
 
 
+### Groupe Recherche du Corps des Mines
+
+J'ai donné le 10 mars 2022 un exposé intitulé "La Théorie Quantique des Champs au Troisième Millénaire" au groupe recherche du corps des Mines. Les transparents de la présentation sont accessibles [ici]({{site.file_path}}/presentations/Mines.pdf). 
+
 ### Colles
 
 J'ai donné des colles en physique à l'Institut Bossuet en 2014 et 2015. A toutes fin utiles, voici une partie des [sujets]({{site.file_path}}/Colles_Sujets.pdf) (manuscrits!).
