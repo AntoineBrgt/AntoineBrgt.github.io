@@ -8,7 +8,8 @@ Vous trouverez ici certains documents utilisés durant les cours enseignés à l
   * [General Relativity](relativite/index.html) (2015-2016)
   * [Physique pour tous](https://tilloy.wordpress.com/teaching/physique-pour-tous/) (2014-2016)
   * [Mécanique quantique](mecanique-quantique/index.html) (2014-2016)
-  * [Physique des particules](particules/index.html) (2022)
+  * [Physique des particules](particules/index.html) (2021-2022)
+  * [Symmetries in physics](symmetries/index.html) (2022-2023)
 
 
 
