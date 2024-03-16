@@ -23,15 +23,19 @@ Voir la [page dédiée](/videos/).
 Cours de fin de Master donnés à Imperial College (Quantum Fields and Fundamental Forces), "Singularities in supersymmetric gauge theories and string theory" ([2020](/teaching/Special-Topics/Special-Topics-abstracts-2020.pdf) et [2021](/teaching/Special-Topics/Special-Topics-abstracts-2021.pdf)). 
 
 
-### Groupe Recherche du Corps des Mines
 
-J'ai donné le 10 mars 2022 un exposé intitulé "La Théorie Quantique des Champs au Troisième Millénaire" au groupe recherche du corps des Mines. Les transparents de la présentation sont accessibles [ici]({{site.file_path}}/presentations/Mines.pdf). 
+### Exposés de vulgarisation
+
+
+  * 14 mars 2024, université de Lorraine, Nancy, "Le problème de la gravité quantique", [présentation]({{site.file_path}}/presentations/2024_03_14_Nancy.pdf). 
+  * 18 novembre 2023, Timeworld, Conservatoire des Arts et Métiers, Paris, "Quel est le rôle de l’énergie en Théorie Quantique des Champs ?", [présentation]({{site.file_path}}/presentations/timeworld.pdf). 
+  * 10 mars 2022, groupe recherche du corps des Mines, Paris, "La Théorie Quantique des Champs au Troisième Millénaire", [présentation]({{site.file_path}}/presentations/Mines.pdf). 
+  * 10 novembre 2015, Rencontres des jeunes physiciens, Paris, "Do we live in a hologram?", [présentation]({{site.file_path}}/Antoine_Bourget_RJP.pdf). 
+
+
 
 ### Colles
 
 J'ai donné des colles en physique à l'Institut Bossuet en 2014 et 2015. A toutes fin utiles, voici une partie des [sujets]({{site.file_path}}/Colles_Sujets.pdf) (manuscrits!).
 
 
-### Rencontres des jeunes physiciens
-
-Ma [présentation]({{site.file_path}}/Antoine_Bourget_RJP.pdf). Le site web est [ici](http://rjp.sfp-paris.fr/).
