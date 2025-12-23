@@ -4,7 +4,13 @@ title: Teaching
 permalink: /teaching/
 ---
 
-Vous trouverez ici certains documents utilisés durant les cours enseignés à l'Ecole Normale Supérieure de Paris.
+J'enseigne depuis 2023 à l'Ecole Polytechnique. 
+  * Mécanique quantique -- tronc commun (2024)
+  * Physique statistique -- deuxième année (2024 et 2025)
+  * Relativistic Fields and their Quantization -- troisième année (depuis 2025)
+Les documents relatifs aux cours sont disponibles sur Moodle. 
+
+Vous trouverez ici certains documents utilisés durant les cours enseignés à l'Ecole Normale Supérieure de Paris entre 2025 et 2023.
   * [General Relativity](relativite/index.html) (2015-2016)
   * [Physique pour tous](https://tilloy.wordpress.com/teaching/physique-pour-tous/) (2014-2016)
   * [Mécanique quantique](mecanique-quantique/index.html) (2014-2016)
